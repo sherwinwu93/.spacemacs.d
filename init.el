@@ -28,7 +28,7 @@ This function should only modify configuration layer settings."
 
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
-   dotspacemacs-configuration-layer-path '()
+   dotspacemacs-configuration-layer-path '("~/.spacemacs.d/")
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
@@ -53,6 +53,7 @@ This function should only modify configuration layer settings."
      spell-checking
      ;; syntax-checking
      ;; version-control
+     wusd
      treemacs)
 
 
@@ -185,6 +186,7 @@ It should only modify the values of Spacemacs settings."
    ;; contents, to a maximum of the full image height and a minimum of 3 line
    ;; heights. If set to a number (int or float) it is used as a constant
    ;; scaling factor for the default logo size.
+   ;; 11:50
    dotspacemacs-startup-banner-scale 'auto
 
    ;; List of items to show in startup buffer or an association list of
@@ -318,7 +320,7 @@ It should only modify the values of Spacemacs settings."
    ;; auto-save the file in-place, `cache' to auto-save the file to another
    ;; file stored in the cache directory and `nil' to disable auto-saving.
    ;; (default 'cache)
-   dotspacemacs-auto-save-file-location 'cache
+   dotspacemacs-auto-save-file-location 'original
 
    ;; Maximum number of rollback slots to keep in the cache. (default 5)
    dotspacemacs-max-rollback-slots 5
@@ -328,7 +330,7 @@ It should only modify the values of Spacemacs settings."
    ;; elements in the `kill-ring'. (default nil)
    dotspacemacs-enable-paste-transient-state nil
 
-   ;; Which-key delay in seconds. The which-key buffer is the popup listing
+  ;; Which-key delay in seconds. The which-key buffer is the popup listing
    ;; the commands bound to the current keystroke sequence. (default 0.4)
    dotspacemacs-which-key-delay 0.4
 
@@ -568,9 +570,9 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-  (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
-  (load custom-file 'no-error 'no-message)
 )
+(setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
+(load custom-file 'no-error 'no-message)
 
 
 ;; Do not write anything past this comment. This is where Emacs will
