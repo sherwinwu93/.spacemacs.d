@@ -1,5 +1,5 @@
 ;; 所有快捷键: 执行顺序:第5
-
+;; ------------------------------------------------------------evil
 ;; ------------------------------------------------------------input
 (define-key rime-active-mode-map (kbd "<tab>") 'rime-inline-ascii)
 (define-key rime-mode-map (kbd "C-`") 'rime-send-keybinding)
@@ -35,11 +35,14 @@
 (define-key global-map (kbd "s-z") 'undo)
 ;;对应Windows上面的Ctrol-x 剪切
 (define-key global-map (kbd "s-x") 'kill-region)
+;; ----------------------------------------Search and Replace
+(define-key global-map (kbd "C-s") 'helm-swoop)
+(define-key global-map (kbd "s-s") 'query-replace)
 ;; ------------------------------------------------------------translate
-(evil-leader/set-key
+(spacemacs/set-leader-keys
   "ot" 'youdao-dictionary-search-at-point+
   "oy" 'youdao-dictionary-search-at-point
-  )
+)
 ;; ------------------------------------------------------------org
 ;; (spacemacs/set-leader-keys
 ;;   "ao" nil
