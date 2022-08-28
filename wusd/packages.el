@@ -25,18 +25,15 @@
     rime
     (xscheme :location local)
     (auto-save :location local)
-    ;; org
     youdao-dictionary
     ))
-(defun wusd/init-xscheme()
-  (use-package xscheme))
 (defun wusd/init-rime()
   (use-package rime))
+(defun wusd/init-xscheme()
+  (use-package xscheme))
 (defun wusd/init-auto-save()
     (use-package auto-save
 	         :config (auto-save-enable)
 ))
-;; (defun wusd/init-org()
-;;   (use-package org))
 (defun wusd/init-youdao-dictionary()
   (use-package youdao-dictionary))

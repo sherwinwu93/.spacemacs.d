@@ -35,7 +35,8 @@
 ;; 忽略文件夹
 (setq projectile-globally-ignored-directories '("~/.spacemacs.d/local/"))
 ;; ------------------------------------------------------------org
-(require 'init-org)
+(with-eval-after-load
+    (require 'init-org))
 ;; ------------------------------------------------------------translate
 ;; 缓存翻译
 (setq url-automatic-caching t)
