@@ -1,7 +1,7 @@
 (add-hook 'org-mode-hook (lambda() (org-indent-mode t)))
 
 ;; 定义 agenda 文件的位置
-(setq org-agenda-files '("~/notes/todos/inbox.org"))
+(setq org-agenda-files '("~/notes/todos/"))
 ;; 大项目state的hook
 (defun org-summary-todo (n-done n-not-done)
   "Switch entry to DONE when all subentries are done, to TODO otherwise."
@@ -47,18 +47,21 @@
 			   ;;修复bug,不可删除
 			   (nil :maxlevel . 1)
 			   ("~/notes/todos/inbox.org" :maxlevel . 1)
+			   ("~/notes/todos/finish.org" :maxlevel . 1)
 			   ))
 (defun agenda-file()
   (interactive)
   (find-file "~/notes/todos/inbox.org"))
+(spacemacs/set-leader-keys
+  "oa" 'agenda-file)
 
 ;; ----------------------------------------capture
-(setq org-capture-templates '(("c" "Todo [inbox]" entry
+(setq org-capture-templates '(("c" "Todo [Tasks]" entry
 			       (file+headline "~/notes/todos/inbox.org" "Tasks")
-			       "* TODO %i%?")
+			       "* TODO %i%?\n%T")
 			      ("l" "Todo [NCE2]" entry
 			       (file+headline "~/notes/todos/inbox.org" "NCE2")
-			       "* TODO %i%?")
+			       "* TODO %i%?\n%T")
 			      ))
 
 (require 'init-org-agenda-custom-commands)

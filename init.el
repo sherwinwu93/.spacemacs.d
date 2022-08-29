@@ -47,7 +47,9 @@ This function should only modify configuration layer settings."
      markdown
      multiple-cursors
      (org :variables
-          org-enforce-todo-dependencies t)
+          org-enforce-todo-dependencies t
+          org-enable-notifications t
+          org-start-notification-daemon-on-startup t)
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
