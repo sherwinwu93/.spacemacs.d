@@ -572,6 +572,10 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  (dolist (charset '(kana han cjk-misc bopomofo))
+    (set-fontset-font (frame-parameter nil 'font) charset
+                      (font-spec :family "Consolas"
+                                 :size 9.5)))
 )
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
 (load custom-file 'no-error 'no-message)
