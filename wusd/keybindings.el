@@ -57,6 +57,10 @@
 ;;   )
 ;; (spacemacs/declare-prefix
 ;;   "ao" "org")
+(spacemacs/set-leader-keys
+  "oa" 'org-agenda
+  "oc" 'org-capture
+  "of" 'agenda-file)
 
 ;; ------------------------------------------------------------scheme
 (define-key global-map (kbd "<f9>") 'wusd/open-mit-scheme)

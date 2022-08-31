@@ -52,8 +52,6 @@
 (defun agenda-file()
   (interactive)
   (find-file "~/notes/todos/inbox.org"))
-(spacemacs/set-leader-keys
-  "oa" 'agenda-file)
 
 ;; ----------------------------------------capture
 (setq org-capture-templates '(("c" "Todo [Tasks]" entry
