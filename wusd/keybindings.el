@@ -1,5 +1,8 @@
 ;; 所有快捷键: 执行顺序:第5
 ;; ------------------------------------------------------------evil
+(define-key evil-insert-state-map (kbd "C-a") 'evil-beginning-of-line)
+(define-key evil-insert-state-map (kbd "C-k") 'kill-sentence)
+
 ;; ------------------------------------------------------------input
 (define-key rime-active-mode-map (kbd "<tab>") 'rime-inline-ascii)
 (define-key rime-mode-map (kbd "C-`") 'rime-send-keybinding)

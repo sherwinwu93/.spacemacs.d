@@ -45,7 +45,7 @@ This function should only modify configuration layer settings."
      helm
      ;; lsp
      markdown
-     multiple-cursors
+     ;;multiple-cursors
      (org :variables
           org-enforce-todo-dependencies t
           org-enable-notifications t
