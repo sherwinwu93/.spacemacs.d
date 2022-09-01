@@ -334,7 +334,7 @@ It should only modify the values of Spacemacs settings."
    ;; elements in the `kill-ring'. (default nil)
    dotspacemacs-enable-paste-transient-state nil
 
-  ;; Which-key delay in seconds. The which-key buffer is the popup listing
+   ;; Which-key delay in seconds. The which-key buffer is the popup listing
    ;; the commands bound to the current keystroke sequence. (default 0.4)
    dotspacemacs-which-key-delay 0.4
 
@@ -545,7 +545,7 @@ default it calls `spacemacs/load-spacemacs-env' which loads the environment
 variables declared in `~/.spacemacs.env' or `~/.spacemacs.d/.spacemacs.env'.
 See the header of this file for more information."
   (spacemacs/load-spacemacs-env)
-)
+	)
 
 (defun dotspacemacs/user-init ()
   "Initialization for user code:
@@ -553,11 +553,11 @@ This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
-(setq configuration-layer-elpa-archives
-      '(("melpa-cn" . "http://mirrors.ustc.edu.cn/elpa/melpa/")
-        ("nongnu-cn"   . "http://mirrors.ustc.edu.cn/elpa/nongnu/")
-        ("gnu-cn"   . "http://mirrors.ustc.edu.cn/elpa/gnu/")))
-)
+	(setq configuration-layer-elpa-archives
+				'(("melpa-cn" . "http://mirrors.ustc.edu.cn/elpa/melpa/")
+					("nongnu-cn"   . "http://mirrors.ustc.edu.cn/elpa/nongnu/")
+					("gnu-cn"   . "http://mirrors.ustc.edu.cn/elpa/gnu/")))
+	)
 
 
 (defun dotspacemacs/user-load ()
@@ -565,7 +565,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 This function is called only while dumping Spacemacs configuration. You can
 `require' or `load' the libraries of your choice that will be included in the
 dump."
-)
+	)
 
 
 (defun dotspacemacs/user-config ()
@@ -574,13 +574,37 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-	(require 'hungry-delete)
-	(global-hungry-delete-mode)
   (dolist (charset '(kana han cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font) charset
                       (font-spec :family "Consolas"
                                  :size 9.5)))
-)
+
+	(setq custom-tab-width 2)
+
+	;; Two callable functions for enabling/disabling tabs in Emacs
+	(defun disable-tabs () (setq indent-tabs-mode nil))
+	(defun enable-tabs ()
+		(local-set-key (kbd "TAB") 'tab-to-tab-stop)
+		(setq indent-tabs-mode t)
+		(setq tab-width custom-tab-width))
+
+	(add-hook 'prog-mode-hook 'enable-tabs)
+	(add-hook 'org-mode-hook 'enable-tabs)
+	(add-hook 'lisp-mode-hook 'disable-tabs)
+	(add-hook 'emacs-lisp-mode-hook 'disable-tabs)
+
+	(setq-default python-indent-offset custom-tab-width) ;; Python
+	(setq-default js-indent-level custom-tab-width) ;; Javascript
+
+	(setq-default electric-indent-inhibit t)
+
+  (setq backward-delete-char-untabify-method 'hungry)
+
+  (setq-default evil-shift-width custom-tab-width)
+
+	;; (global-whitespace-mode) ; Enable whitespace mode everywhere
+																				; END TABS CONFIG
+	)
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
 (load custom-file 'no-error 'no-message)
 
