@@ -25,6 +25,8 @@
 ;; ------------------------------------------------------------files
 (spacemacs/set-leader-keys
   "d" 'dired-jump)
+(spacemacs/set-leader-keys
+  "<tab>" 'other-window)
 ;; ------------------------------------------------------------edit
 ;; --------------------CUDA
 ;;对应Windows上面的Ctrl-a 全选

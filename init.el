@@ -589,7 +589,7 @@ before packages are loaded."
 		(setq tab-width custom-tab-width))
 
 	(add-hook 'prog-mode-hook 'enable-tabs)
-	(add-hook 'org-mode-hook 'enable-tabs)
+	(add-hook 'prog-mode-hook 'enable-tabs)
 	(add-hook 'lisp-mode-hook 'disable-tabs)
 	(add-hook 'emacs-lisp-mode-hook 'disable-tabs)
 
