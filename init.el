@@ -577,8 +577,8 @@ before packages are loaded."
   ;; --------------------fonts
   (dolist (charset '(kana han cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font) charset
-                      (font-spec :family "Consolas"
-                                 :size 14)))
+                      (font-spec :family "Source Han Sans SC VF"
+                                 :size 17)))
   ;; 递归遍历加载路径
   (defun add-subdirs-to-load-path(dir)
     "Recursive add directories to `load-path`"
