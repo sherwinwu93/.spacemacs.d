@@ -1,0 +1,30 @@
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*-
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+((".cache"
+ (filename . "~/.emacs.d/.cache/")
+ (front-context-string . "bookmarks\n  -rw-")
+ (rear-context-string . " Sep  1 18:58   ")
+ (position . 341))
+("init-files.el"
+ (filename . "~/.spacemacs.d/lisp/init-files.el")
+ (front-context-string)
+ (rear-context-string . "de 'init-files)\n")
+ (position . 455))
+("init-edit.el"
+ (filename . "~/.spacemacs.d/lisp/init-edit.el")
+ (front-context-string . "tric-indent-inhi")
+ (rear-context-string . "etq-default elec")
+ (position . 769))
+("org-capture-last-stored"
+ (filename . "~/notes/todos/inbox.org")
+ (front-context-string . "** TODO 去除.space")
+ (rear-context-string . "       :@idea:\n\n")
+ (position . 442))
+("org-refile-last-stored"
+ (filename . "~/notes/todos/finish.org")
+ (front-context-string . "** DONE 强大的Org-m")
+ (rear-context-string . ">  0:07\n:END:\n\n\n")
+ (position . 7470))
+)

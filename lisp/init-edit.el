@@ -1,6 +1,7 @@
 ;; ----------------------------------------Abbreviation
 (setq-default abbrev-mode t)
 (read-abbrev-file "~/.spacemacs.d/abbrev_defs")
+(setq-default bookmark-default-file "~/.spacemacs.d/bookmarks")
 
 ;; ----------------------------------------tab
 (setq custom-tab-width 2)
