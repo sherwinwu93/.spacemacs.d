@@ -265,7 +265,7 @@ It should only modify the values of Spacemacs settings."
    ;; a non-negative integer (pixel size), or a floating-point (point size).
    ;; Point size is recommended, because it's device independent. (default 10.0)
    dotspacemacs-default-font '("Consolas"
-                               :size 11.5
+                               :size 17
                                :weight normal
                                :width normal)
    ;; The leader key (default "SPC")
@@ -574,6 +574,11 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  ;; --------------------fonts
+  (dolist (charset '(kana han cjk-misc bopomofo))
+    (set-fontset-font (frame-parameter nil 'font) charset
+                      (font-spec :family "Consolas"
+                                 :size 14)))
   ;; 递归遍历加载路径
   (defun add-subdirs-to-load-path(dir)
     "Recursive add directories to `load-path`"
