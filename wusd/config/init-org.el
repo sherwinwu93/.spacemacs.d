@@ -11,13 +11,13 @@
 
 (setq org-todo-keywords
       '((sequence "TODO(t)"
-		  "DOING(g)"
-		  "BLOCKED(b)"
-		  "|"
-		  "DONE(d)"
-      "CANCELED(c)"
-		  )
-	))
+		              "DOING(g)"
+		              "BLOCKED(b)"
+		              "|"
+		              "DONE(d)"
+                  "CANCELED(c)"
+		              )
+	      ))
 ;; state的颜色
 (setq org-todo-keyword-faces
       (quote (("TODO" :foreground "yellow" :weight bold)
@@ -25,7 +25,7 @@
 	            ("BLOCKED" :foreground "red" :weight bold)
 	            ("DONE" :foreground "forest green" :weight bold)
 	            ("CANCELED" :foreground "yellow" :weight bold)
-	      )))
+	            )))
 
 ;; If task state is turned into done, it will  insert "Closed [timestamp]".
 (setq org-log-done 'time)
@@ -50,18 +50,18 @@
 		                  ))
 
 (setq org-refile-targets '(
-			   ;;修复bug,不可删除
-			   (nil :maxlevel . 1)
-			   ("~/notes/todos/inbox.org" :maxlevel . 1)
-			   ("~/notes/todos/finish.org" :maxlevel . 1)
-			   ))
+			                     ;;修复bug,不可删除
+			                     (nil :maxlevel . 1)
+			                     ("~/notes/todos/inbox.org" :maxlevel . 1)
+			                     ("~/notes/todos/finish.org" :maxlevel . 1)
+			                     ))
 (defun agenda-file()
   (interactive)
   (find-file "~/notes/todos/"))
 
 ;; ----------------------------------------capture
 ;; (setq org-capture-templates '(
- ;;("c" "Todo [Tasks]" entry
+;;("c" "Todo [Tasks]" entry
 ;; 			       (file+headline "~/notes/todos/inbox.org" "Tasks")
 ;; 			       "* TODO %i%?\n%T")
 ;; 			      ("i" "[Ideas]" entry
@@ -70,7 +70,7 @@
 ;; 			      ("f" "Todo [Infos]" entry
 ;; 			       (file+headline "~/notes/todos/inbox.org" "Infos")
 ;; 			       "* %i%?\n")
-			      ;; )
+;; )
 (setq org-capture-templates
       '(
         ("t" "TODO [Task]"
