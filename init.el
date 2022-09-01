@@ -28,7 +28,7 @@ This function should only modify configuration layer settings."
 
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
-   dotspacemacs-configuration-layer-path '("~/.spacemacs.d/")
+   dotspacemacs-configuration-layer-path '()
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
@@ -56,7 +56,6 @@ This function should only modify configuration layer settings."
      spell-checking
      ;; syntax-checking
      ;; version-control
-     wusd
      treemacs)
 
 
@@ -68,7 +67,8 @@ This function should only modify configuration layer settings."
    ;; `dotspacemacs/user-config'. To use a local version of a package, use the
    ;; `:location' property: '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(rime
+                                      youdao-dictionary)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -574,37 +574,23 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-  (dolist (charset '(kana han cjk-misc bopomofo))
-    (set-fontset-font (frame-parameter nil 'font) charset
-                      (font-spec :family "Consolas"
-                                 :size 9.5)))
+  ;; 递归遍历加载路径
+  (defun add-subdirs-to-load-path(dir)
+    "Recursive add directories to `load-path`"
+    (let ((default-directory (file-name-as-directory dir)))
+      (add-to-list 'load-path dir)
+      (normal-top-level-add-subdirs-to-load-path)))
+  (add-subdirs-to-load-path "~/.spacemacs.d/lisp")
+  (require 'init-input)
+  (require 'init-better-defaults)
+  (require 'init-edit)
+  (require 'init-files)
+  (require 'init-funcs)
+  (require 'init-scheme)
+  (require 'init-translate)
+  (require 'init-keymaps)
+  )
 
-	(setq custom-tab-width 2)
-
-	;; Two callable functions for enabling/disabling tabs in Emacs
-	(defun disable-tabs () (setq indent-tabs-mode nil))
-	(defun enable-tabs ()
-		(local-set-key (kbd "TAB") 'tab-to-tab-stop)
-		(setq indent-tabs-mode t)
-		(setq tab-width custom-tab-width))
-
-	(add-hook 'prog-mode-hook 'enable-tabs)
-	(add-hook 'prog-mode-hook 'enable-tabs)
-	(add-hook 'lisp-mode-hook 'disable-tabs)
-	(add-hook 'emacs-lisp-mode-hook 'disable-tabs)
-
-	(setq-default python-indent-offset custom-tab-width) ;; Python
-	(setq-default js-indent-level custom-tab-width) ;; Javascript
-
-	(setq-default electric-indent-inhibit t)
-
-  (setq backward-delete-char-untabify-method 'hungry)
-
-  (setq-default evil-shift-width custom-tab-width)
-
-	;; (global-whitespace-mode) ; Enable whitespace mode everywhere
-																				; END TABS CONFIG
-	)
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
 (load custom-file 'no-error 'no-message)
 

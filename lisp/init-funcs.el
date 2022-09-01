@@ -1,15 +1,3 @@
-;; 过程包: 加载顺序：第3
-;; 递归遍历加载路径
-(defun add-subdirs-to-load-path(dir)
-  "Recursive add directories to `load-path`"
-  (let ((default-directory (file-name-as-directory dir)))
-    (add-to-list 'load-path dir)
-    (normal-top-level-add-subdirs-to-load-path)))
-
-
-(add-subdirs-to-load-path "~/.spacemacs.d/wusd/funcs/")
-;; --------------------------------------------------------------------------------
-
 ;; ------------------------------------------------------------better-defaults
 ;; 移动到最后并执行代码
 (defun wusd/eval-last-sexp()
@@ -47,3 +35,5 @@
       (kmacro-lambda-form [?\M-x ?i ?v ?y ?- ?p ?u ?s ?h ?- ?v ?i ?e ?w return return] 0 "%d"))
 (fset 'wusd/ivy-pop-view
       (kmacro-lambda-form [?\M-x ?i ?v ?y ?- ?p ?o ?p ?- ?v ?i ?e ?w return return] 0 "%d"))
+
+(provide 'init-funcs)
