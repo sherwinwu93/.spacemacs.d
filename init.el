@@ -588,6 +588,7 @@ before packages are loaded."
   (require 'init-funcs)
   (require 'init-scheme)
   (require 'init-translate)
+  (require 'init-org)
   (require 'init-keymaps)
   )
 
