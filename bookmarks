@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-((".cache"
+(("init-keymaps.el"
+ (filename . "~/.spacemacs.d/lisp/init-keymaps.el")
+ (front-context-string . "向\n(define-key gl")
+ (rear-context-string . "---------------方")
+ (position . 1077))
+(".cache"
  (filename . "~/.emacs.d/.cache/")
  (front-context-string . "bookmarks\n  -rw-")
  (rear-context-string . " Sep  1 18:58   ")

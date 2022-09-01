@@ -12,7 +12,8 @@
 ;; 先sharpKey改Capslock键, 把Capslock改为C-g键
 (define-key key-translation-map (kbd "<f10>") (kbd "C-g"))
 (define-key global-map (kbd "<f10>") 'keyboard-escape-quit)
-(define-key key-translation-map (kbd "<f12>") (kbd "C-h"))
+(define-key global-map (kbd "<f11>") 'bookmark-set)
+(define-key global-map (kbd "<f12>") 'helm-bookmarks)
 ;; 改键<menu>为modifier
 (define-key global-map (kbd "<menu>") nil)
 (define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier)
