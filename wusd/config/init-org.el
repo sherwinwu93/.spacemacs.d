@@ -1,4 +1,7 @@
-(add-hook 'org-mode-hook (lambda() (org-indent-mode t)))
+(add-hook 'org-mode-hook (lambda()
+                           (org-indent-mode t)
+                           ))
+
 
 ;; 定义 agenda 文件的位置
 (setq org-agenda-files '("~/notes/todos/"))

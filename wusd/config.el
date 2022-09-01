@@ -8,6 +8,7 @@
 (setq rime-show-candidate 'posframe)
 (setq default-input-method "rime")
 ;; ------------------------------------------------------------better-defaults
+(setq-default indent-tabs-mode t)
 ;; ----------------------------------------Display
 (set-frame-position (selected-frame) 800 100)
 (set-frame-width (selected-frame) 110)
