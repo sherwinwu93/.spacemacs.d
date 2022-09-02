@@ -44,13 +44,12 @@
 (define-key global-map (kbd "s-s") 'query-replace)
 ;; ------------------------------------------------------------code
 (define-key key-translation-map (kbd "C-/") 'comment-line)
-(define-key key-translation-map (kbd "C-M-l") 'indent-region)
 
 ;; ------------------------------------------------------------translate
 (spacemacs/set-leader-keys
   "ot" 'youdao-dictionary-search-at-point+
   "oy" 'youdao-dictionary-search-at-point
-)
+  )
 ;; ------------------------------------------------------------org
 ;; (spacemacs/set-leader-keys
 ;;   "ao" nil
