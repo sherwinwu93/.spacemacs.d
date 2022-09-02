@@ -42,10 +42,12 @@ This function should only modify configuration layer settings."
      auto-completion
      better-defaults
      emacs-lisp
-     git
-     helm
-     ;; lsp
+     (git :variables
+          git-magit-status-fullscreen t)
      markdown
+     ;; helm
+     ivy
+     ;; lsp
      ;;multiple-cursors
      (org :variables
           org-enforce-todo-dependencies t
@@ -244,8 +246,8 @@ It should only modify the values of Spacemacs settings."
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         monokai
                          spacemacs-dark
+                         monokai
                          jetbrains-darcula
                          spacemacs-light)
 
@@ -578,7 +580,7 @@ before packages are loaded."
   ;; --------------------fonts
   (dolist (charset '(kana han cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font) charset
-                      (font-spec :family "Source Han Sans SC VF"
+                      (font-spec :family "Microsoft YaHei Mono"
                                  :size 16)))
   ;; 递归遍历加载路径
   (defun add-subdirs-to-load-path(dir)

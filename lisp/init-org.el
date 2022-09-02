@@ -47,9 +47,12 @@
 			                     ("~/notes/todos/inbox.org" :maxlevel . 1)
 			                     ("~/notes/todos/finish.org" :maxlevel . 1)
 			                     ))
-(defun agenda-file()
+(defun agenda-dirs()
   (interactive)
   (find-file "~/notes/todos/"))
+(defun agenda-file()
+  (interactive)
+  (find-file "~/notes/todos/inbox.org"))
 
 ;; ----------------------------------------capture
 (setq org-capture-templates

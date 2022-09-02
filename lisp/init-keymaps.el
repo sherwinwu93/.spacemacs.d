@@ -13,7 +13,7 @@
 (define-key key-translation-map (kbd "<f6>") (kbd "C-g"))
 (define-key global-map (kbd "<f6>") 'keyboard-escape-quit)
 (define-key global-map (kbd "<f9>") 'bookmark-set)
-(define-key global-map (kbd "<f10>") 'helm-bookmarks)
+(define-key global-map (kbd "<f10>") 'bookmark-jump)
 ;; 改键<menu>为modifier
 (define-key global-map (kbd "<menu>") nil)
 (define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier)
@@ -35,9 +35,9 @@
 ;; (define-key global-map (kbd "s-s") 'save-buffer)
 ;;对应Windows上面的Ctrl-v 粘贴
 (define-key global-map (kbd "s-v") 'yank)
-;;对应Windows上面的Ctrol-z 撤销
+;;对应Windows上面的Ctrl-z 撤销
 (define-key global-map (kbd "s-z") 'undo)
-;;对应Windows上面的Ctrol-x 剪切
+;;对应Windows上面的Ctrl-x 剪切
 (define-key global-map (kbd "s-x") 'kill-region)
 ;; ----------------------------------------Search and Replace
 (define-key global-map (kbd "C-s") 'helm-swoop)

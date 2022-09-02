@@ -2,4 +2,14 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-()
+(("spacemacs-doc.org"
+ (filename . "~/notes/emacs/spacemacs-doc.org")
+ (front-context-string . "\n*** 2. Dotfile\n")
+ (rear-context-string . " layers to load\n")
+ (position . 546))
+("init.el"
+ (filename . "~/.spacemacs.d/init.el")
+ (front-context-string . "tify-org-buffer'")
+ (rear-context-string . " `spacemacs/pret")
+ (position . 24204))
+)
