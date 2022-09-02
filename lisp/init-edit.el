@@ -7,7 +7,10 @@
 (read-abbrev-file "~/.spacemacs.d/abbrev_defs")
 ;; ----------------------------------------bookmarks
 (setq-default bookmark-default-file "~/.spacemacs.d/bookmarks")
-
+(fset 'wusd/ivy-push-view
+      (kmacro-lambda-form [?\M-x ?i ?v ?y ?- ?p ?u ?s ?h ?- ?v ?i ?e ?w return return] 0 "%d"))
+(fset 'wusd/ivy-pop-view
+      (kmacro-lambda-form [?\M-x ?i ?v ?y ?- ?p ?o ?p ?- ?v ?i ?e ?w return return] 0 "%d"))
 ;; ----------------------------------------tab
 (setq custom-tab-width 2)
 

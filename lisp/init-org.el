@@ -79,6 +79,8 @@
          "* TODO %i%?\n SCHEDULED: %T"
          :empty-lines 2)
         ))
+(fset '<s
+      (kmacro-lambda-form [?\C-a ?# ?+ ?B ?E ?I backspace ?G ?I ?N ?_ ?S ?R ?C return ?# ?+ ?E ?N ?D ?_ ?S ?R ?C ?\C-p ?\C-e ? ] 0 "%d"))
 
 (require 'init-org-agenda-custom-commands)
 

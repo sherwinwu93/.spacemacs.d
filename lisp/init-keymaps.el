@@ -2,14 +2,6 @@
 ;; 清空evil insert模式的map,使用默认
 (setcdr evil-insert-state-map nil)
 (define-key evil-insert-state-map (kbd "<escape>") 'evil-normal-state)
-;; --------------------CUDA
-;;对应Windows上面的Ctrl-c 复制
-(define-key evil-insert-state-map (kbd "C-c") 'kill-ring-save)
-;;对应Windows上面的Ctrl-v 粘贴
-(define-key evil-insert-state-map (kbd "C-v") 'yank)
-;;对应Windows上面的Ctrl-z 撤销
-(define-key evil-insert-state-map (kbd "C-z") 'undo)
-
 ;; ------------------------------------------------------------input
 (define-key rime-active-mode-map (kbd "<tab>") 'rime-inline-ascii)
 (define-key rime-mode-map (kbd "C-`") 'rime-send-keybinding)
@@ -20,8 +12,6 @@
 ;; 先sharpKey改Capslock键, 把Capslock改为C-g键
 (define-key key-translation-map (kbd "<f6>") (kbd "C-g"))
 (define-key global-map (kbd "<f6>") 'minibuffer-keyboard-quit)
-(define-key global-map (kbd "<f9>") 'bookmark-set)
-(define-key global-map (kbd "<f10>") 'bookmark-jump)
 ;; 改键<menu>为modifier
 (define-key global-map (kbd "<menu>") nil)
 (define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier)
@@ -32,8 +22,12 @@
 (define-key global-map (kbd "<f5>") 'wusd/eval-last-sexp)
 ;; ------------------------------------------------------------files
 (spacemacs/set-leader-keys
-  "d" 'dired-jump)
+  "d" 'dired-jump
+  "wo" 'other-window)
 ;; ------------------------------------------------------------edit
+;; --------------------bookmarks
+(define-key global-map (kbd "<f9>") 'wusd/ivy-push-view)
+(define-key global-map (kbd "<f10>") 'ivy-switch-view)
 ;; --------------------CUDA
 ;;对应Windows上面的Ctrl-a 全选
 (define-key global-map (kbd "s-a") 'mark-whole-buffer)

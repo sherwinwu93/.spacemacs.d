@@ -596,7 +596,6 @@ before packages are loaded."
   (require 'init-better-defaults)
   (require 'init-edit)
   (require 'init-files)
-  (require 'init-funcs)
   (require 'init-scheme)
   (require 'init-translate)
   (require 'init-org)
