@@ -11,7 +11,7 @@
 ;; ----------------------------------------系统级按键
 ;; 先sharpKey改Capslock键, 把Capslock改为C-g键
 (define-key key-translation-map (kbd "<f6>") (kbd "C-g"))
-(define-key global-map (kbd "<f6>") 'keyboard-escape-quit)
+(define-key global-map (kbd "<f6>") 'minibuffer-keyboard-quit)
 (define-key global-map (kbd "<f9>") 'bookmark-set)
 (define-key global-map (kbd "<f10>") 'bookmark-jump)
 ;; 改键<menu>为modifier
