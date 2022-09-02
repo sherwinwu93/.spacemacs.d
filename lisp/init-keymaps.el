@@ -2,7 +2,15 @@
 ;; 清空evil insert模式的map,使用默认
 (setcdr evil-insert-state-map nil)
 (define-key evil-insert-state-map (kbd "<escape>") 'evil-normal-state)
-
+;; --------------------CUDA
+;;对应Windows上面的Ctrl-c 复制
+(define-key evil-insert-state-map (kbd "C-c") 'kill-ring-save)
+;;对应Windows上面的Ctrl-v 粘贴
+(define-key evil-insert-state-map (kbd "C-v") 'yank)
+;;对应Windows上面的Ctrl-z 撤销
+(define-key evil-insert-state-map (kbd "C-z") 'undo)
+;;对应Windows上面的Ctrl-x 剪切
+(define-key evil-insert-state-map (kbd "C-x") 'kill-region)
 
 ;; ------------------------------------------------------------input
 (define-key rime-active-mode-map (kbd "<tab>") 'rime-inline-ascii)
