@@ -41,7 +41,7 @@ This function should only modify configuration layer settings."
      yaml
      auto-completion
      better-defaults
-     emacs-lisp
+     ;; emacs-lisp
      (git :variables
           git-magit-status-fullscreen t)
      markdown
@@ -270,7 +270,8 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-default-font '("Consolas"
                                :size 17
                                :weight normal
-                               :width normal)
+                               :width normal
+                               )
    ;; The leader key (default "SPC")
    dotspacemacs-leader-key "SPC"
 
