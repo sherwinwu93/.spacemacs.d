@@ -56,25 +56,25 @@
       '(
         ("t" "TODO [Task]"
          entry (file+headline "~/notes/todos/inbox.org" "Task")
-         "* TODO %i%?\n%T"
-         :empty-lines 1)
+         "* TODO %i%?\n SCHEDULED: %T"
+         :empty-lines 2)
         ("w" "TODO [Work]"
          entry (file+headline "~/notes/todos/inbox.org" "Work")
-         "* TODO %i%?\n%T"
-         :empty-lines 1)
+         "* TODO %i%?\n SCHEDULED: %T"
+         :empty-lines 2)
         ("i" "TODO [Idea]"
          entry (file+headline "~/notes/todos/inbox.org" "Idea")
-         "* TODO %i%?\n%t"
-         :empty-lines 1)
+         "* TODO %i%?\n SCHEDULED: %t"
+         :empty-lines 2)
         ("f" "[Info]"
          entry (file+headline "~/notes/todos/inbox.org" "Info")
          "* %i%?\n"
-         :empty-lines 1)
+         :empty-lines 2)
         ;; 狭义上的learn
         ("l" "TODO [learn]"
          entry (file+headline "~/notes/todos/inbox.org" "Learn")
-         "* TODO %i%?\n%T"
-         :empty-lines 1)
+         "* TODO %i%?\n SCHEDULED: %T"
+         :empty-lines 2)
         ))
 
 (require 'init-org-agenda-custom-commands)

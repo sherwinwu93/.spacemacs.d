@@ -10,10 +10,10 @@
 ;; ------------------------------------------------------------better-defaults
 ;; ----------------------------------------系统级按键
 ;; 先sharpKey改Capslock键, 把Capslock改为C-g键
-(define-key key-translation-map (kbd "<f10>") (kbd "C-g"))
-(define-key global-map (kbd "<f10>") 'keyboard-escape-quit)
-(define-key global-map (kbd "<f11>") 'bookmark-set)
-(define-key global-map (kbd "<f12>") 'helm-bookmarks)
+(define-key key-translation-map (kbd "<f6>") (kbd "C-g"))
+(define-key global-map (kbd "<f6>") 'keyboard-escape-quit)
+(define-key global-map (kbd "<f9>") 'bookmark-set)
+(define-key global-map (kbd "<f10>") 'helm-bookmarks)
 ;; 改键<menu>为modifier
 (define-key global-map (kbd "<menu>") nil)
 (define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier)
@@ -25,8 +25,6 @@
 ;; ------------------------------------------------------------files
 (spacemacs/set-leader-keys
   "d" 'dired-jump)
-;; (spacemacs/set-leader-keys
-;;   "<tab>" 'other-window)
 ;; ------------------------------------------------------------edit
 ;; --------------------CUDA
 ;;对应Windows上面的Ctrl-a 全选
@@ -44,6 +42,10 @@
 ;; ----------------------------------------Search and Replace
 (define-key global-map (kbd "C-s") 'helm-swoop)
 (define-key global-map (kbd "s-s") 'query-replace)
+;; ------------------------------------------------------------code
+(define-key key-translation-map (kbd "C-/") 'comment-line)
+(define-key key-translation-map (kbd "C-M-l") 'indent-region)
+
 ;; ------------------------------------------------------------translate
 (spacemacs/set-leader-keys
   "ot" 'youdao-dictionary-search-at-point+
@@ -66,8 +68,9 @@
   "oa" 'org-agenda
   "oc" 'org-capture
   "of" 'agenda-file)
+(define-key global-map (kbd "<f11>") 'org-capture)
+(define-key global-map (kbd "<f12>") 'org-agenda-list)
 
 ;; ------------------------------------------------------------scheme
-(define-key global-map (kbd "<f9>") 'wusd/open-mit-scheme)
 
 (provide 'init-keymaps)

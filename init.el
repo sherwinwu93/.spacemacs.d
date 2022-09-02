@@ -38,6 +38,7 @@ This function should only modify configuration layer settings."
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
+     yaml
      auto-completion
      better-defaults
      emacs-lisp
@@ -578,7 +579,7 @@ before packages are loaded."
   (dolist (charset '(kana han cjk-misc bopomofo))
     (set-fontset-font (frame-parameter nil 'font) charset
                       (font-spec :family "Source Han Sans SC VF"
-                                 :size 17)))
+                                 :size 16)))
   ;; 递归遍历加载路径
   (defun add-subdirs-to-load-path(dir)
     "Recursive add directories to `load-path`"

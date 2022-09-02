@@ -2,5 +2,6 @@
 ;; 输入法显示框
 (setq rime-show-candidate 'posframe)
 (setq default-input-method "rime")
+(setq rime-user-data-dir "~/rime")
 
 (provide 'init-input)

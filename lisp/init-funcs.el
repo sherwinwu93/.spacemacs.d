@@ -21,6 +21,9 @@
 (defun todo-dirs()
   (interactive)
   (find-file "~/notes/todos/"))
+(defun wusd/org-capture()
+  (interactive)
+  (org-capture))
 
 (fset '<s
       (kmacro-lambda-form [?\C-a ?# ?+ ?B ?E ?I backspace ?G ?I ?N ?_ ?S ?R ?C return ?# ?+ ?E ?N ?D ?_ ?S ?R ?C ?\C-p ?\C-e ? ] 0 "%d"))

@@ -2,7 +2,13 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("init-keymaps.el"
+(("qq"
+ (position . 2422)
+ (help-fn . describe-mode)
+ (help-args "*Org Agenda*")
+ (position . 2422)
+ (handler . help-bookmark-jump))
+("init-keymaps.el"
  (filename . "~/.spacemacs.d/lisp/init-keymaps.el")
  (front-context-string . "向\n(define-key gl")
  (rear-context-string . "---------------方")
@@ -24,9 +30,9 @@
  (position . 769))
 ("org-capture-last-stored"
  (filename . "~/notes/todos/inbox.org")
- (front-context-string . "** TODO 去除.space")
- (rear-context-string . "       :@idea:\n\n")
- (position . 442))
+ (front-context-string . "** TODO 测试,c能不能起")
+ (rear-context-string . "22-09-01 Thu>\n\n\n")
+ (position . 724))
 ("org-refile-last-stored"
  (filename . "~/notes/todos/finish.org")
  (front-context-string . "** DONE 强大的Org-m")
