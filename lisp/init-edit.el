@@ -1,3 +1,7 @@
+(defun set-bigger-spacing ()
+  (setq-local default-text-properties '(line-spacing 0.2 line-height 1.2)))
+(add-hook 'text-mode-hook 'set-bigger-spacing)
+(add-hook 'prog-mode-hook 'set-bigger-spacing)
 ;; ----------------------------------------Abbreviation
 (setq-default abbrev-mode t)
 (read-abbrev-file "~/.spacemacs.d/abbrev_defs")
@@ -14,7 +18,7 @@
 	(setq indent-tabs-mode t)
 	(setq tab-width custom-tab-width))
 (add-hook 'prog-mode-hook 'enable-tabs)
-(add-hook 'org-mode-hook 'enable-tabs)
+(add-hook 'text-mode-hook 'enable-tabs)
 (add-hook 'lisp-mode-hook 'disable-tabs)
 (add-hook 'emacs-lisp-mode-hook 'disable-tabs)
 
