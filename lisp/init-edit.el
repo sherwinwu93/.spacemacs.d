@@ -13,7 +13,6 @@
 	(local-set-key (kbd "TAB") 'tab-to-tab-stop)
 	(setq indent-tabs-mode t)
 	(setq tab-width custom-tab-width))
-
 (add-hook 'prog-mode-hook 'enable-tabs)
 (add-hook 'org-mode-hook 'enable-tabs)
 (add-hook 'lisp-mode-hook 'disable-tabs)
