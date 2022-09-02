@@ -1,6 +1,8 @@
 ;; ------------------------------------------------------------evil
-(define-key evil-insert-state-map (kbd "C-a") 'evil-beginning-of-line)
-(define-key evil-insert-state-map (kbd "C-k") 'kill-sentence)
+;; 清空evil insert模式的map,使用默认
+(setcdr evil-insert-state-map nil)
+(define-key evil-insert-state-map (kbd "<escape>") 'evil-normal-state)
+
 
 ;; ------------------------------------------------------------input
 (define-key rime-active-mode-map (kbd "<tab>") 'rime-inline-ascii)
