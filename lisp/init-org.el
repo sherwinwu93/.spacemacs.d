@@ -74,7 +74,7 @@
 ;; ----------------------------------------org-agenda-custom-commands
 (setq org-agenda-custom-commands
   ;; --------------------
-  '(("w" "Wusd block agenda"
+  '(("o" "Wusd Personal Agenda"
        ((tags-todo "+PRIORITY=\"A\"")
         (agenda "" ((org-agenda-span 1)))
         (agenda "" ((org-agenda-entry-types '(:deadline))
@@ -84,7 +84,7 @@
         (todo "TODO")
 				(todo "DONE")))
     ;; --------------------
-    ("W" "Weekly Review" ((agenda "" ((org-agenda-span 7)))
+    ("w" "Weekly Review" ((agenda "" ((org-agenda-span 7)))
 			                    (stuck "")
 			                    (todo "TODO")
 			                    (todo "DOING")

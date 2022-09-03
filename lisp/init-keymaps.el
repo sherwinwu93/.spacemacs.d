@@ -23,7 +23,7 @@
 ;; ------------------------------------------------------------files
 (spacemacs/set-leader-keys
   "d" 'dired-jump)
-(define-key global-map (kbd "s-o") 'other-window)
+(define-key global-map (kbd "s-w") 'other-window)
 ;; ------------------------------------------------------------edit
 ;; --------------------bookmarks
 (define-key global-map (kbd "<f9>") 'wusd/ivy-push-view)
@@ -52,16 +52,10 @@
   "ot" 'youdao-dictionary-search-at-point+
   "oy" 'youdao-dictionary-search-at-point
   )
+(define-key global-map (kbd "s-t") 'youdao-dictionary-search-at-point)
 ;; ------------------------------------------------------------org
-;; (spacemacs/declare-prefix
-;;   "ao" "org")
-(spacemacs/set-leader-keys
-  "oa" 'org-agenda
-  "oc" 'org-capture
-  "of" 'agenda-file)
-(define-key global-map (kbd "<f11>") 'org-capture)
-(define-key global-map (kbd "<f12>") 'org-agenda)
-
+(define-key global-map (kbd "s-o") 'org-agenda)
+(define-key global-map (kbd "s-i") 'org-capture)
 ;; ------------------------------------------------------------scheme
 
 (provide 'init-keymaps)
