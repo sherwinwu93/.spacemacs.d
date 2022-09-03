@@ -1,3 +1,4 @@
+;; ----------------------------------------files
 ;; 关闭生成init.el~文件
 (use-package auto-save
   :load-path "~/.spacemacs.d/lisp/extensions/"

@@ -15,7 +15,7 @@
 ;; 改键<menu>为modifier
 (define-key global-map (kbd "<menu>") nil)
 (define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier)
-;; --------------------方向
+;; --------------------Naivagate
 (define-key global-map (kbd "C-f") 'scroll-up-command)
 (define-key global-map (kbd "C-b") 'scroll-down-command)
 ;; ----------------------------------------Command
@@ -42,7 +42,7 @@
 ;;对应Windows上面的Ctrl-x 剪切
 (define-key global-map (kbd "s-x") 'kill-region)
 ;; ----------------------------------------Search and Replace
-(define-key global-map (kbd "C-s") 'helm-swoop)
+(define-key global-map (kbd "C-s") 'swiper)
 (define-key global-map (kbd "s-s") 'query-replace)
 ;; ------------------------------------------------------------code
 (define-key key-translation-map (kbd "C-/") 'comment-line)
@@ -53,16 +53,6 @@
   "oy" 'youdao-dictionary-search-at-point
   )
 ;; ------------------------------------------------------------org
-;; (spacemacs/set-leader-keys
-;;   "ao" nil
-;;   "aop" 'org-ctrl-c-ctrl-c
-;;   "aot" 'org-todo
-;;   "aod" 'org-deadline
-;;   "aos" 'org-schedule
-;;   "aoa" 'org-agenda
-;;   "aoc" 'org-capture
-;;   "aor" 'org-refile
-;;   )
 ;; (spacemacs/declare-prefix
 ;;   "ao" "org")
 (spacemacs/set-leader-keys
@@ -70,7 +60,7 @@
   "oc" 'org-capture
   "of" 'agenda-file)
 (define-key global-map (kbd "<f11>") 'org-capture)
-(define-key global-map (kbd "<f12>") 'org-agenda-list)
+(define-key global-map (kbd "<f12>") 'org-agenda)
 
 ;; ------------------------------------------------------------scheme
 
