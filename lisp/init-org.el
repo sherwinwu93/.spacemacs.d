@@ -1,6 +1,8 @@
 ;; ----------------------------------------agenda
 ;; 定义 agenda 文件的位置
-(setq org-agenda-files '("~/notes/todos/"))
+(setq org-agenda-files '("~/notes/todos/inbox.org"))
+(fset 'wusd/org-agenda
+      (kmacro-lambda-form [?\M-x ?o ?r ?g ?- ?a ?g ?e ?n ?d ?a return ?o] 0 "%d"))
 ;; ----------------------------------------state
 ;; --------------------state
 (setq org-todo-keywords '((sequence "TODO(t)" "DOING(g)" "BLOCKED(b)"
@@ -57,9 +59,9 @@
          entry (file+headline "~/notes/todos/inbox.org" "Idea")
          "* TODO %i%?\n SCHEDULED: %t"
          :empty-lines 2)
-        ("f" "[Info]"
+        ("f" "TODO [Info]"
          entry (file+headline "~/notes/todos/inbox.org" "Info")
-         "* %i%?\n"
+         "* TODO %i%?\n"
          :empty-lines 2)
         ;; 狭义上的learn
         ("l" "TODO [learn]"

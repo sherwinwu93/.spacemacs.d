@@ -24,6 +24,7 @@
 (spacemacs/set-leader-keys
   "d" 'dired-jump)
 (define-key global-map (kbd "s-w") 'other-window)
+(define-key global-map (kbd "s-b") 'ivy-switch-buffer)
 ;; ------------------------------------------------------------edit
 ;; --------------------bookmarks
 (define-key global-map (kbd "<f9>") 'wusd/ivy-push-view)
@@ -46,15 +47,13 @@
 (define-key global-map (kbd "s-s") 'query-replace)
 ;; ------------------------------------------------------------code
 (define-key key-translation-map (kbd "C-/") 'comment-line)
-
 ;; ------------------------------------------------------------translate
 (spacemacs/set-leader-keys
   "ot" 'youdao-dictionary-search-at-point+
-  "oy" 'youdao-dictionary-search-at-point
-  )
+  "oy" 'youdao-dictionary-search-at-point)
 (define-key global-map (kbd "s-t") 'youdao-dictionary-search-at-point)
 ;; ------------------------------------------------------------org
-(define-key global-map (kbd "s-o") 'org-agenda)
+(define-key global-map (kbd "s-o") 'wusd/org-agenda)
 (define-key global-map (kbd "s-i") 'org-capture)
 ;; ------------------------------------------------------------scheme
 
