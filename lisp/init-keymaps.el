@@ -24,11 +24,11 @@
 (spacemacs/set-leader-keys
   "d" 'dired-jump)
 (define-key global-map (kbd "s-w") 'other-window)
-(define-key global-map (kbd "s-b") 'ivy-switch-buffer)
 ;; ------------------------------------------------------------edit
 ;; --------------------bookmarks
 (define-key global-map (kbd "<f9>") 'wusd/ivy-push-view)
 (define-key global-map (kbd "<f10>") 'ivy-switch-view)
+(define-key global-map (kbd "s-b") 'counsel-bookmark)
 ;; --------------------CUDA
 ;;对应Windows上面的Ctrl-a 全选
 (define-key global-map (kbd "s-a") 'mark-whole-buffer)
