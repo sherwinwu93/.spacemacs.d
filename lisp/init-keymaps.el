@@ -22,8 +22,8 @@
 (define-key global-map (kbd "<f5>") 'wusd/eval-last-sexp)
 ;; ------------------------------------------------------------files
 (spacemacs/set-leader-keys
-  "d" 'dired-jump
-  "wo" 'other-window)
+  "d" 'dired-jump)
+(define-key global-map (kbd "s-o") 'other-window)
 ;; ------------------------------------------------------------edit
 ;; --------------------bookmarks
 (define-key global-map (kbd "<f9>") 'wusd/ivy-push-view)
