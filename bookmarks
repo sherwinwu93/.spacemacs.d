@@ -4,9 +4,9 @@
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("org-capture-last-stored"
  (filename . "~/notes/todos/inbox.org")
- (front-context-string . "** TODO [#A] 测试优")
- (rear-context-string . "22-09-01 Thu>\n\n\n")
- (position . 784))
+ (front-context-string . "** TODO test\n SC")
+ (rear-context-string . "09-03 六 22:24>\n\n")
+ (position . 409))
 ("org-refile-last-stored"
  (filename . "~/notes/todos/finish.org")
  (front-context-string . "** DONE L32[100%")

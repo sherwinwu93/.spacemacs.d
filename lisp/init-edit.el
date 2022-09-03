@@ -5,8 +5,12 @@
 (add-hook 'text-mode-hook 'set-bigger-spacing)
 (add-hook 'prog-mode-hook 'set-bigger-spacing)
 ;; ----------------------------------------Abbreviation
+;; unexpand-abbrev| 退回缩写
+;; list-abbrevs wushengdong
 (setq-default abbrev-mode t)
-(read-abbrev-file "~/.spacemacs.d/abbrev_defs")
+(setq abbrev-file-name "~/.spacemacs.d/abbrev_defs")
+;; 设置退出时询问保存缩写
+;; (setq save-abbrevs t)
 ;; ----------------------------------------bookmarks
 (setq-default bookmark-default-file "~/.spacemacs.d/bookmarks")
 (fset 'wusd/ivy-push-view
