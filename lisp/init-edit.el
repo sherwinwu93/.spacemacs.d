@@ -4,6 +4,9 @@
   (setq-local default-text-properties '(line-spacing 0.2 line-height 1.2)))
 (add-hook 'text-mode-hook 'set-bigger-spacing)
 (add-hook 'prog-mode-hook 'set-bigger-spacing)
+;; 设置折行
+(add-hook 'org-mode-hook (lambda()
+                           (setq truncate-lines nil)))
 ;; ----------------------------------------Abbreviation
 ;; unexpand-abbrev| 退回缩写
 ;; list-abbrevs wushengdong

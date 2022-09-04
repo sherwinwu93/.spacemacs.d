@@ -71,7 +71,8 @@
   ;; --------------------
   '(("o" "Wusd Personal Agenda"
        ((tags-todo "+PRIORITY=\"A\"")
-        (agenda "" ((org-agenda-span 1)))
+        (agenda "" ((org-agenda-span 1)
+                    (org-deadline-warning-days 0)))
         (agenda "" ((org-agenda-entry-types '(:deadline))
                     (org-agenda-span 1)
                     (org-deadline-warning-days 365)
