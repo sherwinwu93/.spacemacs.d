@@ -51,7 +51,7 @@
 (spacemacs/set-leader-keys
   "ot" 'youdao-dictionary-search-at-point+
   "oy" 'youdao-dictionary-search-at-point)
-(define-key global-map (kbd "s-t") 'youdao-dictionary-search-at-point)
+(define-key global-map (kbd "s-t") 'youdao-dictionary-search-at-point+)
 ;; ------------------------------------------------------------org
 (define-key global-map (kbd "s-o") 'wusd/org-agenda)
 (define-key global-map (kbd "s-i") 'org-capture)

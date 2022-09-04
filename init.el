@@ -559,10 +559,11 @@ This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
-	(setq configuration-layer-elpa-archives
-				'(("melpa-cn" . "http://mirrors.ustc.edu.cn/elpa/melpa/")
-					("nongnu-cn"   . "http://mirrors.ustc.edu.cn/elpa/nongnu/")
-					("gnu-cn"   . "http://mirrors.ustc.edu.cn/elpa/gnu/")))
+(setq configuration-layer-elpa-archives
+      '(("melpa-cn" . "http://mirrors.bfsu.edu.cn/elpa/melpa/")
+        ("org-cn" . "http://mirrors.bfsu.edu.cn/elpa/org/")
+        ("gnu-cn" . "http://mirrors.bfsu.edu.cn/elpa/gnu/")
+        ("non-gnu" . "https://elpa.nongnu.org/nongnu/")))
 	)
 
 
