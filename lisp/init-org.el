@@ -45,6 +45,9 @@
 			                     ("~/notes/todos/finish.org" :maxlevel . 1)
 			                     ))
 ;; ----------------------------------------capture
+;; ("f" "TODO [Info]"
+;;  entry (file+headline "~/notes/todos/inbox.org" "Info")
+;;  "* TODO %i%?\n" :empty-lines 1)
 (setq org-capture-templates
       '(("t" "TODO [Task]"
          entry (file+headline "~/notes/todos/inbox.org" "Task")
@@ -54,10 +57,7 @@
          "* TODO %i%?\n SCHEDULED: %T" :empty-lines 1)
         ("i" "TODO [Idea]"
          entry (file+headline "~/notes/todos/inbox.org" "Idea")
-         "* TODO %i%?\n SCHEDULED: %t" :empty-lines 1)
-        ("f" "TODO [Info]"
-         entry (file+headline "~/notes/todos/inbox.org" "Info")
-         "* TODO %i%?\n" :empty-lines 1)
+         "* TODO %i%?\n SCHEDULED: %T" :empty-lines 1)
         ;; 狭义上的learn
         ("l" "TODO [learn]"
          entry (file+headline "~/notes/todos/inbox.org" "Learn")
@@ -76,8 +76,7 @@
                     (org-agenda-span 1)
                     (org-deadline-warning-days 365)
                     (org-agenda-time-grid nil)))
-        (todo "TODO")
-				(todo "DONE")))
+        (todo "TODO")))
     ;; --------------------
     ("w" "Weekly Review" ((agenda "" ((org-agenda-span 7)))
 			                    (stuck "")
