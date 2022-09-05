@@ -4,14 +4,14 @@
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("org-capture-last-stored"
  (filename . "~/notes/todos/inbox.org")
- (front-context-string . "** TODO test\n SC")
- (rear-context-string . "09-03 六 22:24>\n\n")
- (position . 409))
+ (front-context-string . "** TODO 剑桥中级语法翻译")
+ (rear-context-string . "      :@learn:\n\n")
+ (position . 935))
 ("org-refile-last-stored"
  (filename . "~/notes/todos/finish.org")
- (front-context-string . "** DONE L32[100%")
- (rear-context-string . ">  0:07\n:END:\n\n\n")
- (position . 7727))
+ (front-context-string . "** TODO 数智大屏bug\n")
+ (rear-context-string . "course 未上架不返回\n\n\n")
+ (position . 1963))
 ("spacemacs-doc.org"
  (filename . "~/notes/emacs/spacemacs-doc.org")
  (front-context-string . "\n*** 2. Dotfile\n")

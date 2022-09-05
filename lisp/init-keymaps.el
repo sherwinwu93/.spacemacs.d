@@ -26,8 +26,8 @@
 (define-key global-map (kbd "s-w") 'other-window)
 ;; ------------------------------------------------------------edit
 ;; --------------------bookmarks
-(define-key global-map (kbd "<f9>") 'wusd/ivy-push-view)
-(define-key global-map (kbd "<f10>") 'ivy-switch-view)
+(define-key global-map (kbd "<f11>") 'wusd/ivy-push-view)
+(define-key global-map (kbd "<f12>") 'ivy-switch-view)
 (define-key global-map (kbd "s-b") 'counsel-bookmark)
 ;; --------------------CUDA
 ;;对应Windows上面的Ctrl-a 全选
@@ -52,10 +52,8 @@
 ;; ------------------------------------------------------------code
 (define-key key-translation-map (kbd "C-/") 'comment-line)
 ;; ------------------------------------------------------------translate
-(spacemacs/set-leader-keys
-  "ot" 'youdao-dictionary-search-at-point+
-  "oy" 'youdao-dictionary-search-at-point)
-(define-key global-map (kbd "s-t") 'youdao-dictionary-search-at-point+)
+(define-key global-map (kbd "<f9>") 'youdao-dictionary-search-at-point+)
+(define-key global-map (kbd "<f10>") 'youdao-dictionary-search-at-point)
 ;; ------------------------------------------------------------org
 (define-key global-map (kbd "s-o") 'wusd/org-agenda)
 (define-key global-map (kbd "s-i") 'org-capture)
