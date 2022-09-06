@@ -77,7 +77,8 @@
                     (org-agenda-span 1)
                     (org-deadline-warning-days 365)
                     (org-agenda-time-grid nil)))
-        (todo "TODO")))
+        (todo "TODO")
+        (todo "DONE")))
     ;; --------------------
     ("w" "Weekly Review" ((agenda "" ((org-agenda-span 7)))
 			                    (stuck "")
