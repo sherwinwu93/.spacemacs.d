@@ -594,6 +594,7 @@ before packages are loaded."
       (add-to-list 'load-path dir)
       (normal-top-level-add-subdirs-to-load-path)))
   (add-subdirs-to-load-path "~/.spacemacs.d/lisp")
+  (require 'init-evil)
   (require 'init-input)
   (require 'init-better-defaults)
   (require 'init-edit)
