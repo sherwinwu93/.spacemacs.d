@@ -46,7 +46,10 @@
 (define-key global-map (kbd "C-s") 'swiper)
 (define-key global-map (kbd "s-s") 'query-replace)
 ;; ----------------------------------------Jump
+(spacemacs/set-leader-keys
+  "<SPC>" 'other-window)
 (define-key global-map (kbd "s-j") 'evil-avy-goto-line)
+(define-key global-map (kbd "s-k") 'evil-avy-goto-char-timer)
 ;; ------------------------------------------------------------code
 (define-key key-translation-map (kbd "C-/") 'comment-line)
 ;; ------------------------------------------------------------translate
