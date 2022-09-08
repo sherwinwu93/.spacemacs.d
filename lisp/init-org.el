@@ -51,17 +51,17 @@
 (setq org-capture-templates
       '(("t" "TODO [Task]"
          entry (file+headline "~/notes/todos/inbox.org" "Task")
-         "* TODO %i%?\n SCHEDULED: %T" :empty-lines 1)
+         "* TODO %i%?\n SCHEDULED: %t" :empty-lines 1)
         ("w" "TODO [Work]"
          entry (file+headline "~/notes/todos/inbox.org" "Work")
-         "* TODO %i%?\n SCHEDULED: %T" :empty-lines 1)
+         "* TODO %i%?\n SCHEDULED: %t" :empty-lines 1)
         ("i" "TODO [Idea]"
          entry (file+headline "~/notes/todos/inbox.org" "Idea")
-         "* TODO %i%?\n SCHEDULED: %T" :empty-lines 1)
+         "* TODO %i%?\n SCHEDULED: %t" :empty-lines 1)
         ;; 狭义上的learn
         ("l" "TODO [learn]"
          entry (file+headline "~/notes/todos/inbox.org" "Learn")
-         "* TODO %i%?\n SCHEDULED: %T" :empty-lines 1)))
+         "* TODO %i%?\n SCHEDULED: %t" :empty-lines 1)))
 ;; ----------------------------------------template
 (fset '<s
       (kmacro-lambda-form [?\C-a ?# ?+ ?B ?E ?I backspace ?G ?I ?N ?_ ?S ?R ?C return ?# ?+ ?E ?N ?D ?_ ?S ?R ?C ?\C-p ?\C-e ? ] 0 "%d"))

@@ -4,9 +4,9 @@
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("org-capture-last-stored"
  (filename . "~/notes/todos/inbox.org")
- (front-context-string . "** TODO 数训漏洞修复\n ")
- (rear-context-string . "-02 Fri 19:18>\n\n")
- (position . 619))
+ (front-context-string . "** TODO 直播开发文档熟悉")
+ (rear-context-string . "<2022-09-08 四>\n\n")
+ (position . 662))
 ("org-refile-last-stored"
  (filename . "~/notes/todos/finish.org")
  (front-context-string . "** TODO 数智大屏bug\n")
