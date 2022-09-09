@@ -1,7 +1,7 @@
 (use-package rime)
 ;; 输入法显示框
-(setq rime-show-candidate 'minibuffer)
-;; (setq rime-show-candidate 'message)
+;; (setq rime-show-candidate 'minibuffer)
+(setq rime-show-candidate 'message)
 ;; (setq rime-show-candidate 'popup)
 ;; (setq rime-show-candidate 'sidewindow)
 ;; (setq rime-popup-style 'simple)
