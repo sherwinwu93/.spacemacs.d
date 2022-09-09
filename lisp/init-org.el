@@ -5,7 +5,7 @@
       (kmacro-lambda-form [?\M-x ?o ?r ?g ?- ?a ?g ?e ?n ?d ?a return ?o] 0 "%d"))
 ;; ----------------------------------------state
 ;; --------------------state
-(setq org-todo-keywords '((sequence "TODO(t)" "DOING(g)" "BLOCKED(b)"
+(setq org-todo-keywords '((sequence "TODO(t)" "DOING(g)" "BLOCKED(b)" "REVIEW(r)"
                                     "|"
                                     "DONE(d)" "CANCELED(c)")))
 ;; --------------------state's colour
@@ -67,6 +67,7 @@
       (kmacro-lambda-form [?\C-a ?# ?+ ?B ?E ?I backspace ?G ?I ?N ?_ ?S ?R ?C return ?# ?+ ?E ?N ?D ?_ ?S ?R ?C ?\C-p ?\C-e ? ] 0 "%d"))
 
 ;; ----------------------------------------org-agenda-custom-commands
+(setq org-agenda-window-setup 'only-window)
 (setq org-agenda-custom-commands
   ;; --------------------
   '(("o" "Wusd Personal Agenda"
