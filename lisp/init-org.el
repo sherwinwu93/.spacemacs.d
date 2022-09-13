@@ -60,6 +60,9 @@
         ("i" "TODO [Idea]"
          entry (file+headline "~/notes/todos/inbox.org" "Idea")
          "* TODO %i%?\n SCHEDULED: %t" :empty-lines 1)
+        ("f" "TODO [info]"
+         entry (file+headline "~/notes/todos/inbox.org" "Info")
+         "* TODO %i%?" :empty-lines 1)
         ;; 狭义上的learn
         ("l" "TODO [learn]"
          entry (file+headline "~/notes/todos/inbox.org" "Learn")

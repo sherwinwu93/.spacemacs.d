@@ -9,9 +9,9 @@
  (position . 1817))
 ("org-capture-last-stored"
  (filename . "~/notes/todos/inbox.org")
- (front-context-string . "** TODO 题库分类修改去掉")
- (rear-context-string . "<2022-09-08 四>\n\n")
- (position . 805))
+ (front-context-string . "** TODO GTD\n\n** ")
+ (rear-context-string . "-07 三>\n\n* Info\n\n")
+ (position . 9457))
 ("org-refile-last-stored"
  (filename . "~/notes/todos/finish.org")
  (front-context-string . "** TODO 数智大屏bug\n")
