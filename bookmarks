@@ -9,9 +9,9 @@
  (position . 1817))
 ("org-capture-last-stored"
  (filename . "~/notes/todos/inbox.org")
- (front-context-string . "** TODO GTD\n\n** ")
- (rear-context-string . "-07 三>\n\n* Info\n\n")
- (position . 9457))
+ (front-context-string . "** TODO 修复营房系统bu")
+ (rear-context-string . "-02 Fri 13:35>\n\n")
+ (position . 373))
 ("org-refile-last-stored"
  (filename . "~/notes/todos/finish.org")
  (front-context-string . "** TODO 数智大屏bug\n")
