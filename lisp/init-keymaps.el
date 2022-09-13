@@ -10,8 +10,9 @@
 ;; ------------------------------------------------------------better-defaults
 ;; ----------------------------------------系统级按键
 ;; 先sharpKey改Capslock键, 把Capslock改为C-g键
-(define-key key-translation-map (kbd "<f6>") (kbd "C-g"))
-(define-key global-map (kbd "<f6>") 'minibuffer-keyboard-quit)
+;; 用autohotkey直接替换替换
+;; (define-key key-translation-map (kbd "<f6>") (kbd "C-g"))
+;; (define-key global-map (kbd "<f6>") 'minibuffer-keyboard-quit)
 ;; 改键<menu>为modifier
 (define-key global-map (kbd "<menu>") nil)
 (define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier)

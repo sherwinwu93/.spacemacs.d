@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("org-capture-last-stored"
+(("init-keymaps.el"
+ (filename . "~/.spacemacs.d/lisp/init-keymaps.el")
+ (front-context-string . ")\n;; 对应Windows上面")
+ (rear-context-string . " 'kill-ring-save")
+ (position . 1817))
+("org-capture-last-stored"
  (filename . "~/notes/todos/inbox.org")
  (front-context-string . "** TODO 题库分类修改去掉")
  (rear-context-string . "<2022-09-08 四>\n\n")
