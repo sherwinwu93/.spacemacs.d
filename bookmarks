@@ -2,16 +2,21 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("init-keymaps.el"
+(("nce2"
+ (filename . "~/notes/nce2/")
+ (front-context-string . "xianzaiwanchengs")
+ (rear-context-string . " 9月   5 12:31   ")
+ (position . 2626))
+("init-keymaps.el"
  (filename . "~/.spacemacs.d/lisp/init-keymaps.el")
  (front-context-string . ")\n;; 对应Windows上面")
  (rear-context-string . " 'kill-ring-save")
  (position . 1817))
 ("org-capture-last-stored"
  (filename . "~/notes/todos/inbox.org")
- (front-context-string . "** TODO 修复营房系统bu")
- (rear-context-string . "-02 Fri 13:35>\n\n")
- (position . 373))
+ (front-context-string . "** TODO 营房应急云漏洞修")
+ (rear-context-string . "<2022-09-08 四>\n\n")
+ (position . 1065))
 ("org-refile-last-stored"
  (filename . "~/notes/todos/finish.org")
  (front-context-string . "** TODO 数智大屏bug\n")

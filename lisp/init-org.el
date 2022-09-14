@@ -18,7 +18,7 @@
 	            ("DOING" :foreground "spring green" :weight bold)
 	            ("BLOCKED" :foreground "red" :weight bold)
 	            ("DONE" :foreground "forest green" :weight bold)
-	            ("CANCELED" :foreground "yellow" :weight bold)
+	            ("CANCELED" :foreground "forest green" :weight bold)
 	            )))
 ;; --------------------summary
 ;; 大项目state的hook
@@ -86,6 +86,7 @@
                     (org-deadline-warning-days 365)
                     (org-agenda-time-grid nil)))
         (todo "TODO")
+        (todo "CANCELED")
         (todo "DONE")))
     ;; --------------------
     ("w" "Weekly Review" ((agenda "" ((org-agenda-span 7)))
