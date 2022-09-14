@@ -587,7 +587,6 @@ before packages are loaded."
     (set-fontset-font (frame-parameter nil 'font) charset
                       (font-spec :family "Microsoft YaHei Mono"
                                  :size 15)))
-
   ;; 递归遍历加载路径
   (defun add-subdirs-to-load-path(dir)
     "Recursive add directories to `load-path`"
