@@ -41,6 +41,10 @@
 		                  ("@info" . ?f)
 		                  ("@learn" . ?l)
 		                  ))
+;; --------------------properties
+(setq   org-highest-priority ?A
+        org-default-priority ?B
+        org-lowest-priority ?B)
 ;; ----------------------------------------refile
 (setq org-refile-targets '(
 			                     ;;修复bug,不可删除
