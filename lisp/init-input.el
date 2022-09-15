@@ -8,4 +8,7 @@
 ;; (setq rime-sidewindow-keep-window t)
 (setq default-input-method "rime")
 (setq rime-user-data-dir "~/rime")
+
+(use-package evil-fcitx
+  :load-path "~/.spacemacs.d/lisp/extensions/")
 (provide 'init-input)
