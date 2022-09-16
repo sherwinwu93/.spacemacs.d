@@ -592,7 +592,7 @@ before packages are loaded."
     (let ((default-directory (file-name-as-directory dir)))
       (add-to-list 'load-path dir)
       (normal-top-level-add-subdirs-to-load-path)))
-  (add-subdirs-to-load-path "~/.spacemacs.d/lisp")
+  (add-subdirs-to-load-path "~/.spacemacs.d/lisp/")
   (require 'init-evil)
   (require 'init-input)
   (require 'init-better-defaults)
