@@ -3,10 +3,10 @@
 (setcdr evil-insert-state-map nil)
 (define-key evil-insert-state-map (kbd "<escape>") 'evil-normal-state)
 ;; ------------------------------------------------------------input
-(define-key rime-active-mode-map (kbd "<tab>") 'rime-inline-ascii)
-(define-key rime-mode-map (kbd "C-`") 'rime-send-keybinding)
+;; (define-key rime-active-mode-map (kbd "<tab>") 'rime-inline-ascii)
+;; (define-key rime-mode-map (kbd "C-`") 'rime-send-keybinding)
 (define-key global-map (kbd "s-<menu>") 'toggle-input-method)
-(define-key rime-mode-map (kbd "M-j") 'rime-force-enable)
+;; (define-key rime-mode-map (kbd "M-j") 'rime-force-enable)
 ;; ------------------------------------------------------------better-defaults
 ;; ----------------------------------------系统级按键
 ;; 先sharpKey改Capslock键, 把Capslock改为C-g键
