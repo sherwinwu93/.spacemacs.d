@@ -19,9 +19,9 @@
  (position . 1817))
 ("org-capture-last-stored"
  (filename . "~/notes/todos/inbox.org")
- (front-context-string . "** TODO 赛博学习法温习2")
- (rear-context-string . "<2022-09-15 四>\n\n")
- (position . 2248))
+ (front-context-string . "** TODO 如何学习\n SC")
+ (rear-context-string . "      :@learn:\n\n")
+ (position . 2680))
 ("org-refile-last-stored"
  (filename . "~/notes/todos/finish.org")
  (front-context-string . "** TODO 数智大屏bug\n")

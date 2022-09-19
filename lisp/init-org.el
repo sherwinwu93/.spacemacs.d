@@ -2,7 +2,9 @@
 (add-hook 'org-mode-hook (lambda()
                            ;; (org-indent-mode 1)
                            (hungry-delete-mode 1)
-                           (toc-org-mode 1)))
+                           ;; 手动添加
+                           ;; (toc-org-mode 1)
+                           ))
 ;; ----------------------------------------agenda
 ;; 定义 agenda 文件的位置
 (setq org-agenda-files '("~/notes/todos/inbox.org"))
@@ -41,6 +43,7 @@
 		                  ("@idea" . ?i)
 		                  ("@info" . ?f)
 		                  ("@learn" . ?l)
+                      ("TOC" . ?c)
 		                  ))
 ;; --------------------properties
 (setq   org-highest-priority ?A
