@@ -1,7 +1,7 @@
 ;; ----------------------------------------fonts
 ;; 设置行间距
 (defun set-bigger-spacing ()
-  (setq-local default-text-properties '(line-spacing 0.3 line-height 1.3)))
+  (setq-local default-text-properties '(line-spacing 0.2 line-height 1.2)))
 (add-hook 'text-mode-hook 'set-bigger-spacing)
 (add-hook 'prog-mode-hook 'set-bigger-spacing)
 ;; 设置折行
