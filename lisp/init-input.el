@@ -1,5 +1,5 @@
-;; (use-package evil-fcitx
-;;   :load-path "~/.spacemacs.d/lisp/extensions/")
+(use-package evil-fcitx
+  :load-path "~/.spacemacs.d/lisp/extensions/")
 (use-package rime)
 ;; 输入法显示框
 (setq rime-show-candidate 'minibuffer)

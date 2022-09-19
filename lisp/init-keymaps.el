@@ -58,8 +58,8 @@
 (define-key global-map (kbd "<f9>") 'youdao-dictionary-search-at-point+)
 (define-key global-map (kbd "<f10>") 'youdao-dictionary-search-at-point)
 ;; ------------------------------------------------------------org
-(define-key global-map (kbd "s-o") 'wusd/org-agenda)
-(define-key global-map (kbd "s-i") 'org-capture)
+(define-key global-map (kbd "M-o") 'wusd/org-agenda)
+(define-key global-map (kbd "M-i") 'org-capture)
 ;; ------------------------------------------------------------scheme
 
 (provide 'init-keymaps)

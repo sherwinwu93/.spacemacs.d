@@ -582,10 +582,10 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
   ;; --------------------fonts
-  (dolist (charset '(kana han cjk-misc bopomofo))
-    (set-fontset-font (frame-parameter nil 'font) charset
-                      (font-spec :family "Microsoft YaHei Mono"
-                                 :size 15)))
+  ;; (dolist (charset '(kana han cjk-misc bopomofo))
+  ;;   (set-fontset-font (frame-parameter nil 'font) charset
+  ;;                     (font-spec :family "Microsoft YaHei Mono"
+  ;;                                :size 15)))
   ;; 递归遍历加载路径
   (defun add-subdirs-to-load-path(dir)
     "Recursive add directories to `load-path`"
