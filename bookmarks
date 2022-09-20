@@ -24,9 +24,9 @@
  (position . 2680))
 ("org-refile-last-stored"
  (filename . "~/notes/todos/finish.org")
- (front-context-string . "** TODO 数智大屏bug\n")
- (rear-context-string . "course 未上架不返回\n\n\n")
- (position . 1963))
+ (front-context-string . "** DONE 数训服务中心[1")
+ (rear-context-string . "<2022-09-15 四>\n\n")
+ (position . 932))
 ("spacemacs-doc.org"
  (filename . "~/notes/emacs/spacemacs-doc.org")
  (front-context-string . "\n*** 2. Dotfile\n")
