@@ -11,4 +11,7 @@
 (setq default-input-method "rime")
 (setq rime-user-data-dir "~/rime")
 
+(defun rime-dirs()
+  (interactive)
+  (find-file "~/rime"))
 (provide 'init-input)
