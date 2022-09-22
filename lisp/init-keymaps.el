@@ -62,5 +62,7 @@
 (define-key global-map (kbd "s-o") 'wusd/org-agenda)
 (define-key global-map (kbd "s-i") 'org-capture)
 ;; ------------------------------------------------------------scheme
+;; ------------------------------------------------------------git
+(define-key global-map (kbd "s-g") 'wusd/git-pull)
 
 (provide 'init-keymaps)
