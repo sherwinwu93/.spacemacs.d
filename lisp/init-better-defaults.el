@@ -1,8 +1,3 @@
-;; backward-forward
-(use-package backward-forward
-  :load-path "~/.spacemacs.d/extensions/"
-  :config
-  (backward-forward-mode t))
 ;; --------------------Display
 ;; (set-frame-position (selected-frame) 800 100)
 ;; (set-frame-width (selected-frame) 110)

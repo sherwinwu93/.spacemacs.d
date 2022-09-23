@@ -53,8 +53,8 @@
 (define-key global-map (kbd "s-k") 'evil-avy-goto-char-timer)
 (spacemacs/set-leader-keys
   "<SPC>" 'evil-avy-goto-line)
-(define-key global-map (kbd "C-M-<left>") 'evil-jump-backward)
-(define-key global-map (kbd "C-M-<right>") 'evil-jump-forward)
+(define-key global-map (kbd "C-M-<left>") 'better-jumper-jump-backward)
+(define-key global-map (kbd "C-M-<right>") 'better-jumper-jump-forward)
 ;; ------------------------------------------------------------code
 (define-key key-translation-map (kbd "C-/") 'comment-line)
 ;; ------------------------------------------------------------translate
