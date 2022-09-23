@@ -91,7 +91,7 @@
                     (org-deadline-warning-days 0)))
         (agenda "" ((org-agenda-entry-types '(:deadline))
                     (org-agenda-span 1)
-                    (org-deadline-warning-days 365)
+                    (org-deadline-warning-days 7)
                     (org-agenda-time-grid nil)))
         (todo "TODO")
         (todo "CANCELED")
