@@ -602,6 +602,7 @@ before packages are loaded."
   (require 'init-translate)
   (require 'init-org)
   (require 'init-keymaps)
+  (require 'init-vc)
   )
 
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
