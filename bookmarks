@@ -19,14 +19,14 @@
  (position . 1817))
 ("org-capture-last-stored"
  (filename . "~/notes/todos/inbox.org")
- (front-context-string . "** TODO 老婆生日\nSCH")
- (rear-context-string . "DO 学会一套处理情绪的方法\n\n")
- (position . 8429))
+ (front-context-string . "** TODO 给军哥maven")
+ (rear-context-string . "<2022-09-28 三>\n\n")
+ (position . 2640))
 ("org-refile-last-stored"
  (filename . "~/notes/todos/finish.org")
- (front-context-string . "** DONE 数训服务中心[1")
- (rear-context-string . "<2022-09-15 四>\n\n")
- (position . 932))
+ (front-context-string . "** DONE L41[6/6]")
+ (rear-context-string . "<2022-09-18 日>\n\n")
+ (position . 13923))
 ("spacemacs-doc.org"
  (filename . "~/notes/emacs/spacemacs-doc.org")
  (front-context-string . "\n*** 2. Dotfile\n")

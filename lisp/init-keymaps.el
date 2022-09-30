@@ -43,7 +43,8 @@
 ;;对应Windows上面的Ctrl-z 撤销
 (define-key global-map (kbd "s-z") 'undo)
 ;;对应Windows上面的Ctrl-x 剪切
-(define-key global-map (kbd "s-x") 'kill-region)
+(define-key global-map (kbd "M-x") 'kill-region)
+(define-key global-map (kbd "s-x") 'counsel-M-x)
 ;; ----------------------------------------Search and Replace
 (define-key global-map (kbd "C-s") 'swiper)
 (define-key global-map (kbd "s-s") 'query-replace)
@@ -51,8 +52,6 @@
 (define-key global-map (kbd "s-w") 'other-window)
 (define-key global-map (kbd "s-j") 'evil-avy-goto-line)
 (define-key global-map (kbd "s-k") 'evil-avy-goto-char-timer)
-(spacemacs/set-leader-keys
-  "<SPC>" 'evil-avy-goto-line)
 (define-key global-map (kbd "C-M-<left>") 'better-jumper-jump-backward)
 (define-key global-map (kbd "C-M-<right>") 'better-jumper-jump-forward)
 ;; ------------------------------------------------------------code
