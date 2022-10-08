@@ -56,8 +56,9 @@
 ;; ------------------------------------------------------------code
 (define-key key-translation-map (kbd "C-/") 'comment-line)
 ;; ------------------------------------------------------------translate
-(define-key global-map (kbd "<f9>") 'youdao-dictionary-search-at-point+)
-(define-key global-map (kbd "<f10>") 'youdao-dictionary-search-at-point)
+(define-key global-map (kbd "<f8>") 'youdao-dictionary-search-at-point+)
+(define-key global-map (kbd "<f9>") 'youdao-dictionary-search-at-point)
+(define-key global-map (kbd "<f10>") 'wusd/complete-pronounce)
 ;; ------------------------------------------------------------org
 (define-key global-map (kbd "s-o") 'wusd/org-agenda)
 (define-key global-map (kbd "s-i") 'org-capture)
