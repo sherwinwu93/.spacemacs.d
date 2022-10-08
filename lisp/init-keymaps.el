@@ -43,8 +43,7 @@
 ;;对应Windows上面的Ctrl-z 撤销
 (define-key global-map (kbd "s-z") 'undo)
 ;;对应Windows上面的Ctrl-x 剪切
-(define-key global-map (kbd "M-x") 'kill-region)
-(define-key global-map (kbd "s-x") 'counsel-M-x)
+(define-key global-map (kbd "s-x") 'kill-region)
 ;; ----------------------------------------Search and Replace
 (define-key global-map (kbd "C-s") 'swiper)
 (define-key global-map (kbd "s-s") 'query-replace)
