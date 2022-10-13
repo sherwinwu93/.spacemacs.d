@@ -2,12 +2,7 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("培训中心.org"
- (filename . "~/notes/works/培训中心.org")
- (front-context-string . "数\n\n*** 学院\n\n**** ")
- (rear-context-string . "价格\n	- 子课程数\n	- 学院")
- (position . 416))
-("nce2"
+(("nce2"
  (filename . "~/notes/nce2/")
  (front-context-string . "xianzaiwanchengs")
  (rear-context-string . " 9月   5 12:31   ")
