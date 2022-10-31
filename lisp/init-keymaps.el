@@ -23,8 +23,7 @@
 (define-key global-map (kbd "<f5>") 'wusd/eval-last-sexp)
 ;; ------------------------------------------------------------files
 (spacemacs/set-leader-keys
-  "d" 'dired-jump
-  "<tab>" 'ivy-switch-buffer)
+  "d" 'dired-jump)
 (define-key global-map (kbd "s-w") 'other-window)
 ;; ------------------------------------------------------------edit
 ;; --------------------bookmarks
@@ -48,6 +47,8 @@
 (define-key global-map (kbd "C-s") 'swiper)
 (define-key global-map (kbd "s-s") 'query-replace)
 ;; ----------------------------------------Jump
+(spacemacs/set-leader-keys
+  "tab" 'other-window)
 (define-key global-map (kbd "s-w") 'other-window)
 (define-key global-map (kbd "s-j") 'evil-avy-goto-line)
 (define-key global-map (kbd "s-k") 'evil-avy-goto-char-timer)

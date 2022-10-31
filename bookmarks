@@ -19,14 +19,14 @@
  (position . 1817))
 ("org-capture-last-stored"
  (filename . "~/notes/todos/inbox.org")
- (front-context-string . "** TODO 给军哥maven")
- (rear-context-string . "<2022-09-28 三>\n\n")
- (position . 2640))
+ (front-context-string . "** TODO 模拟考试微信报名")
+ (rear-context-string . "<2022-10-27 四>\n\n")
+ (position . 1006))
 ("org-refile-last-stored"
  (filename . "~/notes/todos/finish.org")
- (front-context-string . "** DONE L41[6/6]")
- (rear-context-string . "<2022-09-18 日>\n\n")
- (position . 13923))
+ (front-context-string . "** DONE 应急消防职业技能")
+ (rear-context-string . "<2022-09-07 三>\n\n")
+ (position . 1580))
 ("spacemacs-doc.org"
  (filename . "~/notes/emacs/spacemacs-doc.org")
  (front-context-string . "\n*** 2. Dotfile\n")
