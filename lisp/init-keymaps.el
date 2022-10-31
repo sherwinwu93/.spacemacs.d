@@ -48,7 +48,7 @@
 (define-key global-map (kbd "s-s") 'query-replace)
 ;; ----------------------------------------Jump
 (spacemacs/set-leader-keys
-  "tab" 'other-window)
+  "<tab>" 'other-window)
 (define-key global-map (kbd "s-w") 'other-window)
 (define-key global-map (kbd "s-j") 'evil-avy-goto-line)
 (define-key global-map (kbd "s-k") 'evil-avy-goto-char-timer)
