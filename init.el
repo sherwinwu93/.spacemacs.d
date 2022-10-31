@@ -40,7 +40,7 @@ This function should only modify configuration layer settings."
      ;; ----------------------------------------------------------------
      evil-better-jumper
      yaml
-     (auto-completion :disabled-for org)
+     (auto-completion :disabled-for org spacemacs-org)
      better-defaults
      ;; emacs-lisp
      (git :variables

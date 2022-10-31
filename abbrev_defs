@@ -1,7 +1,6 @@
 ;;-*-coding: utf-8;-*-
-(define-abbrev-table 'global-abbrev-table
+(define-abbrev-table 'org-mode-abbrev-table
   '(
-    ("t." "template" nil :count 0)
     ("wusd" "wushengdong" nil :count 1)
    ))
 
