@@ -14,9 +14,9 @@
  (position . 1817))
 ("org-capture-last-stored"
  (filename . "~/notes/todos/inbox.org")
- (front-context-string . "** TODO 模拟考试微信报名")
- (rear-context-string . "<2022-10-27 四>\n\n")
- (position . 1006))
+ (front-context-string . "** TODO 培训课程报名操作")
+ (rear-context-string . "<2022-11-04 五>\n\n")
+ (position . 1355))
 ("org-refile-last-stored"
  (filename . "~/notes/todos/finish.org")
  (front-context-string . "** DONE 应急消防职业技能")

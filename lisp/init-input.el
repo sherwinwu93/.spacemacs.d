@@ -9,9 +9,9 @@
 ;; (setq rime-popup-style 'simple)
 ;; (setq rime-sidewindow-keep-window t)
 (setq default-input-method "rime")
-(setq rime-user-data-dir "~/rime")
+(setq rime-user-data-dir "/usr/local/rime")
 
 (defun rime-dirs()
   (interactive)
-  (find-file "~/rime"))
+  (find-file "/usr/local/rime"))
 (provide 'init-input)
