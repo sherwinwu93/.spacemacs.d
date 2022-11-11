@@ -65,7 +65,7 @@
 (define-key global-map (kbd "s-i") 'org-capture)
 ;; ------------------------------------------------------------scheme
 (spacemacs/set-leader-keys
-  "aa" 'org-agenda)
+  "o" 'org-agenda)
 ;; ------------------------------------------------------------git
 (define-key global-map (kbd "s-g") 'wusd/git-pull)
 

@@ -94,8 +94,8 @@
                     (org-agenda-span 1)
                     (org-deadline-warning-days 7)
                     (org-agenda-time-grid nil)))
-        (todo "TODO")
 			  (tags "@logic")
+        (todo "TODO")
         (todo "CANCELED")
         (todo "DONE")))
     ;; --------------------
