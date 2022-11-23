@@ -43,6 +43,7 @@
 		                  ("@idea" . ?i)
 		                  ("@info" . ?f)
 		                  ("@learn" . ?l)
+		                  ("@prepare" . ?p)
                       ("TOC" . ?c)
 		                  ))
 ;; --------------------properties
