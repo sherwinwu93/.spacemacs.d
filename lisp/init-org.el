@@ -83,22 +83,30 @@
       (kmacro-lambda-form [?\C-a ?# ?+ ?B ?E ?I backspace ?G ?I ?N ?_ ?S ?R ?C return ?# ?+ ?E ?N ?D ?_ ?S ?R ?C ?\C-p ?\C-e ? ] 0 "%d"))
 
 ;; ----------------------------------------org-agenda-custom-commands
+
 (setq org-agenda-window-setup 'only-window)
+
 (setq org-agenda-custom-commands
   ;; --------------------
   '(("o" "Wusd Personal Agenda"
        ((tags-todo "+PRIORITY=\"A\"")
+        ;; 按优先级排序
         (agenda "" ((org-agenda-span 1)
                     (org-deadline-warning-days 0)
                     (org-agenda-sorting-strategy '(priority-down time-up))))
+        ;; 空的周课表,需要准备则todo
+        (agenda "" ((org-agenda-span 7)
+                    (org-agenda-files '("~/notes/todos/weeks.org"))))
+        ;; 生日
         (agenda "" ((org-agenda-entry-types '(:deadline))
                     (org-agenda-span 1)
                     (org-deadline-warning-days 7)
                     (org-agenda-time-grid nil)))
-			  (tags "@logic")
-        (todo "TODO")
-        (todo "CANCELED")
-        (todo "DONE")))
+			  ;; (tags "@logic")
+        ;; (todo "TODO")
+        ;; (todo "CANCELED")
+        ;; (todo "DONE")
+        ))
     ;; --------------------
     ("w" "Weekly Review" ((agenda "" ((org-agenda-span 7)))
 			                    (stuck "")
