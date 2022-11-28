@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("nce2"
+(("notes"
+ (filename . "~/notes/")
+ (front-context-string . "humans of new yo")
+ (rear-context-string . " 11月 28 22:15   ")
+ (position . 706))
+("nce2"
  (filename . "~/notes/nce2/")
  (front-context-string . "xianzaiwanchengs")
  (rear-context-string . " 9月   5 12:31   ")
@@ -19,9 +24,9 @@
  (position . 1355))
 ("org-refile-last-stored"
  (filename . "~/notes/todos/finish.org")
- (front-context-string . "** DONE L63[7/7]")
- (rear-context-string . "<2022-11-11 五>\n\n")
- (position . 33923))
+ (front-context-string . "** DONE L64[7/7]")
+ (rear-context-string . "<2022-11-14 一>\n\n")
+ (position . 34450))
 ("spacemacs-doc.org"
  (filename . "~/notes/emacs/spacemacs-doc.org")
  (front-context-string . "\n*** 2. Dotfile\n")
