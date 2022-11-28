@@ -24,9 +24,9 @@
  (position . 1817))
 ("org-capture-last-stored"
  (filename . "~/notes/todos/inbox.org")
- (front-context-string . "** TODO 培训课程报名操作")
- (rear-context-string . "<2022-11-04 五>\n\n")
- (position . 1355))
+ (front-context-string . "** TODO 将首页接口改为不")
+ (rear-context-string . "<2022-11-17 四>\n\n")
+ (position . 10586))
 ("org-refile-last-stored"
  (filename . "~/notes/todos/finish.org")
  (front-context-string . "** DONE L64[7/7]")
