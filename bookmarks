@@ -14,9 +14,9 @@
  (position . 1817))
 ("org-capture-last-stored"
  (filename . "~/notes/todos/inbox.org")
- (front-context-string . "** TODO 将首页接口改为不")
- (rear-context-string . "<2022-11-17 四>\n\n")
- (position . 10586))
+ (front-context-string . "** TODO 小程序微信支付\n")
+ (rear-context-string . "<2022-11-22 二>\n\n")
+ (position . 10213))
 ("org-refile-last-stored"
  (filename . "~/notes/todos/finish.org")
  (front-context-string . "** DONE L63[7/7]")
