@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("humans of new york"
+(("逻辑"
+ (filename . "~/notes/逻辑/")
+ (front-context-string . "如何学习.org\n  -rw-r")
+ (rear-context-string . " 12月  1 16:57   ")
+ (position . 368))
+("humans of new york"
  (filename . "~/notes/humans of new york/")
  (front-context-string . "Z-Humans of NewY")
  (rear-context-string . " 11月 28 22:27   ")
