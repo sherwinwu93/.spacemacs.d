@@ -127,11 +127,11 @@
       (tags-todo "@info")
       (tags-todo "@learn")))))
 
-(defun agenda-dirs()
-  (interactive)
-  (find-file "~/notes/todos/"))
-(defun agenda-file()
+(defun tian()
   (interactive)
   (find-file "~/notes/todos/inbox.org"))
+(defun zhou()
+  (interactive)
+  (find-file "~/notes/todos/weeks.org"))
 
 (provide 'init-org)
