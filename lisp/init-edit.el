@@ -38,7 +38,11 @@
 (setq-default electric-indent-inhibit t)
 (setq backward-delete-char-untabify-method 'hungry)
 (setq-default evil-shift-width custom-tab-width)
-
+;; ----------------------------------------缩进
+(defun indent-whole()
+  (interactive)
+  (indent-region (point-min) (point-max))
+  (message "format successfully"))
 
 
 (provide 'init-edit)
