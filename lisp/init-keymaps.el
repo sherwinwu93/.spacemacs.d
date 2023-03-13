@@ -35,7 +35,7 @@
 (define-key global-map (kbd "s-c") 'kill-ring-save)
 ;; 对应Windows上面的Ctrl-s 保存
 ;; (define-key global-map (kbd "s-s") 'save-buffer)
-;;对应Windows上面的Ctrl-v 粘贴
+;;对应Windows上面的Ctrl-v 粘贴,不删除到kill-ring中
 (define-key global-map (kbd "s-v") 'clipboard-yank)
 ;;对应Windows上面的Ctrl-z 撤销
 (define-key global-map (kbd "s-z") 'undo)
