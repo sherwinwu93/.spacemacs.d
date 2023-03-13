@@ -39,7 +39,6 @@ This function should only modify configuration layer settings."
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      evil-better-jumper
-     yaml
      (auto-completion :disabled-for org spacemacs-org)
      better-defaults
      ;; emacs-lisp

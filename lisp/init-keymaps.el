@@ -27,8 +27,6 @@
 (define-key global-map (kbd "s-w") 'other-window)
 ;; ------------------------------------------------------------edit
 ;; --------------------bookmarks
-(define-key global-map (kbd "<f11>") 'wusd/ivy-push-view)
-(define-key global-map (kbd "<f12>") 'ivy-switch-view)
 (define-key global-map (kbd "s-b") 'counsel-bookmark)
 ;; --------------------CUDA
 ;;对应Windows上面的Ctrl-a 全选
@@ -38,7 +36,7 @@
 ;; 对应Windows上面的Ctrl-s 保存
 ;; (define-key global-map (kbd "s-s") 'save-buffer)
 ;;对应Windows上面的Ctrl-v 粘贴
-(define-key global-map (kbd "s-v") 'yank)
+(define-key global-map (kbd "s-v") 'clipboard-yank)
 ;;对应Windows上面的Ctrl-z 撤销
 (define-key global-map (kbd "s-z") 'undo)
 ;;对应Windows上面的Ctrl-x 剪切

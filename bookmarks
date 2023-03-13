@@ -34,9 +34,9 @@
  (position . 1817))
 ("org-capture-last-stored"
  (filename . "~/notes/todos/inbox.org")
- (front-context-string . "** TODO 中消正式版发布\n")
- (rear-context-string . "<2022-11-25 五>\n\n")
- (position . 14055))
+ (front-context-string . "** TODO head fir")
+ (rear-context-string . "      :@learn:\n\n")
+ (position . 351))
 ("org-refile-last-stored"
  (filename . "~/notes/todos/finish.org")
  (front-context-string . "** DONE L64[7/7]")
