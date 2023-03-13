@@ -54,6 +54,7 @@
 (define-key global-map (kbd "C-M-<right>") 'better-jumper-jump-forward)
 ;; ------------------------------------------------------------code
 (define-key key-translation-map (kbd "C-/") 'comment-line)
+(define-key global-map (kbd "C-M-l") 'indent-whole)
 ;; ------------------------------------------------------------translate
 (define-key global-map (kbd "<f8>") 'youdao-dictionary-search-at-point+)
 (define-key global-map (kbd "<f9>") 'youdao-dictionary-search-at-point)
