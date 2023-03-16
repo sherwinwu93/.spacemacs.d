@@ -2,8 +2,9 @@
   :load-path "~/.spacemacs.d/lisp/extensions/")
 (setq url-automatic-caching t)
 
-(fset 'wusd/complete-pronounce
-      (kmacro-lambda-form [?  ?w ?w ?y ?$ ?  ?w ?w ?p] 0 "%d"))
+(fset 'wusd/add-pronunciation
+   (kmacro-lambda-form [?j ?0 ?v ?e f10 ?  tab ?y ?$ ?  tab ?p] 0 "%d"))
+
 (fset 'youdao-quick-translate
    (kmacro-lambda-form [?j ?0 ?v ?e f9] 0 "%d"))
 

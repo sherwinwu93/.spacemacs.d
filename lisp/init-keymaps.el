@@ -21,7 +21,11 @@
             ))
 
 ;; ----------------------------------------Command
-(define-key global-map (kbd "<f5>") 'wusd/eval-last-sexp)
+(define-key global-map (kbd "<f8>") 'wusd/eval-last-sexp)
+(define-key global-map (kbd "<f5>") 'kmacro-name-last-macro)
+(define-key global-map (kbd "<f6>") 'insert-kbd-macro)
+
+
 ;; ------------------------------------------------------------edit
 ;; --------------------CUDA
 ;;对应Windows上面的Ctrl-a 全选
@@ -54,9 +58,9 @@
 (define-key key-translation-map (kbd "C-/") 'comment-line)
 (define-key global-map (kbd "C-M-l") 'indent-whole)
 ;; ------------------------------------------------------------translate
-(define-key global-map (kbd "<f8>") 'youdao-dictionary-search-at-point+)
-(define-key global-map (kbd "<f9>") 'youdao-dictionary-search-at-point)
-(define-key global-map (kbd "<f10>") 'wusd/complete-pronounce)
+(define-key global-map (kbd "<f9>") 'youdao-dictionary-search-at-point+)
+(define-key global-map (kbd "<f10>") 'youdao-dictionary-search-at-point)
+(define-key global-map (kbd "s-t") 'wusd/add-pronunciation)
 ;; ------------------------------------------------------------org
 (define-key global-map (kbd "s-o") 'wusd/org-agenda)
 (define-key global-map (kbd "s-i") 'org-capture)
