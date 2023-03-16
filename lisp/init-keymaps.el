@@ -13,9 +13,10 @@
 ;; 改键<menu>为modifier
 (define-key global-map (kbd "<menu>") nil)
 (define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier)
-;; --------------------Naivagate
-;;(define-key global-map (kbd "C-f") 'scroll-up-command)
-;;(define-key global-map (kbd "C-b") 'scroll-down-command)
+;; --------------------Evil
+(define-key evil-visual-state-local-map (kbd "S") 'evil-surround-region)
+(define-key evil-visual-state-local-map (kbd "s") 'evil-substitute)
+
 ;; ----------------------------------------Command
 (define-key global-map (kbd "<f5>") 'wusd/eval-last-sexp)
 ;; ------------------------------------------------------------files
@@ -63,7 +64,7 @@
 
 ;; ------------------------------------------------------------help
 (define-key global-map (kbd "s-<menu>") 'counsel-M-x)
-(define-key key-translation-map (kbd "<f12>") (kbd "M-m"))
-(define-key global-map (kbd "<f11>") 'describe-key)
+(define-key global-map (kbd "<f11>") 'describe-function)
+(define-key global-map (kbd "<f12>") 'describe-key)
 
 (provide 'init-keymaps)
