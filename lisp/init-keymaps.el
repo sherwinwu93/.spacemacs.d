@@ -63,7 +63,7 @@
 
 ;; ------------------------------------------------------------help
 (define-key global-map (kbd "s-<menu>") 'counsel-M-x)
-(define-key key-translation-map (kbd "<f11>") (kbd "M-m"))
-(define-key global-map (kbd "<f12>") 'describe-key)
+(define-key key-translation-map (kbd "<f12>") (kbd "M-m"))
+(define-key global-map (kbd "<f11>") 'describe-key)
 
 (provide 'init-keymaps)
