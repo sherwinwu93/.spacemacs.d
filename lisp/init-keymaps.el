@@ -42,7 +42,9 @@
 (define-key global-map (kbd "s-x") 'kill-region)
 ;; ----------------------------------------Search and Replace
 (define-key evil-normal-state-map (kbd "/") 'swiper)
-(define-key global-map (kbd "C-s") 'query-replace)
+(define-key global-map (kbd "C-s") 'swiper)
+(define-key global-map (kbd "C-S") 'spacemacs/search-project-auto)
+(define-key global-map (kbd "s-s") 'query-replace)
 ;; ----------------------------------------Jump
 (spacemacs/set-leader-keys
   "<tab>" 'other-window)
