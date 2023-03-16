@@ -16,6 +16,7 @@
 ;; 改键<menu>为modifier
 (define-key global-map (kbd "<menu>") nil)
 (define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier)
+(define-key global-map (kbd "<f11>") 'counsel-M-x)
 ;; --------------------Naivagate
 (define-key global-map (kbd "C-f") 'scroll-up-command)
 (define-key global-map (kbd "C-b") 'scroll-down-command)
@@ -27,16 +28,12 @@
 (define-key global-map (kbd "s-w") 'other-window)
 ;; ------------------------------------------------------------edit
 ;; --------------------bookmarks
-(define-key global-map (kbd "<f11>") 'wusd/ivy-push-view)
-(define-key global-map (kbd "<f12>") 'ivy-switch-view)
 (define-key global-map (kbd "s-b") 'counsel-bookmark)
 ;; --------------------CUDA
 ;;对应Windows上面的Ctrl-a 全选
 (define-key global-map (kbd "s-a") 'mark-whole-buffer)
 ;;对应Windows上面的Ctrl-c 复制
 (define-key global-map (kbd "s-c") 'kill-ring-save)
-;; 对应Windows上面的Ctrl-s 保存
-;; (define-key global-map (kbd "s-s") 'save-buffer)
 ;;对应Windows上面的Ctrl-v 粘贴
 (define-key global-map (kbd "s-v") 'yank)
 ;;对应Windows上面的Ctrl-z 撤销
@@ -44,8 +41,8 @@
 ;;对应Windows上面的Ctrl-x 剪切
 (define-key global-map (kbd "s-x") 'kill-region)
 ;; ----------------------------------------Search and Replace
-(define-key global-map (kbd "C-s") 'swiper)
-(define-key global-map (kbd "s-s") 'query-replace)
+(define-key evil-normal-state-map (kbd "/") 'swiper)
+(define-key global-map (kbd "C-s") 'query-replace)
 ;; ----------------------------------------Jump
 (spacemacs/set-leader-keys
   "<tab>" 'other-window)
@@ -60,7 +57,6 @@
 (define-key global-map (kbd "<f8>") 'youdao-dictionary-search-at-point+)
 (define-key global-map (kbd "<f9>") 'youdao-dictionary-search-at-point)
 (define-key global-map (kbd "<f10>") 'wusd/complete-pronounce)
-(define-key global-map (kbd "<f11>") 'youdao-quick-translate)
 ;; ------------------------------------------------------------org
 (define-key global-map (kbd "s-o") 'wusd/org-agenda)
 (define-key global-map (kbd "s-i") 'org-capture)
@@ -69,5 +65,9 @@
   "o" 'org-agenda)
 ;; ------------------------------------------------------------git
 (define-key global-map (kbd "s-g") 'wusd/git-pull)
+
+;; ------------------------------------------------------------help
+(define-key key-translation-map (kbd "<f12>") (kbd "<SPC>h"))
+
 
 (provide 'init-keymaps)
