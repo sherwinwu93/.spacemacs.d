@@ -9,14 +9,10 @@
 (define-key rime-mode-map (kbd "M-j") 'rime-force-enable)
 ;; ------------------------------------------------------------better-defaults
 ;; ----------------------------------------系统级按键
-;; 先sharpKey改Capslock键, 把Capslock改为C-g键
-;; 用autohotkey直接替换替换
-;; (define-key key-translation-map (kbd "<f6>") (kbd "C-g"))
-;; (define-key global-map (kbd "<f6>") 'minibuffer-keyboard-quit)
+;; 用autohotkey直接替换替换,把Capslock改为C-g键
 ;; 改键<menu>为modifier
 (define-key global-map (kbd "<menu>") nil)
 (define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier)
-(define-key global-map (kbd "<f11>") 'counsel-M-x)
 ;; --------------------Naivagate
 ;;(define-key global-map (kbd "C-f") 'scroll-up-command)
 ;;(define-key global-map (kbd "C-b") 'scroll-down-command)
@@ -25,10 +21,7 @@
 ;; ------------------------------------------------------------files
 (spacemacs/set-leader-keys
   "d" 'dired-jump)
-(define-key global-map (kbd "s-w") 'other-window)
 ;; ------------------------------------------------------------edit
-;; --------------------bookmarks
-(define-key global-map (kbd "s-b") 'counsel-bookmark)
 ;; --------------------CUDA
 ;;对应Windows上面的Ctrl-a 全选
 (define-key global-map (kbd "s-a") 'mark-whole-buffer)
@@ -46,9 +39,10 @@
 (define-key global-map (kbd "C-S") 'spacemacs/search-project-auto)
 (define-key global-map (kbd "s-s") 'query-replace)
 ;; ----------------------------------------Navigation
+(define-key global-map (kbd "s-w") (kbd "M-m w ["))
+(define-key global-map (kbd "s-b") 'wusd/quick-buffer)
 (spacemacs/set-leader-keys
   "<tab>" 'other-window)
-(define-key global-map (kbd "s-w") 'other-window)
 (define-key global-map (kbd "s-j") 'evil-avy-goto-line)
 (define-key global-map (kbd "s-k") 'evil-avy-goto-char-timer)
 (define-key global-map (kbd "C-M-<left>") 'better-jumper-jump-backward)
@@ -69,6 +63,8 @@
 (define-key global-map (kbd "s-g") 'wusd/git-pull)
 
 ;; ------------------------------------------------------------help
+(define-key global-map (kbd "s-<menu>") 'counsel-M-x)
+(define-key key-translation-map (kbd "<f11>") (kbd "M-m"))
 (define-key global-map (kbd "<f12>") 'describe-key)
 
 (provide 'init-keymaps)
