@@ -19,9 +19,6 @@
 
 ;; ----------------------------------------Command
 (define-key global-map (kbd "<f5>") 'wusd/eval-last-sexp)
-;; ------------------------------------------------------------files
-(spacemacs/set-leader-keys
-  "d" 'dired-jump)
 ;; ------------------------------------------------------------edit
 ;; --------------------CUDA
 ;;对应Windows上面的Ctrl-a 全选
@@ -39,12 +36,13 @@
 (define-key global-map (kbd "C-S") 'spacemacs/search-project-auto)
 (define-key global-map (kbd "s-s") 'query-replace)
 ;; ----------------------------------------Navigation
+(spacemacs/set-leader-keys
+  "d" 'dired-jump
+  "<tab>" 'other-window)
 (define-key global-map (kbd "s-w") 'spacemacs/window-transient-state/spacemacs/shrink-window-horizontally)
 (define-key global-map (kbd "s-b") 'wusd/quick-buffer)
-(spacemacs/set-leader-keys
-  "<tab>" 'other-window)
-(define-key global-map (kbd "s-j") 'evil-avy-goto-line)
-(define-key global-map (kbd "s-k") 'evil-avy-goto-char-timer)
+(define-key global-map (kbd "s-k") 'scroll-other-window-down)
+(define-key global-map (kbd "s-j") 'scroll-other-window)
 (define-key global-map (kbd "C-M-<left>") 'better-jumper-jump-backward)
 (define-key global-map (kbd "C-M-<right>") 'better-jumper-jump-forward)
 ;; ------------------------------------------------------------code
