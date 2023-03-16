@@ -43,6 +43,8 @@
 (define-key global-map (kbd "s-b") 'wusd/quick-buffer)
 (define-key global-map (kbd "s-k") 'scroll-other-window-down)
 (define-key global-map (kbd "s-j") 'scroll-other-window)
+(define-key global-map (kbd "s-l") 'avy-goto-line)
+(define-key global-map (kbd "s-h") 'avy-goto-char-timer)
 (define-key global-map (kbd "C-M-<left>") 'better-jumper-jump-backward)
 (define-key global-map (kbd "C-M-<right>") 'better-jumper-jump-forward)
 ;; ------------------------------------------------------------code
