@@ -25,22 +25,21 @@
 ;; ------------------------------------------------------------edit
 ;; --------------------CUDA
 ;;对应Windows上面的Ctrl-a 全选
-(define-key global-map (kbd "s-a") 'mark-whole-buffer)
+(define-key global-map (kbd "M-a") 'mark-whole-buffer)
 ;;对应Windows上面的Ctrl-c 复制
-(define-key global-map (kbd "s-c") 'kill-ring-save)
+(define-key global-map (kbd "M-c") 'kill-ring-save)
 ;;对应Windows上面的Ctrl-v 粘贴
-(define-key global-map (kbd "s-v") 'yank)
+(define-key global-map (kbd "M-v") 'yank)
 ;;对应Windows上面的Ctrl-z 撤销
-(define-key global-map (kbd "s-z") 'undo)
+(define-key global-map (kbd "M-z") 'undo)
 ;;对应Windows上面的Ctrl-x 剪切
-(define-key global-map (kbd "s-x") 'kill-region)
+(define-key global-map (kbd "M-x") 'kill-region)
 ;; ----------------------------------------Search and Replace
 (define-key global-map (kbd "C-s") 'swiper)
-(define-key global-map (kbd "C-s") (execute-kbd-macro [?\M-m ?s ?s]))
 (define-key global-map (kbd "C-S") 'spacemacs/search-project-auto)
 (define-key global-map (kbd "s-s") 'query-replace)
 ;; ----------------------------------------Navigation
-(define-key global-map (kbd "s-w") (kbd "M-m w ["))
+(define-key key-translation-map (kbd "s-w") (kbd "M-m w ["))
 (define-key global-map (kbd "s-b") 'wusd/quick-buffer)
 (spacemacs/set-leader-keys
   "<tab>" 'other-window)
@@ -50,6 +49,7 @@
 (define-key global-map (kbd "C-M-<right>") 'better-jumper-jump-forward)
 ;; ------------------------------------------------------------code
 (define-key key-translation-map (kbd "C-/") 'comment-line)
+(define-key global-map (kbd "C-M-l") 'indent-whole)
 ;; ------------------------------------------------------------translate
 (define-key global-map (kbd "<f8>") 'youdao-dictionary-search-at-point+)
 (define-key global-map (kbd "<f9>") 'youdao-dictionary-search-at-point)
@@ -67,5 +67,6 @@
 (define-key global-map (kbd "s-<menu>") 'counsel-M-x)
 (define-key global-map (kbd "<f11>") 'describe-function)
 (define-key global-map (kbd "<f12>") 'describe-key)
+
 
 (provide 'init-keymaps)
