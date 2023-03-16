@@ -5,12 +5,8 @@
 (delete-selection-mode t)
 ;; --------------------Command
 ;; 移动到最后并执行代码
-(defun wusd/eval-last-sexp()
-  (interactive)
-  (execute-kbd-macro (kbd "<escape>"))
-  (execute-kbd-macro (kbd "A"))
-  (execute-kbd-macro (kbd "C-x C-e"))
-  (execute-kbd-macro (kbd "<escape>")))
+(fset 'wusd/eval-last-sexp
+   (kmacro-lambda-form [escape ?A ?\C-x ?\C-e escape] 0 "%d"))
 
 (fset 'wusd/quick-buffer
    (kmacro-lambda-form [?\M-m ?b ?b return] 0 "%d"))

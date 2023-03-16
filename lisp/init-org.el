@@ -8,8 +8,7 @@
 ;; ----------------------------------------agenda
 ;; 定义 agenda 文件的位置
 (setq org-agenda-files '("~/notes/todos/inbox.org"))
-(fset 'wusd/org-agenda
-      (kmacro-lambda-form [?\M-x ?o ?r ?g ?- ?a ?g ?e ?n ?d ?a return ?o] 0 "%d"))
+
 ;; ----------------------------------------state
 ;; --------------------state
 (setq org-todo-keywords '((sequence "TODO(t)" "DOING(g)" "BLOCKED(b)" "REVIEW(r)"
@@ -127,6 +126,8 @@
       (tags-todo "@info")
       (tags-todo "@learn")))))
 
+(fset 'wusd/org-agenda
+      (kmacro-lambda-form [?\M-m ?a ?o ?o ?o] 0 "%d"))
 (defun tian()
   (interactive)
   (find-file "~/notes/todos/inbox.org"))

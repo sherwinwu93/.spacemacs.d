@@ -39,7 +39,7 @@
 (define-key global-map (kbd "C-S") 'spacemacs/search-project-auto)
 (define-key global-map (kbd "s-s") 'query-replace)
 ;; ----------------------------------------Navigation
-(define-key key-translation-map (kbd "s-w") (kbd "M-m w ["))
+(define-key global-map (kbd "s-w") 'spacemacs/window-transient-state/spacemacs/shrink-window-horizontally)
 (define-key global-map (kbd "s-b") 'wusd/quick-buffer)
 (spacemacs/set-leader-keys
   "<tab>" 'other-window)
