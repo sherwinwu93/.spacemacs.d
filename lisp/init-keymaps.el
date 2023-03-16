@@ -18,8 +18,8 @@
 (define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier)
 (define-key global-map (kbd "<f11>") 'counsel-M-x)
 ;; --------------------Naivagate
-(define-key global-map (kbd "C-f") 'scroll-up-command)
-(define-key global-map (kbd "C-b") 'scroll-down-command)
+;;(define-key global-map (kbd "C-f") 'scroll-up-command)
+;;(define-key global-map (kbd "C-b") 'scroll-down-command)
 ;; ----------------------------------------Command
 (define-key global-map (kbd "<f5>") 'wusd/eval-last-sexp)
 ;; ------------------------------------------------------------files
@@ -45,7 +45,7 @@
 (define-key global-map (kbd "C-s") 'swiper)
 (define-key global-map (kbd "C-S") 'spacemacs/search-project-auto)
 (define-key global-map (kbd "s-s") 'query-replace)
-;; ----------------------------------------Jump
+;; ----------------------------------------Navigation
 (spacemacs/set-leader-keys
   "<tab>" 'other-window)
 (define-key global-map (kbd "s-w") 'other-window)
@@ -69,7 +69,6 @@
 (define-key global-map (kbd "s-g") 'wusd/git-pull)
 
 ;; ------------------------------------------------------------help
-(define-key key-translation-map (kbd "<f12>") (kbd "<SPC>h"))
-
+(define-key global-map (kbd "<f12>") 'describe-key)
 
 (provide 'init-keymaps)
