@@ -13,9 +13,12 @@
 ;; 改键<menu>为modifier
 (define-key global-map (kbd "<menu>") nil)
 (define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier)
-;; --------------------Evil
-(define-key evil-visual-state-local-map (kbd "S") 'evil-surround-region)
-(define-key evil-visual-state-local-map (kbd "s") 'evil-substitute)
+;; 复原evil-surround修改的按键
+(add-hook 'evil-visual-state-entry-hook
+          (lambda()
+            (define-key evil-visual-state-local-map (kbd "S") 'evil-surround-region)
+            (define-key evil-visual-state-local-map (kbd "s") 'evil-substitute)
+            ))
 
 ;; ----------------------------------------Command
 (define-key global-map (kbd "<f5>") 'wusd/eval-last-sexp)
@@ -41,10 +44,10 @@
   "<tab>" 'other-window)
 (define-key global-map (kbd "s-w") 'spacemacs/window-transient-state/spacemacs/shrink-window-horizontally)
 (define-key global-map (kbd "s-b") 'wusd/quick-buffer)
-(define-key global-map (kbd "s-k") 'scroll-other-window-down)
-(define-key global-map (kbd "s-j") 'scroll-other-window)
-(define-key global-map (kbd "s-l") 'avy-goto-line)
-(define-key global-map (kbd "s-h") 'avy-goto-char-timer)
+(define-key global-map (kbd "s-h") 'scroll-other-window-down)
+(define-key global-map (kbd "s-l") 'scroll-other-window)
+(define-key global-map (kbd "s-j") 'avy-goto-line)
+(define-key global-map (kbd "s-k") 'avy-goto-char-timer)
 (define-key global-map (kbd "C-M-<left>") 'better-jumper-jump-backward)
 (define-key global-map (kbd "C-M-<right>") 'better-jumper-jump-forward)
 ;; ------------------------------------------------------------code
@@ -64,7 +67,7 @@
 (define-key global-map (kbd "s-g") 'wusd/git-pull)
 
 ;; ------------------------------------------------------------help
-(define-key global-map (kbd "s-<menu>") 'counsel-M-x)
+(define-key global-map (kbd "s-x") 'counsel-M-x)
 (define-key global-map (kbd "<f11>") 'describe-function)
 (define-key global-map (kbd "<f12>") 'describe-key)
 
