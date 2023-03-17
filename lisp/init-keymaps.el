@@ -73,7 +73,6 @@
 (define-key my-mode-map (kbd "<f5>") 'kmacro-name-last-macro)
 (define-key my-mode-map (kbd "<f6>") 'insert-kbd-macro)
 ;; ----------------------------------------Eval
-(define-key my-mode-map (kbd "M-x") 'counsel-M-x)
 (define-key my-mode-map (kbd "M-e") 'eval-last-sexp)
 
 ;; ------------------------------------------------------------help
@@ -84,6 +83,3 @@
 
 
 (provide 'init-keymaps)
-
-
-
