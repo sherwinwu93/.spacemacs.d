@@ -595,6 +595,7 @@ before packages are loaded."
       (normal-top-level-add-subdirs-to-load-path)))
   (add-subdirs-to-load-path "~/.spacemacs.d/lisp/")
   (with-eval-after-load 'org
+    (require 'my-mode)
     (require 'init-evil)
     (require 'init-input)
     (require 'init-better-defaults)
@@ -603,8 +604,8 @@ before packages are loaded."
     (require 'init-scheme)
     (require 'init-translate)
     (require 'init-org)
-    (require 'init-keymaps)
     (require 'init-vc)
+    (require 'init-keymaps)
   )
   )
 
