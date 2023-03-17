@@ -47,10 +47,11 @@
 
 ;; ------------------------------------------------------------Buffer and Window
 ;; ----------------------------------------buffer
-(define-key my-mode-map (kbd "M-b") 'ivy-switch-buffer)
+(define-key my-mode-map (kbd "M-b") 'wusd/quick-buffer)
 (define-key my-mode-map (kbd "C-M-<left>") 'better-jumper-jump-backward)
 (define-key my-mode-map (kbd "C-M-<right>") 'better-jumper-jump-forward)
 ;; ----------------------------------------window
+(spacemacs/set-leader-keys "<tab>" 'other-window)
 (define-key my-mode-map (kbd "M-d") 'spacemacs/delete-window)
 (define-key my-mode-map (kbd "M-w") 'other-window)
 (define-key my-mode-map (kbd "C-M-j") 'scroll-other-window)
