@@ -73,11 +73,11 @@
 (define-key my-mode-map (kbd "<f5>") 'kmacro-name-last-macro)
 (define-key my-mode-map (kbd "<f6>") 'insert-kbd-macro)
 ;; ----------------------------------------Eval
+(define-key my-mode-map (kbd "M-x") 'counsel-M-x)
 (define-key my-mode-map (kbd "M-e") 'eval-last-sexp)
-(define-key my-mode-map (kbd "C-e") 'wusd/eval-last-sexp)
 
 ;; ------------------------------------------------------------help
-(define-key my-mode-map (kbd "<f9>") 'counsel-M-x)
+(define-key my-mode-map (kbd "<f9>") 'wusd/eval-last-sexp)
 (define-key my-mode-map (kbd "<f10>") 'describe-variable)
 (define-key my-mode-map (kbd "<f11>") 'describe-function)
 (define-key my-mode-map (kbd "<f12>") 'describe-key)
