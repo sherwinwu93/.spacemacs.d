@@ -34,6 +34,7 @@
 (define-key my-mode-map (kbd "M-v") 'yank-pop)
 ;;对应Windows上面的Ctrl-z 撤销
 (define-key my-mode-map (kbd "C-z") 'undo)
+(define-key my-mode-map (kbd "M-z") 'undo-tree-visualize)
 ;;对应Windows上面的Ctrl-x 剪切
 (define-key my-mode-map (kbd "C-x") 'kill-region)
 ;; ----------------------------------------Search and Replace
