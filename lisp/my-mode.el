@@ -11,7 +11,8 @@
   ;; `fundamental-mode' buffers even after doing \"(global-my-mode 1)\".
   ;; More info: http://emacs.stackexchange.com/q/16693/115
   :init-value t
-  :lighter " my-mode"
+  :lighter ""
+  ;; :lighter " my-mode"
   :keymap my-mode-map)
 
 ;;;###autoload
