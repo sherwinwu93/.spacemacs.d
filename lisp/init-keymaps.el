@@ -48,12 +48,15 @@
   "<tab>" 'other-window)
 (define-key global-map (kbd "s-w") 'spacemacs/window-transient-state/spacemacs/shrink-window-horizontally)
 (define-key global-map (kbd "s-b") 'wusd/quick-buffer)
-(define-key global-map (kbd "s-h") 'scroll-other-window-down)
-(define-key global-map (kbd "s-l") 'scroll-other-window)
+(define-key global-map (kbd "M-j") 'scroll-other-window)
+(define-key global-map (kbd "M-k") 'scroll-other-window-down)
 (define-key global-map (kbd "s-j") 'avy-goto-line)
 (define-key global-map (kbd "s-k") 'avy-goto-char-timer)
 (define-key global-map (kbd "C-M-<left>") 'better-jumper-jump-backward)
 (define-key global-map (kbd "C-M-<right>") 'better-jumper-jump-forward)
+;; --------------------tabs
+(define-key global-map (kbd "M-<left>") 'spacemacs/tabs-backward)
+(define-key global-map (kbd "M-<right>") 'spacemacs/tabs-forward)
 ;; ------------------------------------------------------------code
 (define-key key-translation-map (kbd "C-/") 'comment-line)
 (define-key global-map (kbd "C-M-l") 'indent-whole)

@@ -62,6 +62,7 @@ This function should only modify configuration layer settings."
                      spell-checking-enable-by-default nil)
      ;; syntax-checking
      ;; version-control
+     (tabs :variables tabs-highlight-current-tab 'left)
      treemacs)
 
 
