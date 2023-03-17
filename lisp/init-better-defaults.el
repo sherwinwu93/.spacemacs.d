@@ -6,7 +6,7 @@
 ;; --------------------Command
 ;; 移动到最后并执行代码
 (fset 'wusd/eval-last-sexp
-   (kmacro-lambda-form [escape ?A ?\C-x ?\C-e escape] 0 "%d"))
+   (kmacro-lambda-form [escape ?A ?\C-e escape] 0 "%d"))
 
 (fset 'wusd/quick-buffer
    (kmacro-lambda-form [?\M-m ?b ?b return] 0 "%d"))

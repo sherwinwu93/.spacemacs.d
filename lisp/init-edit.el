@@ -44,5 +44,4 @@
   (indent-region (point-min) (point-max))
   (message "format successfully"))
 
-
 (provide 'init-edit)
