@@ -38,10 +38,10 @@
 ;;对应Windows上面的Ctrl-x 剪切
 (define-key my-mode-map (kbd "C-x") 'kill-region)
 ;; ----------------------------------------Search and Replace
-;; (define-key my-mode-map (kbd "C-s") 'swiper)
-(define-key my-mode-map (kbd "C-s") 'helm-swoop)
-;; (define-key my-mode-map (kbd "C-S-s") 'spacemacs/search-project-auto)
-(define-key my-mode-map (kbd "C-S-s") 'spacemacs/helm-project-smart-do-search)
+(define-key my-mode-map (kbd "C-s") 'swiper)
+;; (define-key my-mode-map (kbd "C-s") 'helm-swoop)
+(define-key my-mode-map (kbd "C-S-s") 'spacemacs/search-project-auto)
+;; (define-key my-mode-map (kbd "C-S-s") 'spacemacs/helm-project-smart-do-search)
 (define-key my-mode-map (kbd "M-s") 'query-replace)
 (define-key my-mode-map (kbd "C-S-r") 'projectile-replace)
 
@@ -68,8 +68,8 @@
 (define-key my-mode-map (kbd "M-t") 'wusd/add-pronunciation)
 
 ;; ------------------------------------------------------------org
-(define-key my-mode-map (kbd "C-o") 'wusd/org-agenda)
-(define-key my-mode-map (kbd "C-p") 'org-capture)
+(define-key my-mode-map (kbd "M-o") 'wusd/org-agenda)
+(define-key my-mode-map (kbd "M-i") 'org-capture)
 
 ;; ------------------------------------------------------------Commands
 ;; ----------------------------------------Macros
