@@ -60,12 +60,6 @@ This function should only modify configuration layer settings."
                      ispell-program-name "aspell"
                      ispell-dictionary "american"
                      spell-checking-enable-by-default nil)
-     (html :variables
-           css-enable-lsp t
-           less-enable-lsp t
-           scss-enable-lsp t
-           html-enable-lsp t
-           web-fmt-tool 'web-beautify)
      ;; syntax-checking
      ;; version-control
      ;; (tabs :variables tabs-highlight-current-tab 'left)
