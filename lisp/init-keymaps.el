@@ -13,7 +13,7 @@
 ;; 清空evil insert模式的map,使用默认
 (setcdr evil-insert-state-map nil)
 (define-key evil-insert-state-map (kbd "<escape>") 'evil-normal-state)
-(define-key evil-normal-state-map (kbd "C-y") 'evil-visual-block)
+(define-key evil-normal-state-map (kbd "Y") 'evil-visual-block)
 ;; ----------------------------------------input
 (define-key rime-active-mode-map (kbd "<tab>") 'rime-inline-ascii)
 (define-key rime-mode-map (kbd "C-`") 'rime-send-keybinding)
@@ -71,8 +71,8 @@
 (define-key my-mode-map (kbd "<f5>") 'kmacro-name-last-macro)
 (define-key my-mode-map (kbd "<f6>") 'insert-kbd-macro)
 ;; ----------------------------------------Eval
-(define-key my-mode-map (kbd "C-e") 'eval-last-sexp)
-(define-key my-mode-map (kbd "M-e") 'wusd/eval-last-sexp)
+(define-key my-mode-map (kbd "M-e") 'eval-last-sexp)
+(define-key my-mode-map (kbd "C-e") 'wusd/eval-last-sexp)
 
 ;; ------------------------------------------------------------help
 (define-key my-mode-map (kbd "<f9>") 'counsel-M-x)
