@@ -27,7 +27,7 @@
 (defun turn-off-my-mode ()
   "Turn off my-mode."
   (my-mode -1))
-(add-hook 'minibuffer-setup-hook #'turn-off-my-mode)
+;(add-hook 'minibuffer-setup-hook #'turn-off-my-mode)
 
 (provide 'my-mode)
 

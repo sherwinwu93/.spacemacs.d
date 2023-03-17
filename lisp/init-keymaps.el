@@ -38,9 +38,12 @@
 ;;对应Windows上面的Ctrl-x 剪切
 (define-key my-mode-map (kbd "C-x") 'kill-region)
 ;; ----------------------------------------Search and Replace
-(define-key my-mode-map (kbd "C-s") 'swiper)
-(define-key my-mode-map (kbd "C-S") 'spacemacs/search-project-auto)
-(define-key my-mode-map (kbd "s-s") 'query-replace)
+;; (define-key my-mode-map (kbd "C-s") 'swiper)
+(define-key my-mode-map (kbd "C-s") 'helm-swoop)
+;; (define-key my-mode-map (kbd "C-S-s") 'spacemacs/search-project-auto)
+(define-key my-mode-map (kbd "C-S-s") 'spacemacs/helm-project-smart-do-search)
+(define-key my-mode-map (kbd "M-s") 'query-replace)
+(define-key my-mode-map (kbd "C-S-r") 'projectile-replace)
 
 ;; ------------------------------------------------------------Buffer and Window
 ;; ----------------------------------------buffer

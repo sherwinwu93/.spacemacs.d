@@ -45,8 +45,8 @@ This function should only modify configuration layer settings."
      (git :variables
           git-magit-status-fullscreen t)
      markdown
-     ;; helm
-     ivy
+     helm
+     ;; ivy
      ;; lsp
      ;;multiple-cursors
      (org :variables
