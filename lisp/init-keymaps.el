@@ -5,7 +5,7 @@
 ;; ------------------------------------------------------------input
 (define-key rime-active-mode-map (kbd "<tab>") 'rime-inline-ascii)
 (define-key rime-mode-map (kbd "C-`") 'rime-send-keybinding)
-(define-key global-map (kbd "s-<menu>") 'toggle-input-method)
+;(define-key global-map (kbd "s-<menu>") 'toggle-input-method)
 (define-key rime-mode-map (kbd "M-j") 'rime-force-enable)
 ;; ------------------------------------------------------------better-defaults
 ;; ----------------------------------------系统级按键
