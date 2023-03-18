@@ -22,6 +22,7 @@
 ;; ------------------------------------------------------------Files
 (spacemacs/set-leader-keys "d" 'dired-jump)
 (define-key my-mode-map (kbd "C-d") 'dired-jump)
+(define-key my-mode-map (kbd "M-r") 'spacemacs/counsel-recentf)
 
 ;; ------------------------------------------------------------edit
 ;; --------------------CUDA
