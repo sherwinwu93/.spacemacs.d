@@ -79,7 +79,7 @@
 
 ;; ------------------------------------------------------------help
 (define-key my-mode-map (kbd "<f9>") (lookup-key global-map (kbd "C-h")))
-(define-key my-mode-map (kbd "<f10>") 'describe-mode)
+(define-key my-mode-map (kbd "<f10>") 'describe-variable)
 (define-key my-mode-map (kbd "<f11>") 'describe-function)
 (define-key my-mode-map (kbd "<f12>") 'describe-key)
 
