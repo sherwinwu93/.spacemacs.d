@@ -4,12 +4,12 @@
 ;; 改键<menu>为modifier
 ;;(define-key my-mode-map (kbd "<menu>") nil)
 ;;(define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier)
+;; ----------------------------------------evil
 ;; 复原evil-surround修改的按键
 (add-hook 'evil-visual-state-entry-hook
           (lambda()
             (define-key evil-visual-state-local-map (kbd "S") 'evil-surround-region)
             (define-key evil-visual-state-local-map (kbd "s") 'evil-substitute)))
-;; ----------------------------------------evil
 ;; 清空evil insert模式的map,使用默认
 (setcdr evil-insert-state-map nil)
 (define-key evil-insert-state-map (kbd "<escape>") 'evil-normal-state)
@@ -21,30 +21,27 @@
 
 ;; ------------------------------------------------------------Files
 (spacemacs/set-leader-keys "d" 'dired-jump)
-(define-key my-mode-map (kbd "C-d") 'dired-jump)
-(define-key my-mode-map (kbd "M-r") 'spacemacs/counsel-recentf)
 
 ;; ------------------------------------------------------------edit
 ;; --------------------CUDA
 ;;对应Windows上面的Ctrl-a 全选
-(define-key my-mode-map (kbd "C-a") 'mark-whole-buffer)
+(define-key my-mode-map (kbd "M-a") 'mark-whole-buffer)
 ;;对应Windows上面的Ctrl-c 复制
-(define-key my-mode-map (kbd "C-c") 'kill-ring-save)
+(define-key my-mode-map (kbd "M-c") 'kill-ring-save)
 ;;对应Windows上面的Ctrl-v 粘贴
-(define-key my-mode-map (kbd "C-v") 'yank)
-(define-key my-mode-map (kbd "M-v") 'yank-pop)
+(define-key my-mode-map (kbd "M-v") 'yank)
+(define-key my-mode-map (kbd "C-v") 'yank-pop)
 ;;对应Windows上面的Ctrl-z 撤销
-(define-key my-mode-map (kbd "C-z") 'undo)
-(define-key my-mode-map (kbd "M-z") 'undo-tree-visualize)
+(define-key my-mode-map (kbd "M-z") 'undo)
 ;;对应Windows上面的Ctrl-x 剪切
-(define-key my-mode-map (kbd "C-x") 'kill-region)
+(define-key my-mode-map (kbd "M-x") 'kill-region)
 ;; ----------------------------------------Search and Replace
 (define-key my-mode-map (kbd "C-s") 'swiper)
 ;; (define-key my-mode-map (kbd "C-s") 'helm-swoop)
-(define-key my-mode-map (kbd "C-S-s") 'spacemacs/search-project-auto)
+(define-key my-mode-map (kbd "M-s") 'spacemacs/search-project-auto)
 ;; (define-key my-mode-map (kbd "C-S-s") 'spacemacs/helm-project-smart-do-search)
-(define-key my-mode-map (kbd "M-s") 'query-replace)
-(define-key my-mode-map (kbd "C-S-r") 'projectile-replace)
+(define-key my-mode-map (kbd "C-q") 'query-replace)
+(define-key my-mode-map (kbd "M-q") 'projectile-replace)
 
 ;; ------------------------------------------------------------Buffer and Window
 ;; ----------------------------------------buffer
@@ -53,12 +50,10 @@
 (define-key my-mode-map (kbd "C-M-<right>") 'better-jumper-jump-forward)
 ;; ----------------------------------------window
 (spacemacs/set-leader-keys "<tab>" 'other-window)
-(define-key my-mode-map (kbd "M-d") 'spacemacs/delete-window)
-(define-key my-mode-map (kbd "M-w") 'other-window)
 (define-key my-mode-map (kbd "C-M-j") 'scroll-other-window)
 (define-key my-mode-map (kbd "C-M-k") 'scroll-other-window-down)
-(define-key my-mode-map (kbd "C-j") 'avy-goto-line)
-(define-key my-mode-map (kbd "C-k") 'avy-goto-char-timer)
+(define-key my-mode-map (kbd "M-j") 'avy-goto-line)
+(define-key my-mode-map (kbd "M-k") 'avy-goto-char-timer)
 
 ;; ------------------------------------------------------------code
 (define-key key-translation-map (kbd "C-/") 'comment-line)
@@ -67,25 +62,27 @@
 ;; ------------------------------------------------------------translate
 (define-key my-mode-map (kbd "<f7>") 'youdao-dictionary-search-at-point)
 (define-key my-mode-map (kbd "<f8>") 'youdao-dictionary-search-at-point+)
+(define-key my-mode-map (kbd "C-t") 'youdao-dictionary-search-at-point+)
 (define-key my-mode-map (kbd "M-t") 'wusd/add-pronunciation)
 
 ;; ------------------------------------------------------------org
-(define-key my-mode-map (kbd "M-o") 'wusd/org-agenda)
-(define-key my-mode-map (kbd "M-i") 'org-capture)
+(define-key my-mode-map (kbd "C-o") 'wusd/org-agenda)
+(define-key my-mode-map (kbd "M-o") 'org-capture)
 
 ;; ------------------------------------------------------------Commands
 ;; ----------------------------------------Macros
 (define-key my-mode-map (kbd "<f5>") 'kmacro-name-last-macro)
 (define-key my-mode-map (kbd "<f6>") 'insert-kbd-macro)
 ;; ----------------------------------------Eval
-(define-key my-mode-map (kbd "M-e") 'eval-last-sexp)
+(define-key my-mode-map (kbd "C-e") 'eval-last-sexp)
+(define-key my-mode-map (kbd "M-e") 'wusd/eval-last-sexp)
 
 ;; ------------------------------------------------------------help
-(define-key my-mode-map (kbd "<f9>") 'wusd/eval-last-sexp)
+(define-key my-mode-map (kbd "<f9>") (lookup-key global-map (kbd "C-h")))
 (define-key my-mode-map (kbd "<f10>") 'describe-variable)
 (define-key my-mode-map (kbd "<f11>") 'describe-function)
 (define-key my-mode-map (kbd "<f12>") 'describe-key)
-(define-key my-mode-map (kbd "<menu>") (lookup-key global-map (kbd "C-x")))
+;;(define-key my-mode-map (kbd "<menu>") (lookup-key global-map (kbd "C-x")))
 
 
 (provide 'init-keymaps)
