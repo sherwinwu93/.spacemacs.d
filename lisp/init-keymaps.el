@@ -46,7 +46,6 @@
 
 ;; ------------------------------------------------------------Buffer and Window
 ;; ----------------------------------------buffer
-(define-key my-mode-map (kbd "M-b") 'wusd/quick-buffer)
 (define-key my-mode-map (kbd "C-M-<left>") 'better-jumper-jump-backward)
 (define-key my-mode-map (kbd "C-M-<right>") 'better-jumper-jump-forward)
 ;; ----------------------------------------window
@@ -80,10 +79,9 @@
 
 ;; ------------------------------------------------------------help
 (define-key my-mode-map (kbd "<f9>") (lookup-key global-map (kbd "C-h")))
-(define-key my-mode-map (kbd "<f10>") 'describe-variable)
+(define-key my-mode-map (kbd "<f10>") 'describe-mode)
 (define-key my-mode-map (kbd "<f11>") 'describe-function)
 (define-key my-mode-map (kbd "<f12>") 'describe-key)
-;;(define-key my-mode-map (kbd "<menu>") (lookup-key global-map (kbd "C-x")))
 
 
 (provide 'init-keymaps)
