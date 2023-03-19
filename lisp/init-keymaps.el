@@ -2,8 +2,8 @@
 ;; ----------------------------------------系统级按键
 ;; 用autohotkey直接替换替换,把Capslock改为C-g键
 ;; 改键<menu>为modifier
-(define-key my-mode-map (kbd "<menu>") nil)
-(define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier)
+;;(define-key my-mode-map (kbd "<menu>") nil)
+;;(define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier)
 ;; 复原evil-surround修改的按键
 (add-hook 'evil-visual-state-entry-hook
           (lambda()
@@ -85,6 +85,7 @@
 (define-key my-mode-map (kbd "<f10>") 'describe-variable)
 (define-key my-mode-map (kbd "<f11>") 'describe-function)
 (define-key my-mode-map (kbd "<f12>") 'describe-key)
+(define-key my-mode-map (kbd "<menu>") (lookup-key global-map (kbd "C-x")))
 
 
 (provide 'init-keymaps)
