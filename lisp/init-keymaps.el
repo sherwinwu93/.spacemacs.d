@@ -21,19 +21,20 @@
 
 ;; ------------------------------------------------------------Files
 (spacemacs/set-leader-keys "d" 'dired-jump)
+(define-key my-mode-map (kbd "C-d") 'delete-window)
 
 ;; ------------------------------------------------------------edit
 ;; --------------------CUDA
-;;对应Windows上面的Ctrl-a 全选
+;;全选
 (define-key my-mode-map (kbd "M-a") 'mark-whole-buffer)
-;;对应Windows上面的Ctrl-c 复制
+;;复制
 (define-key my-mode-map (kbd "M-c") 'kill-ring-save)
-;;对应Windows上面的Ctrl-v 粘贴
+;;粘贴
 (define-key my-mode-map (kbd "M-v") 'yank)
 (define-key my-mode-map (kbd "C-v") 'yank-pop)
-;;对应Windows上面的Ctrl-z 撤销
+;;撤销
 (define-key my-mode-map (kbd "M-z") 'undo)
-;;对应Windows上面的Ctrl-x 剪切
+;;剪切
 (define-key my-mode-map (kbd "M-x") 'kill-region)
 ;; ----------------------------------------Search and Replace
 (define-key my-mode-map (kbd "C-s") 'swiper)
