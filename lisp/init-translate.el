@@ -3,7 +3,7 @@
 (setq url-automatic-caching t)
 
 (fset 'wusd/add-pronunciation
-   (kmacro-lambda-form [?j ?0 ?v ?e f10 ?  tab ?y ?$ ?  tab ?p] 0 "%d"))
+   (kmacro-lambda-form [?j ?0 ?v ?e f7 ?  tab ?y ?$ ?  tab ?p] 0 "%d"))
 
 (fset 'youdao-quick-translate
    (kmacro-lambda-form [?j ?0 ?v ?e f9] 0 "%d"))
