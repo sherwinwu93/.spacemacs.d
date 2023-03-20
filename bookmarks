@@ -34,14 +34,14 @@
  (position . 1817))
 ("org-capture-last-stored"
  (filename . "~/notes/todos/inbox.org")
- (front-context-string . "** TODO szh-个人档案")
- (rear-context-string . "023-03-16 Thu>\n\n")
- (position . 17762))
+ (front-context-string . "** TODO test\n SC")
+ (rear-context-string . "023-03-20 Mon>\n\n")
+ (position . 17857))
 ("org-refile-last-stored"
  (filename . "~/notes/todos/finish.org")
- (front-context-string . "** DONE L64[7/7]")
- (rear-context-string . "<2022-11-14 一>\n\n")
- (position . 34450))
+ (front-context-string . "** DONE head fir")
+ (rear-context-string . "<2022-10-12 三>\n\n")
+ (position . 11051))
 ("spacemacs-doc.org"
  (filename . "~/notes/emacs/spacemacs-doc.org")
  (front-context-string . "\n*** 2. Dotfile\n")

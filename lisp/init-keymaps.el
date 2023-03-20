@@ -71,10 +71,10 @@
 (spacemacs/set-leader-keys-for-major-mode 'org-mode
   "j" 'org-next-visible-heading
   "k" 'org-previous-visible-heading
-  "h" 'org-backward-visible-heading
-  "l" 'org-forward-visible-heading
+  "h" 'org-backward-heading-same-level
+  "l" 'org-forward-heading-same-level
   )
-;(define-key spacemacs-org-mode-map-root-map (kbd "M-<return>") 'org-meta-return)
+(define-key spacemacs-org-mode-map-root-map (kbd "M-<return>") 'org-meta-return)
 
 ;; ------------------------------------------------------------Commands
 ;; ----------------------------------------Macros

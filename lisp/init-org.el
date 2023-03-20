@@ -11,15 +11,16 @@
 
 ;; ----------------------------------------state
 ;; --------------------state
-(setq org-todo-keywords '((sequence "TODO(t)" "DOING(g)" "BLOCKED(b)" "REVIEW(r)"
-                                    "|"
-                                    "DONE(d)" "CANCELED(c)")))
-;; --------------------state's colour
+(setq org-todo-keywords '((sequence "TODO(t)" "DOING(g)" "|" "DONE(d)")
+                          (sequence "REPORT(r)" "BUG(b)" "|" "FIXED(f)")
+                          (sequence "|" "CANCELED(c)")
+                          (sequence "BLOCKED(k)")))
 (setq org-todo-keyword-faces
       (quote (("TODO" :foreground "yellow" :weight bold)
-	            ("DOING" :foreground "spring green" :weight bold)
-	            ("BLOCKED" :foreground "red" :weight bold)
+              ("REPORT" :foreground "yellow" :weight bold)
+              ("BLOCKED" :foreground "red" :weight bold)
 	            ("DONE" :foreground "forest green" :weight bold)
+	            ("FIXED" :foreground "forest green" :weight bold)
 	            ("CANCELED" :foreground "forest green" :weight bold)
 	            )))
 ;; --------------------summary
@@ -48,7 +49,7 @@
 ;; --------------------properties
 (setq   org-highest-priority ?A
         org-default-priority ?B
-        org-lowest-priority ?B)
+        org-lowest-priority ?C)
 ;; ----------------------------------------refile
 (setq org-refile-targets '(
 			                     ;;修复bug,不可删除
