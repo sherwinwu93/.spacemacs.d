@@ -14,11 +14,11 @@
 (setq org-todo-keywords '((sequence "TODO(t)" "DOING(g)" "|" "DONE(d)")
                           (sequence "REPORT(r)" "BUG(b)" "|" "FIXED(f)")
                           (sequence "|" "CANCELED(c)")
-                          (sequence "BLOCKED(k)")))
+                          (sequence "WAITING(w)")))
 (setq org-todo-keyword-faces
       (quote (("TODO" :foreground "yellow" :weight bold)
               ("REPORT" :foreground "yellow" :weight bold)
-              ("BLOCKED" :foreground "red" :weight bold)
+              ("WAITING" :foreground "red" :weight bold)
 	            ("DONE" :foreground "forest green" :weight bold)
 	            ("FIXED" :foreground "forest green" :weight bold)
 	            ("CANCELED" :foreground "forest green" :weight bold)
