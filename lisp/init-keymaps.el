@@ -68,6 +68,13 @@
 ;; ------------------------------------------------------------org
 (define-key my-mode-map (kbd "C-o") 'wusd/org-agenda)
 (define-key my-mode-map (kbd "M-o") 'org-capture)
+(spacemacs/set-leader-keys-for-major-mode 'org-mode
+  "j" 'org-next-visible-heading
+  "k" 'org-previous-visible-heading
+  "h" 'org-backward-visible-heading
+  "l" 'org-forward-visible-heading
+  )
+;(define-key spacemacs-org-mode-map-root-map (kbd "M-<return>") 'org-meta-return)
 
 ;; ------------------------------------------------------------Commands
 ;; ----------------------------------------Macros

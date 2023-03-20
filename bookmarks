@@ -34,9 +34,9 @@
  (position . 1817))
 ("org-capture-last-stored"
  (filename . "~/notes/todos/inbox.org")
- (front-context-string . "** TODO 中消增加出版物功")
+ (front-context-string . "** TODO szh-个人档案")
  (rear-context-string . "023-03-16 Thu>\n\n")
- (position . 17601))
+ (position . 17762))
 ("org-refile-last-stored"
  (filename . "~/notes/todos/finish.org")
  (front-context-string . "** DONE L64[7/7]")
