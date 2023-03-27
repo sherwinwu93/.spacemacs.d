@@ -12,8 +12,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-distribution 'spacemacs
 
    ;; Lazy installation of layers (i.e. layers are installed only when a file
-   ;; with a supported type is opened). Possible values are `all', `unused'
-   ;; and `nil'. `unused' will lazy install only unused layers (i.e. layers
+   ;; with a supported type is opened). Possible values are `all', ed layers (i.e. layers
    ;; not listed in variable `dotspacemacs-configuration-layers'), `all' will
    ;; lazy install any layer that support lazy installation even the layers
    ;; listed in `dotspacemacs-configuration-layers'. `nil' disable the lazy
@@ -32,13 +31,18 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(html
+   '(autohotkey
+     html
+     (vinegar :variables
+              vinegar-reuse-dired-buffer t
+              vinegar-dired-hide-details nil)
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      evil-better-jumper
+     (tabs :variables tabs-highlight-current-tab 'over)
      (auto-completion :disabled-for org spacemacs-org)
      better-defaults
      ;; emacs-lisp

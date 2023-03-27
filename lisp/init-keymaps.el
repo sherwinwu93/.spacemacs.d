@@ -4,7 +4,7 @@
 ;; 改键<menu>为modifier
 ;;(define-key my-mode-map (kbd "<menu>") nil)
 ;;(define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier)
-(define-key input-decode-map "\C-i" [C-i]) 
+(keyboard-translate ?\C-i ?\M-o)
 ;; ----------------------------------------evil
 ;; 复原evil-surround修改的按键
 (add-hook 'evil-visual-state-entry-hook
@@ -46,7 +46,10 @@
 (define-key my-mode-map (kbd "M-q") 'projectile-replace)
 
 ;; ------------------------------------------------------------Buffer and Window
-;; ----------------------------------------buffer
+;; ----------------------------------------buffer or tab
+(define-key my-mode-map (kbd "M-<left>") 'spacemacs/tabs-backward)
+(define-key my-mode-map (kbd "M-<right>") 'spacemacs/tabs-forward)
+
 (define-key my-mode-map (kbd "C-M-<left>") 'better-jumper-jump-backward)
 (define-key my-mode-map (kbd "C-M-<right>") 'better-jumper-jump-forward)
 ;; ----------------------------------------window
