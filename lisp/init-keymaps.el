@@ -68,6 +68,7 @@
 
 ;; ------------------------------------------------------------Project
 (define-key my-mode-map (kbd "M-1") 'spacemacs/treemacs-project-toggle)
+(define-key my-mode-map (kbd "M-2") 'treemacs-add-and-display-current-project-exclusively)
 
 ;; ------------------------------------------------------------code
 (define-key key-translation-map (kbd "C-/") 'comment-line)

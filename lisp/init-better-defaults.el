@@ -3,7 +3,6 @@
 ;; (set-frame-width (selected-frame) 110)
 ;; (set-frame-height (selected-frame) 50)
 (delete-selection-mode t)
-(treemacs-add-and-display-current-project-exclusively)
 ;; --------------------Command
 ;; 移动到最后并执行代码
 (fset 'wusd/eval-last-sexp
