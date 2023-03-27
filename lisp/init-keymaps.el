@@ -48,6 +48,10 @@
 ;; ------------------------------------------------------------Navigation
 ;; ----------------------------------------direction
 ;; have defined in *.ahk
+(define-key key-translation-map (kbd "M-h") (kbd "<left>"))
+(define-key key-translation-map (kbd "M-j") (kbd "<down>"))
+(define-key key-translation-map (kbd "M-k") ')
+(define-key key-translation-map (kbd "M-l") ')
 
 ;; ----------------------------------------buffer or tab
 (define-key my-mode-map (kbd "M-<left>") 'spacemacs/tabs-backward)
