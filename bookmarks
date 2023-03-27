@@ -2,7 +2,9 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("nce3"
+((""
+ (filename . "/root/notes/Pronunciation Pairs.org"))
+("nce3"
  (filename . "~/notes/nce3/")
  (front-context-string)
  (rear-context-string . " 12月  6 15:38   ")

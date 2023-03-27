@@ -50,8 +50,8 @@
 ;; have defined in *.ahk
 (define-key key-translation-map (kbd "M-h") (kbd "<left>"))
 (define-key key-translation-map (kbd "M-j") (kbd "<down>"))
-(define-key key-translation-map (kbd "M-k") ')
-(define-key key-translation-map (kbd "M-l") ')
+(define-key key-translation-map (kbd "M-k") (kbd "<up>"))
+(define-key key-translation-map (kbd "M-l") (kbd "<right>"))
 
 ;; ----------------------------------------buffer or tab
 (define-key my-mode-map (kbd "M-<left>") 'spacemacs/tabs-backward)
@@ -65,6 +65,9 @@
 (define-key my-mode-map (kbd "C-M-k") 'scroll-other-window-down)
 (define-key my-mode-map (kbd "C-j") 'avy-goto-line)
 (define-key my-mode-map (kbd "C-k") 'avy-goto-char-timer)
+
+;; ------------------------------------------------------------Project
+(define-key my-mode-map (kbd "M-1") 'spacemacs/treemacs-project-toggle)
 
 ;; ------------------------------------------------------------code
 (define-key key-translation-map (kbd "C-/") 'comment-line)
