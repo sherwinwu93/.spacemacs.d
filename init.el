@@ -32,7 +32,7 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(
+   '(html
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
@@ -47,7 +47,7 @@ This function should only modify configuration layer settings."
      markdown
      ;; helm
      ivy
-     lsp
+     ;; lsp
      ;;multiple-cursors
      (org :variables
           org-enforce-todo-dependencies t
@@ -62,7 +62,6 @@ This function should only modify configuration layer settings."
                      spell-checking-enable-by-default nil)
      ;; syntax-checking
      ;; version-control
-     ;; (tabs :variables tabs-highlight-current-tab 'left)
      treemacs)
 
 
@@ -81,8 +80,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-frozen-packages '()
 
    ;; A list of packages that will not be installed and loaded.
-   ;;dotspacemacs-excluded-packages '(evil-surround)
-   dotspacemacs-excluded-packages '()
+   dotspacemacs-excluded-packages '(evil-surround)
 
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -595,7 +593,6 @@ before packages are loaded."
       (normal-top-level-add-subdirs-to-load-path)))
   (add-subdirs-to-load-path "~/.spacemacs.d/lisp/")
   (with-eval-after-load 'org
-    (require 'my-mode)
     (require 'init-evil)
     (require 'init-input)
     (require 'init-better-defaults)
@@ -604,8 +601,9 @@ before packages are loaded."
     (require 'init-scheme)
     (require 'init-translate)
     (require 'init-org)
-    (require 'init-vc)
+    (require 'my-mode)
     (require 'init-keymaps)
+    (require 'init-vc)
   )
   )
 

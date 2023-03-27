@@ -4,6 +4,7 @@
 ;; 改键<menu>为modifier
 ;;(define-key my-mode-map (kbd "<menu>") nil)
 ;;(define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier)
+(define-key input-decode-map "\C-i" [C-i]) 
 ;; ----------------------------------------evil
 ;; 复原evil-surround修改的按键
 (add-hook 'evil-visual-state-entry-hook
@@ -86,7 +87,7 @@
 
 ;; ------------------------------------------------------------help
 (define-key my-mode-map (kbd "<f9>") (lookup-key global-map (kbd "C-h")))
-(define-key my-mode-map (kbd "<f10>") 'describe-variable)
+(define-key my-mode-map (kbd "<f10>") 'describe-mode)
 (define-key my-mode-map (kbd "<f11>") 'describe-function)
 (define-key my-mode-map (kbd "<f12>") 'describe-key)
 

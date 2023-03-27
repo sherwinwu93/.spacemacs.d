@@ -62,10 +62,13 @@
 ;;  "* TODO %i%?\n" :empty-lines 1)
 (setq org-capture-templates
       '(("r" "REPORT [Report]"
-         entry (file+headline "~/notes/todos/inbox.org" "Work")
+         entry (file+headline "~/notes/todos/inbox.org" "Report")
          "* TODO %i%?\n SCHEDULED: %t" :empty-lines 1)
         ("t" "TODO [Work]"
          entry (file+headline "~/notes/todos/inbox.org" "Work")
+         "* TODO %i%?\n SCHEDULED: %t" :empty-lines 1)
+        ("s" "TODO [Study]"
+         entry (file+headline "~/notes/todos/inbox.org" "Study")
          "* TODO %i%?\n SCHEDULED: %t" :empty-lines 1)
         ))
 ;; ----------------------------------------template
@@ -77,45 +80,45 @@
 (setq org-agenda-window-setup 'only-window)
 
 (setq org-agenda-custom-commands
-  ;; --------------------
-  '(("o" "Wusd Personal Agenda"
-       ((tags-todo "+PRIORITY=\"A\"")
-        ;; 按优先级排序
-        (agenda "" ((org-agenda-span 1)
-                    (org-deadline-warning-days 0)
-                    (org-agenda-sorting-strategy '(priority-down time-up))))
-        ;; 空的周课表,需要准备则todo
-        (agenda "" ((org-agenda-span 7)
-                    (org-agenda-files '("~/notes/todos/weeks.org"))))
-        ;; 生日
-        (agenda "" ((org-agenda-entry-types '(:deadline))
-                    (org-agenda-span 1)
-                    (org-deadline-warning-days 7)
-                    (org-agenda-time-grid nil)))
-			  ;; (tags "@logic")
-        ;; (todo "TODO")
-        ;; (todo "CANCELED")
-        ;; (todo "DONE")
-        ))
-    ;; --------------------
-    ("w" "Weekly Review" ((agenda "" ((org-agenda-span 7)))
-			                    (stuck "")
-			                    (todo "TODO")
-			                    (todo "DOING")
-			                    (todo "DONE")))
-    ;; --------------------
-    ("g" . "GTD contexts")
-    ("gt" "task" tags-todo "@task")
-    ("gw" "work" tags-todo "@work")
-    ("gi" "idea" tags-todo "@idea")
-    ("gf" "info" tags-todo "@info")
-    ("gl" "learn" tags-todo "@learn")
-    ("G" "GTD Block Agenda"
-     ((tags-todo "@task")
-      (tags-todo "@work")
-      (tags-todo "@idea")
-      (tags-todo "@info")
-      (tags-todo "@learn")))))
+      ;; --------------------
+      '(("o" "Wusd Personal Agenda"
+         ((tags-todo "+PRIORITY=\"A\"")
+          ;; 按优先级排序
+          (agenda "" ((org-agenda-span 1)
+                      (org-deadline-warning-days 0)
+                      (org-agenda-sorting-strategy '(priority-down time-up))))
+          ;; 空的周课表,需要准备则todo
+          (agenda "" ((org-agenda-span 7)
+                      (org-agenda-files '("~/notes/todos/weeks.org"))))
+          ;; 生日
+          (agenda "" ((org-agenda-entry-types '(:deadline))
+                      (org-agenda-span 1)
+                      (org-deadline-warning-days 7)
+                      (org-agenda-time-grid nil)))
+			    ;; (tags "@logic")
+          ;; (todo "TODO")
+          ;; (todo "CANCELED")
+          ;; (todo "DONE")
+          ))
+        ;; --------------------
+        ("w" "Weekly Review" ((agenda "" ((org-agenda-span 7)))
+			                        (stuck "")
+			                        (todo "TODO")
+			                        (todo "DOING")
+			                        (todo "DONE")))
+        ;; --------------------
+        ("g" . "GTD contexts")
+        ("gt" "task" tags-todo "@task")
+        ("gw" "work" tags-todo "@work")
+        ("gi" "idea" tags-todo "@idea")
+        ("gf" "info" tags-todo "@info")
+        ("gl" "learn" tags-todo "@learn")
+        ("G" "GTD Block Agenda"
+         ((tags-todo "@task")
+          (tags-todo "@work")
+          (tags-todo "@idea")
+          (tags-todo "@info")
+          (tags-todo "@learn")))))
 
 (fset 'wusd/org-agenda
       (kmacro-lambda-form [?\M-m ?a ?o ?o ?o] 0 "%d"))
