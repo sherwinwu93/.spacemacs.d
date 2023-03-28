@@ -45,7 +45,7 @@
 (define-key my-mode-map (kbd "C-q") 'query-replace)
 (define-key my-mode-map (kbd "M-q") 'projectile-replace)
 
-;; ------------------------------------------------------------Navigation
+;; ------------------------------------------------------------Window buffer or tab
 ;; ----------------------------------------direction
 ;; have defined in *.ahk
 (define-key key-translation-map (kbd "M-h") (kbd "<left>"))
@@ -54,8 +54,8 @@
 (define-key key-translation-map (kbd "M-l") (kbd "<right>"))
 
 ;; ----------------------------------------buffer or tab
-(define-key my-mode-map (kbd "M-<left>") 'spacemacs/tabs-backward)
-(define-key my-mode-map (kbd "M-<right>") 'spacemacs/tabs-forward)
+;; (define-key my-mode-map (kbd "M-<left>"spacemacs/tabs-backwardfer)
+;; (define-key my-mode-map (kbd "M-<right>") 'forward-buffer)
 
 (define-key my-mode-map (kbd "C-M-<left>") 'better-jumper-jump-backward)
 (define-key my-mode-map (kbd "C-M-<right>") 'better-jumper-jump-forward)

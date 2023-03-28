@@ -31,18 +31,19 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(autohotkey
-     html
-     (vinegar :variables
-              vinegar-reuse-dired-buffer t
-              vinegar-dired-hide-details nil)
+   '(
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
+     autohotkey
+     html
+     ;; (vinegar :variables
+     ;;          vinegar-reuse-dired-buffer t
+     ;;          vinegar-dired-hide-details nil)
      evil-better-jumper
-     (tabs :variables tabs-highlight-current-tab 'over)
+     ;; (tabs :variables tabs-highlight-current-tab 'left)
      (auto-completion :disabled-for org spacemacs-org)
      better-defaults
      ;; emacs-lisp
@@ -85,7 +86,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-frozen-packages '()
 
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '(evil-surround)
+   dotspacemacs-excluded-packages '()
 
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
