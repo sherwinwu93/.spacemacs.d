@@ -69,8 +69,8 @@
 (define-key my-mode-map (kbd "C-d") 'delete-window)
 (define-key my-mode-map (kbd "C-M-j") 'scroll-other-window)
 (define-key my-mode-map (kbd "C-M-k") 'scroll-other-window-down)
-(define-key my-mode-map (kbd "M-j") 'avy-goto-line)
-(define-key my-mode-map (kbd "M-k") 'avy-goto-char-timer)
+(define-key my-mode-map (kbd "M-k") 'avy-goto-line)
+(define-key my-mode-map (kbd "M-j") 'avy-goto-char-timer)
 
 ;; ------------------------------------------------------------Project
 (define-key my-mode-map (kbd "M-1") 'spacemacs/treemacs-project-toggle)
