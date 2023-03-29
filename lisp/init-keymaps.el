@@ -22,7 +22,6 @@
 
 ;; ------------------------------------------------------------Files
 (spacemacs/set-leader-keys "d" 'dired-jump)
-(define-key my-mode-map (kbd "C-d") 'delete-window)
 
 ;; ------------------------------------------------------------edit
 ;; --------------------CUDA
@@ -62,6 +61,9 @@
 (define-key my-mode-map (kbd "C-M-<right>") 'better-jumper-jump-forward)
 ;; ----------------------------------------window
 (spacemacs/set-leader-keys "<tab>" 'other-window)
+(spacemacs/set-leader-keys "we" 'split-window-right-and-focus)
+(spacemacs/set-leader-keys "ws" 'split-window-below-and-focus)
+(define-key my-mode-map (kbd "C-d") 'delete-window)
 (define-key my-mode-map (kbd "C-M-j") 'scroll-other-window)
 (define-key my-mode-map (kbd "C-M-k") 'scroll-other-window-down)
 (define-key my-mode-map (kbd "M-j") 'avy-goto-line)
