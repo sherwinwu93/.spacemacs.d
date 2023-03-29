@@ -40,8 +40,10 @@
 (define-key my-mode-map (kbd "M-f") 'swiper)
 ;; (define-key my-mode-map (kbd "C-s") 'helm-swoop)
 ;; (define-key my-mode-map (kbd "M-s") 'spacemacs/search-project-auto)
+(define-key my-mode-map (kbd "C-F") 'spacemacs/search-project-auto)
 ;; (define-key my-mode-map (kbd "C-S-s") 'spacemacs/helm-project-smart-do-search)
 (define-key my-mode-map (kbd "M-r") 'query-replace)
+(define-key my-mode-map (kbd "C-R") 'projectile-replace)
 ;; (define-key my-mode-map (kbd "M-q") 'projectile-replace)
 
 ;; ------------------------------------------------------------Window buffer or tab
@@ -63,6 +65,7 @@
 (spacemacs/set-leader-keys "<tab>" 'other-window)
 (spacemacs/set-leader-keys "we" 'split-window-right-and-focus)
 (spacemacs/set-leader-keys "ws" 'split-window-below-and-focus)
+(spacemacs/set-leader-keys "wq" 'spacemacs/toggle-maximize-buffer)
 (define-key my-mode-map (kbd "C-d") 'delete-window)
 (define-key my-mode-map (kbd "C-M-j") 'scroll-other-window)
 (define-key my-mode-map (kbd "C-M-k") 'scroll-other-window-down)
