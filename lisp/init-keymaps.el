@@ -40,10 +40,10 @@
 (define-key my-mode-map (kbd "M-f") 'swiper)
 ;; (define-key my-mode-map (kbd "C-s") 'helm-swoop)
 ;; (define-key my-mode-map (kbd "M-s") 'spacemacs/search-project-auto)
-(define-key my-mode-map (kbd "C-F") 'spacemacs/search-project-auto)
+(define-key my-mode-map (kbd "C-S-f") 'spacemacs/search-project-auto)
 ;; (define-key my-mode-map (kbd "C-S-s") 'spacemacs/helm-project-smart-do-search)
 (define-key my-mode-map (kbd "M-r") 'query-replace)
-(define-key my-mode-map (kbd "C-R") 'projectile-replace)
+(define-key my-mode-map (kbd "C-S-r") 'projectile-replace)
 ;; (define-key my-mode-map (kbd "M-q") 'projectile-replace)
 
 ;; ------------------------------------------------------------Window buffer or tab
