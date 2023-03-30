@@ -91,12 +91,12 @@
 ;; ------------------------------------------------------------org
 (define-key my-mode-map (kbd "C-o") 'wusd/org-agenda)
 (define-key my-mode-map (kbd "M-o") 'org-capture)
-(spacemacs/set-leader-keys-for-major-mode 'org-mode
-  "j" 'org-next-visible-heading
-  "k" 'org-previous-visible-heading
-  "h" 'org-backward-heading-same-level
-  "l" 'org-forward-heading-same-level
-  )
+;; (spacemacs/set-leader-keys-for-major-mode 'org-mode
+;;   "j" 'org-next-visible-heading
+;;   "k" 'org-previous-visible-heading
+;;   "h" 'org-backward-heading-same-level
+;;   "l" 'org-forward-heading-same-level
+;;   )
 ;; (define-key spacemacs-org-mode-map-root-map (kbd "M-<return>") 'org-meta-return)
 
 ;; ------------------------------------------------------------Commands
@@ -104,7 +104,9 @@
 (define-key my-mode-map (kbd "<f5>") 'kmacro-name-last-macro)
 (define-key my-mode-map (kbd "<f6>") 'insert-kbd-macro)
 ;; ----------------------------------------Eval
-(define-key my-mode-map (kbd "M-3") 'eval-last-sexp)
+(define-key my-mode-map (kbd "M-3"(fset 'sss
+   (kmacro-lambda-form [?i ?\C-x ?\C-e escape] 0 "%d"))
+) 'eval-last-sexp)
 (define-key my-mode-map (kbd "M-e") 'wusd/eval-last-sexp)
 (define-key my-mode-map (kbd "C-x") 'counsel-M-x)
 
