@@ -35,6 +35,7 @@
 (define-key evil-insert-state-map (kbd "C-v") 'yank-pop)
 ;;撤销
 (define-key my-mode-map (kbd "M-z") 'undo)
+(define-key my-mode-map (kbd "C-z") 'undo-tree-visualize)
 ;;剪切
 (define-key my-mode-map (kbd "M-x") 'kill-region)
 ;; ----------------------------------------Search and Replace
@@ -48,13 +49,14 @@
 ;; (define-key my-mode-map (kbd "M-q") 'projectile-replace)
 
 ;; ------------------------------------------------------------Window buffer or tab
-;; ----------------------------------------direction
+;; ----------------------------------------navigation
 ;; have defined in *.ahk
 (define-key key-translation-map (kbd "C-n") (kbd "<down>"))
 (define-key key-translation-map (kbd "C-p") (kbd "<up>"))
 
 (define-key my-mode-map (kbd "C-f") 'evil-scroll-page-down)
 (define-key my-mode-map (kbd "C-b") 'evil-scroll-page-up)
+(define-key my-mode-map (kbd "C-e") 'mwim-end-of-line-or-code)
 
 ;; ----------------------------------------buffer or tab
 ;; (define-key my-mode-map (kbd "M-<left>"spacemacs/tabs-backwardfer)
@@ -66,8 +68,7 @@
 (spacemacs/set-leader-keys "<tab>" 'other-window)
 (spacemacs/set-leader-keys "we" 'split-window-right-and-focus)
 (spacemacs/set-leader-keys "ws" 'split-window-below-and-focus)
-(spacemacs/set-leader-keys "wq" 'spacemacs/toggle-maximize-buffer)
-(define-key my-mode-map (kbd "C-d") 'delete-window)
+(define-key my-mode-map (kbd "C-w") 'delete-window)
 (define-key my-mode-map (kbd "C-M-j") 'scroll-other-window)
 (define-key my-mode-map (kbd "C-M-k") 'scroll-other-window-down)
 (define-key my-mode-map (kbd "M-k") 'avy-goto-line)
@@ -103,7 +104,10 @@
 (define-key my-mode-map (kbd "<f5>") 'kmacro-name-last-macro)
 (define-key my-mode-map (kbd "<f6>") 'insert-kbd-macro)
 ;; ----------------------------------------Eval
+(define-key my-mode-map (kbd "M-3") 'eval-last-sexp)
 (define-key my-mode-map (kbd "M-e") 'wusd/eval-last-sexp)
+(define-key my-mode-map (kbd "C-x") 'counsel-M-x)
+
 
 ;; ------------------------------------------------------------help
 (define-key my-mode-map (kbd "<f9>") (lookup-key global-map (kbd "C-h")))
