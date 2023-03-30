@@ -4,7 +4,7 @@
 ;; 改键<menu>为modifier
 ;;(define-key my-mode-map (kbd "<menu>") nil)
 ;;(define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier)
-(keyboard-translate ?\C-i ?\M-o)
+;; (keyboard-translate ?\C-i ?\M-o)
 ;; ----------------------------------------evil
 ;; 复原evil-surround修改的按键
 (add-hook 'evil-visual-state-entry-hook
@@ -24,7 +24,8 @@
 (spacemacs/set-leader-keys "d" 'dired-jump)
 
 ;; ------------------------------------------------------------edit
-;; --------------------CUDA
+;; --------------------CUXA
+;; --------------------CUXA
 ;;全选
 (define-key my-mode-map (kbd "M-a") 'mark-whole-buffer)
 ;;复制

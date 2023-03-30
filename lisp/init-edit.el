@@ -1,3 +1,5 @@
+;; 查询时区分大小写
+(setq-default case-fold-search nil)
 ;; ----------------------------------------fonts
 ;; 设置行间距
 (defun set-bigger-spacing ()
@@ -33,6 +35,8 @@
 (add-hook 'text-mode-hook 'enable-tabs)
 (add-hook 'lisp-mode-hook 'disable-tabs)
 (add-hook 'emacs-lisp-mode-hook 'disable-tabs)
+(add-hook 'web-mode-hook (lambda()
+                           (my-setup-indent 2)))
 (setq-default python-indent-offset custom-tab-width) ;; Python
 (setq-default js-indent-level custom-tab-width) ;; Javascript
 (setq-default electric-indent-inhibit t)

@@ -31,14 +31,14 @@ This function should only modify configuration layer settings."
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(
+   '(javascript
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      autohotkey
-     html
+     (html :variables web-fmt-tool 'prettier)
      ;; (vinegar :variables
      ;;          vinegar-reuse-dired-buffer t
      ;;          vinegar-dired-hide-details nil)
@@ -48,7 +48,9 @@ This function should only modify configuration layer settings."
      better-defaults
      ;; emacs-lisp
      (git :variables
-          git-magit-status-fullscreen t)
+          git-magit-status-fullscreen t
+          html-enable-lsp t
+          css-enable-lsp t)
      markdown
      ;; helm
      ivy
@@ -559,17 +561,31 @@ See the header of this file for more information."
   (spacemacs/load-spacemacs-env)
 	)
 
+(defun my-setup-indent (n)
+  ;; java/c/c++
+  (setq c-basic-offset n)
+  ;; web development
+  (setq coffee-tab-width n) ; coffeescript
+  (setq javascript-indent-level n) ; javascript-mode
+  (setq js-indent-level n) ; js-mode
+  (setq js2-basic-offset n) ; js2-mode, in latest js2-mode, it's alias of js-indent-level
+  (setq web-mode-markup-indent-offset n) ; web-mode, html tag in html file
+  (setq web-mode-css-indent-offset n) ; web-mode, css in html file
+  (setq web-mode-code-indent-offset n) ; web-mode, js code in html file
+  (setq css-indent-offset n) ; css-mode
+  )
+
 (defun dotspacemacs/user-init ()
   "Initialization for user code:
 This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
-(setq configuration-layer-elpa-archives
-      '(("melpa-cn" . "http://mirrors.ustc.edu.cn/elpa/melpa/")
-        ("nongnu-cn"   . "http://mirrors.ustc.edu.cn/elpa/nongnu/")
-        ("gnu-cn"   . "http://mirrors.ustc.edu.cn/elpa/gnu/")))
-)
+  (setq configuration-layer-elpa-archives
+        '(("melpa-cn" . "http://mirrors.ustc.edu.cn/elpa/melpa/")
+          ("nongnu-cn"   . "http://mirrors.ustc.edu.cn/elpa/nongnu/")
+          ("gnu-cn"   . "http://mirrors.ustc.edu.cn/elpa/gnu/")))
+  )
 
 
 (defun dotspacemacs/user-load ()
@@ -610,7 +626,7 @@ before packages are loaded."
     (require 'my-mode)
     (require 'init-keymaps)
     (require 'init-vc)
-  )
+    )
   )
 
 (setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
