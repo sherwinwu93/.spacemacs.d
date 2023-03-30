@@ -96,7 +96,7 @@
   "h" 'org-backward-heading-same-level
   "l" 'org-forward-heading-same-level
   )
-(define-key spacemacs-org-mode-map-root-map (kbd "M-<return>") 'org-meta-return)
+;; (define-key spacemacs-org-mode-map-root-map (kbd "M-<return>") 'org-meta-return)
 
 ;; ------------------------------------------------------------Commands
 ;; ----------------------------------------Macros
