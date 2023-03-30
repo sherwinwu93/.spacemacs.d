@@ -65,7 +65,7 @@
 (spacemacs/set-leader-keys "<tab>" 'other-window)
 (spacemacs/set-leader-keys "we" 'split-window-right-and-focus)
 (spacemacs/set-leader-keys "ws" 'split-window-below-and-focus)
-(spacemacs/set-leader-keys "wq" 'spacemacs/toggle-maximize-buffer)
+(spacemacs/set-leader-keys "ww" 'spacemacs/toggle-maximize-buffer)
 (define-key my-mode-map (kbd "C-d") 'delete-window)
 (define-key my-mode-map (kbd "C-M-j") 'scroll-other-window)
 (define-key my-mode-map (kbd "C-M-k") 'scroll-other-window-down)
