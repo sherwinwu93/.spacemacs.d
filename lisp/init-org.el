@@ -61,7 +61,7 @@
 ;;  entry (file+headline "~/notes/todos/inbox.org" "Info")
 ;;  "* TODO %i%?\n" :empty-lines 1)
 (setq org-capture-templates
-      '(("r" "REPORT [Report]"
+      '(("r" "TODO [Report]"
          entry (file+headline "~/notes/todos/inbox.org" "Report")
          "* TODO %i%?\n SCHEDULED: %t" :empty-lines 1)
         ("t" "TODO [Work]"
