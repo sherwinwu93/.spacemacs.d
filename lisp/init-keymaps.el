@@ -3,7 +3,7 @@
 ;; 用autohotkey直接替换替换,把Capslock改为C-g键
 ;; 改键<menu>为modifier
 ;;(define-key my-mode-map (kbd "<menu>") nil)
-;;(define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier)
+(define-key key-translation-map (kbd "<menu>") 'event-apply-super-modifier)
 ;; (keyboard-translate ?\C-i ?\M-o)
 ;; ----------------------------------------evil
 ;; 复原evil-surround修改的按键
@@ -27,36 +27,31 @@
 ;; --------------------CUXA
 ;; --------------------CUXA
 ;;全选
-(define-key my-mode-map (kbd "M-a") 'mark-whole-buffer)
+(define-key my-mode-map (kbd "s-a") 'mark-whole-buffer)
 ;;复制
-(define-key my-mode-map (kbd "M-c") 'kill-ring-save)
+(define-key my-mode-map (kbd "s-c") 'kill-ring-save)
 ;;粘贴
-(define-key my-mode-map (kbd "M-v") 'yank)
-(define-key evil-insert-state-map (kbd "C-v") 'yank-pop)
+(define-key my-mode-map (kbd "s-v") 'yank)
 ;;撤销
-(define-key my-mode-map (kbd "M-z") 'undo)
-(define-key my-mode-map (kbd "C-z") 'undo-tree-visualize)
+(define-key my-mode-map (kbd "s-z") 'undo)
 ;;剪切
-(define-key my-mode-map (kbd "M-x") 'kill-region)
+(define-key my-mode-map (kbd "s-x") 'kill-region)
 ;; ----------------------------------------Search and Replace
-(define-key my-mode-map (kbd "M-f") 'swiper)
+(define-key my-mode-map (kbd "s-f") 'swiper)
 ;; (define-key my-mode-map (kbd "C-s") 'helm-swoop)
 ;; (define-key my-mode-map (kbd "M-s") 'spacemacs/search-project-auto)
 (define-key my-mode-map (kbd "C-S-f") 'spacemacs/search-project-auto)
 ;; (define-key my-mode-map (kbd "C-S-s") 'spacemacs/helm-project-smart-do-search)
-(define-key my-mode-map (kbd "M-r") 'query-replace)
+(define-key my-mode-map (kbd "s-r") 'query-replace)
 (define-key my-mode-map (kbd "C-S-r") 'projectile-replace)
 ;; (define-key my-mode-map (kbd "M-q") 'projectile-replace)
 
 ;; ------------------------------------------------------------Window buffer or tab
 ;; ----------------------------------------navigation
 ;; have defined in *.ahk
-(define-key key-translation-map (kbd "C-n") (kbd "<down>"))
-(define-key key-translation-map (kbd "C-p") (kbd "<up>"))
 
 (define-key my-mode-map (kbd "C-f") 'evil-scroll-page-down)
 (define-key my-mode-map (kbd "C-b") 'evil-scroll-page-up)
-(define-key my-mode-map (kbd "C-e") 'mwim-end-of-line-or-code)
 
 ;; ----------------------------------------buffer or tab
 ;; (define-key my-mode-map (kbd "M-<left>"spacemacs/tabs-backwardfer)
@@ -67,16 +62,15 @@
 ;; ----------------------------------------window
 (spacemacs/set-leader-keys "<tab>" 'other-window)
 (spacemacs/set-leader-keys "we" 'split-window-right-and-focus)
-(spacemacs/set-leader-keys "ws" 'split-window-below-and-focus)
-(define-key my-mode-map (kbd "C-w") 'delete-window)
+(define-key my-mode-map (kbd "s-w") 'delete-window)
 (define-key my-mode-map (kbd "C-M-j") 'scroll-other-window)
 (define-key my-mode-map (kbd "C-M-k") 'scroll-other-window-down)
-(define-key my-mode-map (kbd "M-k") 'avy-goto-line)
-(define-key my-mode-map (kbd "M-j") 'avy-goto-char-timer)
+(define-key my-mode-map (kbd "s-k") 'avy-goto-line)
+(define-key my-mode-map (kbd "s-j") 'avy-goto-char-timer)
 
 ;; ------------------------------------------------------------Project
-(define-key my-mode-map (kbd "M-1") 'spacemacs/treemacs-project-toggle)
-(define-key my-mode-map (kbd "M-2") 'treemacs-add-and-display-current-project-exclusively)
+(define-key my-mode-map (kbd "s-1") 'spacemacs/treemacs-project-toggle)
+(define-key my-mode-map (kbd "s-2") 'treemacs-add-and-display-current-project-exclusively)
 
 ;; ------------------------------------------------------------code
 (define-key key-translation-map (kbd "C-/") 'comment-line)
@@ -86,11 +80,11 @@
 (define-key my-mode-map (kbd "<f7>") 'youdao-dictionary-search-at-point)
 (define-key my-mode-map (kbd "<f8>") 'youdao-dictionary-search-at-point+)
 (define-key my-mode-map (kbd "C-t") 'youdao-dictionary-search-at-point+)
-(define-key my-mode-map (kbd "M-t") 'wusd/add-pronunciation)
+(define-key my-mode-map (kbd "s-t") 'wusd/add-pronunciation)
 
 ;; ------------------------------------------------------------org
 (define-key my-mode-map (kbd "C-o") 'wusd/org-agenda)
-(define-key my-mode-map (kbd "M-o") 'org-capture)
+(define-key my-mode-map (kbd "s-o") 'org-capture)
 ;; (spacemacs/set-leader-keys-for-major-mode 'org-mode
 ;;   "j" 'org-next-visible-heading
 ;;   "k" 'org-previous-visible-heading
@@ -104,9 +98,8 @@
 (define-key my-mode-map (kbd "<f5>") 'kmacro-name-last-macro)
 (define-key my-mode-map (kbd "<f6>") 'insert-kbd-macro)
 ;; ----------------------------------------Eval
-(define-key my-mode-map (kbd "M-3") 'eval-last-sexp)
-(define-key my-mode-map (kbd "M-e") 'wusd/eval-last-sexp)
-(define-key my-mode-map (kbd "C-x") 'counsel-M-x)
+(define-key my-mode-map (kbd "s-3") 'eval-last-sexp)
+(define-key my-mode-map (kbd "s-e") 'wusd/eval-last-sexp)
 
 
 ;; ------------------------------------------------------------help
