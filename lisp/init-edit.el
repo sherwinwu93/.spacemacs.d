@@ -35,13 +35,32 @@
 (add-hook 'text-mode-hook 'enable-tabs)
 (add-hook 'lisp-mode-hook 'disable-tabs)
 (add-hook 'emacs-lisp-mode-hook 'disable-tabs)
-(add-hook 'web-mode-hook (lambda()
-                           (my-setup-indent 2)))
-(setq-default python-indent-offset custom-tab-width) ;; Python
-(setq-default js-indent-level custom-tab-width) ;; Javascript
+
+;; (defun my-setup-indent (n)
+;;   ;; java/c/c++
+;;   (setq c-basic-offset n)
+;;   ;; web development
+;;   (setq coffee-tab-width n) ; coffeescript
+;;   (setq javascript-indent-level n) ; javascript-mode
+;;   (setq js-indent-level n) ; js-mode
+;;   (setq js2-basic-offset n) ; js2-mode, in latest js2-mode, it's alias of js-indent-level
+;;   (setq web-mode-markup-indent-offset n) ; web-mode, html tag in html file
+;;   (setq web-mode-css-indent-offset n) ; web-mode, css in html file
+;;   (setq web-mode-code-indent-offset n) ; web-mode, js code in html file
+;;   (setq css-indent-offset n) ; css-mode
+;;   )
+;; Making electric-indent behave sanely
 (setq-default electric-indent-inhibit t)
-(setq backward-delete-char-untabify-method 'hungry)
+(setq-default backward-delete-char-untabify-method 'hungry)
+
+(setq-default python-indent-offset custom-tab-width) ;; Python
 (setq-default evil-shift-width custom-tab-width)
+;; --------------------web relation
+(setq-default web-mode-markup-indent-offset custom-tab-width) ; web-mode, html tag in html file
+(setq-default web-mode-css-indent-offset custom-tab-width) ; web-mode, css in html file
+(setq-default web-mode-code-indent-offset custom-tab-width) ; web-mode, js code in html file
+(setq-default css-indent-offset custom-tab-width) ; css-mode
+(setq-default js-indent-level custom-tab-width) ;; Javascript
 ;; ----------------------------------------缩进
 (defun indent-whole()
   (interactive)

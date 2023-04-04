@@ -104,9 +104,7 @@
 (define-key my-mode-map (kbd "<f5>") 'kmacro-name-last-macro)
 (define-key my-mode-map (kbd "<f6>") 'insert-kbd-macro)
 ;; ----------------------------------------Eval
-(define-key my-mode-map (kbd "M-3"(fset 'sss
-   (kmacro-lambda-form [?i ?\C-x ?\C-e escape] 0 "%d"))
-) 'eval-last-sexp)
+(define-key my-mode-map (kbd "M-3") 'eval-last-sexp)
 (define-key my-mode-map (kbd "M-e") 'wusd/eval-last-sexp)
 (define-key my-mode-map (kbd "C-x") 'counsel-M-x)
 
