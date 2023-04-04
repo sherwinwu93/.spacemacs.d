@@ -49,9 +49,11 @@
 ;; ------------------------------------------------------------Window buffer or tab
 ;; ----------------------------------------navigation
 ;; have defined in *.ahk
-
 (define-key my-mode-map (kbd "C-f") 'evil-scroll-page-down)
 (define-key my-mode-map (kbd "C-b") 'evil-scroll-page-up)
+(define-key key-translation-map (kbd "C-n") (kbd "<down>"))
+(define-key key-translation-map (kbd "C-p") (kbd "<up>"))
+(define-key my-mode-map (kbd "C-e") 'mwim-end-of-line-or-code)
 
 ;; ----------------------------------------buffer or tab
 ;; (define-key my-mode-map (kbd "M-<left>"spacemacs/tabs-backwardfer)
