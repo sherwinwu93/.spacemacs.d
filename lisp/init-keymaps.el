@@ -1,3 +1,23 @@
+;; -------------------------------------------------------------------------------- 
+;; key-translation-map: 按键替换map
+;; spacemacs-default-map-root-map: 默认按键
+;; spacemacs-org-mode-map-root-map: mode之后的按键
+;; global-map
+;; org-mode-map
+;; (define-key my-mode-map (kbd "s-a") 'mark-whole-buffer)
+
+;; (spacemacs/declare-prefix "o" "own-menu")
+;; (spacemacs/set-leader-keys "we" 'split-window-right-and-focus)
+
+;; (spacemacs/declare-prefix-for-mode 'org-mode "m" "menu")
+;; (spacemacs/set-leader-keys-for-minor-mode 'org-mode
+;;   "a" 'org-capte-kill
+;;   "c" 'org-capte-kill)
+
+;; (add-hook 'evil-visual-state-entry-hook
+;;           (lambda()
+;;             (define-key evil-visual-state-local-map (kbd "S") 'evil-surround-region)))
+
 ;; ------------------------------------------------------------better-defaults
 ;; ----------------------------------------系统级按键
 ;; 用autohotkey直接替换替换,把Capslock改为C-g键
@@ -32,8 +52,10 @@
 (define-key my-mode-map (kbd "s-c") 'kill-ring-save)
 ;;粘贴
 (define-key my-mode-map (kbd "s-v") 'yank)
+(define-key my-mode-map (kbd "M-v") 'counsel-yank-pop)
 ;;撤销
 (define-key my-mode-map (kbd "s-z") 'undo)
+(define-key my-mode-map (kbd "M-z") 'undo-tree-visualize)
 ;;剪切
 (define-key my-mode-map (kbd "s-x") 'kill-region)
 ;; ----------------------------------------Search and Replace
@@ -51,8 +73,6 @@
 ;; have defined in *.ahk
 (define-key my-mode-map (kbd "C-f") 'evil-scroll-page-down)
 (define-key my-mode-map (kbd "C-b") 'evil-scroll-page-up)
-(define-key key-translation-map (kbd "C-n") (kbd "<down>"))
-(define-key key-translation-map (kbd "C-p") (kbd "<up>"))
 (define-key my-mode-map (kbd "C-e") 'mwim-end-of-line-or-code)
 
 ;; ----------------------------------------buffer or tab
@@ -81,19 +101,12 @@
 ;; ------------------------------------------------------------translate
 (define-key my-mode-map (kbd "<f7>") 'youdao-dictionary-search-at-point)
 (define-key my-mode-map (kbd "<f8>") 'youdao-dictionary-search-at-point+)
-(define-key my-mode-map (kbd "C-t") 'youdao-dictionary-search-at-point+)
 (define-key my-mode-map (kbd "s-t") 'wusd/add-pronunciation)
 
 ;; ------------------------------------------------------------org
-(define-key my-mode-map (kbd "C-o") 'wusd/org-agenda)
-(define-key my-mode-map (kbd "s-o") 'org-capture)
-;; (spacemacs/set-leader-keys-for-major-mode 'org-mode
-;;   "j" 'org-next-visible-heading
-;;   "k" 'org-previous-visible-heading
-;;   "h" 'org-backward-heading-same-level
-;;   "l" 'org-forward-heading-same-level
-;;   )
-;; (define-key spacemacs-org-mode-map-root-map (kbd "M-<return>") 'org-meta-return)
+(define-key my-mode-map (kbd "s-o") 'wusd/org-agenda)
+(define-key my-mode-map (kbd "s-i") 'org-capture)
+(define-key spacemacs-org-mode-map-root-map (kbd "M-<return>") 'org-meta-return)
 
 ;; ------------------------------------------------------------Commands
 ;; ----------------------------------------Macros
