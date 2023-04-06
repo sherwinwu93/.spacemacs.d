@@ -85,12 +85,12 @@
 
 ;; ----------------------------------------window
 (spacemacs/set-leader-keys "<tab>" 'other-window)
-(spacemacs/set-leader-keys "we" 'split-window-right-and-focus)
+(spacemacs/set-leader-keys
+  "we" 'split-window-right-and-focus
+  "ws" 'split-window-below-and-focus)
 (define-key my-mode-map (kbd "s-w") 'delete-window)
-(define-key my-mode-map (kbd "C-M-j") 'scroll-other-window)
-(define-key my-mode-map (kbd "C-M-k") 'scroll-other-window-down)
-(define-key my-mode-map (kbd "s-k") 'avy-goto-line)
-(define-key my-mode-map (kbd "s-j") 'avy-goto-char-timer)
+(define-key my-mode-map (kbd "s-j") 'scroll-other-window)
+(define-key my-mode-map (kbd "s-k") 'scroll-other-window-down)
 
 ;; ------------------------------------------------------------Project
 (define-key my-mode-map (kbd "s-1") 'spacemacs/treemacs-project-toggle)
