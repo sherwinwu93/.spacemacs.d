@@ -1,8 +1,7 @@
-;; -------------------------------------------------------------------------------- 
+;; --------------------------------------------------------------------------------按键设置
 ;; key-translation-map: 按键替换map
 ;; spacemacs-default-map-root-map: 默认按键
 ;; spacemacs-org-mode-map-root-map: mode之后的按键
-;; global-map
 ;; org-mode-map
 ;; (define-key my-mode-map (kbd "s-a") 'mark-whole-buffer)
 
@@ -11,12 +10,17 @@
 
 ;; (spacemacs/declare-prefix-for-mode 'org-mode "m" "menu")
 ;; (spacemacs/set-leader-keys-for-minor-mode 'org-mode
-;;   "a" 'org-capte-kill
-;;   "c" 'org-capte-kill)
+;;  "a" 'org-capte-kill)
 
 ;; (add-hook 'evil-visual-state-entry-hook
 ;;           (lambda()
 ;;             (define-key evil-visual-state-local-map (kbd "S") 'evil-surround-region)))
+
+;; --------------------------------------------------------------------------------发现按键
+;; SPC ?: Describe-keybindings
+;; SPC h: help-prefix
+;; SPC h SPC: help-layer
+;; SPC h d: help-describe-prfiex
 
 ;; ------------------------------------------------------------better-defaults
 ;; ----------------------------------------系统级按键
@@ -31,9 +35,6 @@
           (lambda()
             (define-key evil-visual-state-local-map (kbd "S") 'evil-surround-region)
             (define-key evil-visual-state-local-map (kbd "s") 'evil-substitute)))
-;; 清空evil insert模式的map,使用默认
-(setcdr evil-insert-state-map nil)
-(define-key evil-insert-state-map (kbd "<escape>") 'evil-normal-state)
 (define-key evil-normal-state-map (kbd "Y") 'evil-visual-block)
 ;; ----------------------------------------input
 (define-key rime-active-mode-map (kbd "<tab>") 'rime-inline-ascii)
@@ -73,14 +74,13 @@
 ;; have defined in *.ahk
 (define-key my-mode-map (kbd "C-f") 'evil-scroll-page-down)
 (define-key my-mode-map (kbd "C-b") 'evil-scroll-page-up)
+(define-key my-mode-map (kbd "C-a") 'mwim-beginning-of-code-or-line)
 (define-key my-mode-map (kbd "C-e") 'mwim-end-of-line-or-code)
 
 ;; ----------------------------------------buffer or tab
-;; (define-key my-mode-map (kbd "M-<left>"spacemacs/tabs-backwardfer)
-;; (define-key my-mode-map (kbd "M-<right>") 'forward-buffer)
-
 (define-key my-mode-map (kbd "C-M-<left>") 'better-jumper-jump-backward)
 (define-key my-mode-map (kbd "C-M-<right>") 'better-jumper-jump-forward)
+
 ;; ----------------------------------------window
 (spacemacs/set-leader-keys "<tab>" 'other-window)
 (spacemacs/set-leader-keys "we" 'split-window-right-and-focus)
@@ -114,7 +114,7 @@
 (define-key my-mode-map (kbd "<f6>") 'insert-kbd-macro)
 ;; ----------------------------------------Eval
 (define-key my-mode-map (kbd "s-3") 'eval-last-sexp)
-(define-key my-mode-map (kbd "s-e") 'wusd/eval-last-sexp)
+(define-key my-mode-map (kbd "s-4") 'wusd/eval-last-sexp)
 
 
 ;; ------------------------------------------------------------help
