@@ -78,8 +78,10 @@
 (define-key my-mode-map (kbd "C-e") 'mwim-end-of-line-or-code)
 
 ;; ----------------------------------------buffer or tab
+(keyboard-translate ?\C-i ?\s-0)
 (define-key my-mode-map (kbd "C-M-<left>") 'better-jumper-jump-backward)
 (define-key my-mode-map (kbd "C-M-<right>") 'better-jumper-jump-forward)
+(define-key my-mode-map (kbd "s-0") 'better-jumper-jump-forward)
 
 ;; ----------------------------------------window
 (spacemacs/set-leader-keys "<tab>" 'other-window)
