@@ -7,7 +7,7 @@
                            ))
 ;; ----------------------------------------agenda
 ;; 定义 agenda 文件的位置
-(setq org-agenda-files '("/mnt/Z/org/inbox.org"))
+(setq org-agenda-files '("/mnt/webdav/org/inbox.org"))
 
 ;; ----------------------------------------state
 ;; --------------------state
@@ -53,17 +53,17 @@
 (setq org-refile-targets '(
 			                     ;;修复bug,不可删除
 			                     (nil :maxlevel . 1)
-			                     ("/mnt/Z/finish.org" :maxlevel . 1)
-			                     ("/mnt/Z/org/inbox.org" :maxlevel . 1)
+			                     ("/mnt/webdav/finish.org" :maxlevel . 1)
+			                     ("/mnt/webdav/org/inbox.org" :maxlevel . 1)
 			                     ))
 ;; ----------------------------------------capture
 (setq org-capture-templates
       '(
         ("i" "TODO"
-         entry (file "/mnt/Z/org/inbox.org")
-         "* TODO %i%?\n SCHEDULED: %t" :empty-lines 1)
+         entry (file "/mnt/webdav/org/inbox.org")
+         "* TODO %i%?\n SCHEDULED: %t\n %t" :empty-lines 1)
         ;; ("s" "TODO [Study]"
-        ;;  entry (file+headline "/mnt/Z/org/inbox.org" "Study")
+        ;;  entry (file+headline "/mnt/webdav/org/inbox.org" "Study")
         ;;  "* TODO %i%?\n SCHEDULED: %t" :empty-lines 1)
         ))
 ;; ----------------------------------------template
@@ -84,7 +84,7 @@
                       (org-agenda-sorting-strategy '(priority-down time-up))))
           ;; 空的周课表,需要准备则todo
           (agenda "" ((org-agenda-span 7)
-                      (org-agenda-files '("/mnt/Z/org/weeks.org"))))
+                      (org-agenda-files '("/mnt/webdav/org/weeks.org"))))
           ;; 生日
           (agenda "" ((org-agenda-entry-types '(:deadline))
                       (org-agenda-span 1)
@@ -121,9 +121,9 @@
       (kmacro-lambda-form [?\M-m ?a ?o ?c ?i] 0 "%d"))
 (defun tian()
   (interactive)
-  (find-file "/mnt/Z/org/inbox.org"))
+  (find-file "/mnt/webdav/org/inbox.org"))
 (defun zhou()
   (interactive)
-  (find-file "/mnt/Z/org/weeks.org"))
+  (find-file "/mnt/webdav/org/weeks.org"))
 
 (provide 'init-org)
