@@ -35,15 +35,15 @@
  (rear-context-string . " 'kill-ring-save")
  (position . 1817))
 ("org-capture-last-stored"
- (filename . "~/notes/todos/inbox.org")
- (front-context-string . "** TODO 搭建webdav")
- (rear-context-string . "023-04-03 Mon>\n\n")
- (position . 19000))
+ (filename . "/mnt/Z/org/inbox.org")
+ (front-context-string . "* TODO wushengdo")
+ (rear-context-string . " Phrasal verbs\n\n")
+ (position . 4490))
 ("org-refile-last-stored"
- (filename . "~/notes/todos/finish.org")
- (front-context-string . "** DONE head fir")
- (rear-context-string . "<2022-10-12 三>\n\n")
- (position . 11051))
+ (filename . "/mnt/webdav/finish.org")
+ (front-context-string . "** DONE L27-Noth")
+ (rear-context-string . "2-05 一>\n\n* NCE3\n")
+ (position . 47360))
 ("spacemacs-doc.org"
  (filename . "~/notes/emacs/spacemacs-doc.org")
  (front-context-string . "\n*** 2. Dotfile\n")

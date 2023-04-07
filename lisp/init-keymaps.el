@@ -107,7 +107,7 @@
 
 ;; ------------------------------------------------------------org
 (define-key my-mode-map (kbd "s-o") 'wusd/org-agenda)
-(define-key my-mode-map (kbd "s-i") 'org-capture)
+(define-key my-mode-map (kbd "s-i") 'wusd/org-capture)
 (define-key spacemacs-org-mode-map-root-map (kbd "M-<return>") 'org-meta-return)
 
 ;; ------------------------------------------------------------Commands
