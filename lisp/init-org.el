@@ -61,7 +61,7 @@
       '(
         ("i" "TODO"
          entry (file "/mnt/webdav/org/inbox.org")
-         "* TODO %i%?\n SCHEDULED: %t\n %t" :empty-lines 1)
+         "* TODO %i%?\n SCHEDULED: %t\n" :empty-lines 1)
         ;; ("s" "TODO [Study]"
         ;;  entry (file+headline "/mnt/webdav/org/inbox.org" "Study")
         ;;  "* TODO %i%?\n SCHEDULED: %t" :empty-lines 1)
