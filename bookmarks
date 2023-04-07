@@ -36,9 +36,9 @@
  (position . 1817))
 ("org-capture-last-stored"
  (filename . "~/notes/todos/inbox.org")
- (front-context-string . "** TODO szh-人员档案")
+ (front-context-string . "** TODO 搭建webdav")
  (rear-context-string . "023-04-03 Mon>\n\n")
- (position . 18142))
+ (position . 19000))
 ("org-refile-last-stored"
  (filename . "~/notes/todos/finish.org")
  (front-context-string . "** DONE head fir")

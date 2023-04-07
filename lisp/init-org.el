@@ -7,7 +7,7 @@
                            ))
 ;; ----------------------------------------agenda
 ;; 定义 agenda 文件的位置
-(setq org-agenda-files '("~/notes/todos/inbox.org"))
+(setq org-agenda-files '("/mnt/webdav/org/inbox.org"))
 
 ;; ----------------------------------------state
 ;; --------------------state
@@ -53,22 +53,22 @@
 (setq org-refile-targets '(
 			                     ;;修复bug,不可删除
 			                     (nil :maxlevel . 1)
-			                     ("~/notes/todos/inbox.org" :maxlevel . 1)
-			                     ("~/notes/todos/finish.org" :maxlevel . 1)
+			                     ("/mnt/webdav/org/inbox.org" :maxlevel . 1)
+			                     ("/mnt/webdav/finish.org" :maxlevel . 1)
 			                     ))
 ;; ----------------------------------------capture
 ;; ("f" "TODO [Info]"
-;;  entry (file+headline "~/notes/todos/inbox.org" "Info")
+;;  entry (file+headline "/mnt/webdav/org/inbox.org" "Info")
 ;;  "* TODO %i%?\n" :empty-lines 1)
 (setq org-capture-templates
       '(("r" "TODO [Report]"
-         entry (file+headline "~/notes/todos/inbox.org" "Report")
+         entry (file+headline "/mnt/webdav/org/inbox.org" "Report")
          "* TODO %i%?\n SCHEDULED: %t" :empty-lines 1)
         ("t" "TODO [Work]"
-         entry (file+headline "~/notes/todos/inbox.org" "Work")
+         entry (file+headline "/mnt/webdav/org/inbox.org" "Work")
          "* TODO %i%?\n SCHEDULED: %t" :empty-lines 1)
         ("s" "TODO [Study]"
-         entry (file+headline "~/notes/todos/inbox.org" "Study")
+         entry (file+headline "/mnt/webdav/org/inbox.org" "Study")
          "* TODO %i%?\n SCHEDULED: %t" :empty-lines 1)
         ))
 ;; ----------------------------------------template
@@ -89,7 +89,7 @@
                       (org-agenda-sorting-strategy '(priority-down time-up))))
           ;; 空的周课表,需要准备则todo
           (agenda "" ((org-agenda-span 7)
-                      (org-agenda-files '("~/notes/todos/weeks.org"))))
+                      (org-agenda-files '("/mnt/webdav/org/weeks.org"))))
           ;; 生日
           (agenda "" ((org-agenda-entry-types '(:deadline))
                       (org-agenda-span 1)
@@ -124,9 +124,9 @@
       (kmacro-lambda-form [?\M-m ?a ?o ?o ?o] 0 "%d"))
 (defun tian()
   (interactive)
-  (find-file "~/notes/todos/inbox.org"))
+  (find-file "/mnt/webdav/org/inbox.org"))
 (defun zhou()
   (interactive)
-  (find-file "~/notes/todos/weeks.org"))
+  (find-file "/mnt/webdav/org/weeks.org"))
 
 (provide 'init-org)
