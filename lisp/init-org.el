@@ -119,11 +119,13 @@
       (kmacro-lambda-form [?\M-m ?a ?o ?o ?o] 0 "%d"))
 (fset 'wusd/org-capture
       (kmacro-lambda-form [?\M-m ?a ?o ?c ?i] 0 "%d"))
+
 (defun tian()
   (interactive)
   (find-file "/mnt/webdav/org/inbox.org"))
 (defun zhou()
   (interactive)
   (find-file "/mnt/webdav/org/weeks.org"))
+
 
 (provide 'init-org)
