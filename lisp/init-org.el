@@ -15,7 +15,7 @@
 ;; ! : 切换到该状态时会自动添加时间戳
 ;; @ : 切换到该状态时要求输入文字说明
 ;; 如果同时设定@和!,使用@/!
-(setq org-todo-keywords '((sequence "TODO(t)" "DOING(g!)" "WAITING(w!)" "|" "DONE(d!)" "CANCELED(c@/!)")))
+(setq org-todo-keywords '((sequence "TODO(t)" "DOING(g)" "WAITING(w)" "|" "DONE(d!)" "CANCELED(c@/!)")))
 (setq org-todo-keyword-faces
       (quote (("TODO" :foreground "yellow" :weight bold)
               ("DOING" :foreground "orange" :weight bold)

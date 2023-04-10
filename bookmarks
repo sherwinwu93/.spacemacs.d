@@ -37,8 +37,8 @@
 ("org-capture-last-stored"
  (filename . "/mnt/webdav/org/inbox.org")
  (front-context-string . "* TODO test\n SCH")
- (rear-context-string . "2023-04-11 Tue>\n")
- (position . 5099))
+ (rear-context-string . "4-10 Mon 15:39]\n")
+ (position . 5059))
 ("org-refile-last-stored"
  (filename . "/mnt/webdav/finish.org")
  (front-context-string . "** DONE L27-Noth")
