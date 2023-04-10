@@ -57,10 +57,7 @@ This function should only modify configuration layer settings."
      ivy
      ;; lsp
      ;;multiple-cursors
-     (org :variables
-          org-enforce-todo-dependencies t
-          org-enable-notifications t
-          org-start-notification-daemon-on-startup t)
+     org
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
@@ -602,7 +599,6 @@ before packages are loaded."
       (add-to-list 'load-path dir)
       (normal-top-level-add-subdirs-to-load-path)))
   (add-subdirs-to-load-path "~/.spacemacs.d/lisp/")
-  (with-eval-after-load 'org
     (require 'init-evil)
     (require 'init-input)
     (require 'init-better-defaults)
@@ -610,10 +606,11 @@ before packages are loaded."
     (require 'init-files)
     (require 'init-scheme)
     (require 'init-translate)
-    (require 'init-org)
     (require 'my-mode)
     (require 'init-keymaps)
     (require 'init-vc)
+    (with-eval-after-load 'org
+      (require 'init-org)
     )
   )
 

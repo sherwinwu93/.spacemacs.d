@@ -12,16 +12,16 @@
 
 ;; ----------------------------------------state
 ;; --------------------state
-(setq org-todo-keywords '((sequence "TODO(t)" "DOING(g)" "|" "DONE(d)")
-                          (sequence "REPORT(r)" "BUG(b)" "|" "FIXED(f)")
-                          (sequence "WAITING(w)" "|" "CANCELED(c)")
-                          ))
+;; ! : 切换到该状态时会自动添加时间戳
+;; @ : 切换到该状态时要求输入文字说明
+;; 如果同时设定@和!,使用@/!
+(setq org-todo-keywords '((sequence "TODO(t)" "DOING(g!)" "WAITING(w!)" "|" "DONE(d!)" "CANCELED(c@/!)")))
 (setq org-todo-keyword-faces
       (quote (("TODO" :foreground "yellow" :weight bold)
-              ("REPORT" :foreground "yellow" :weight bold)
+              ("DOING" :foreground "orange" :weight bold)
+	            ("WAITING" :foreground "green" :weight bold)
 	            ("DONE" :foreground "forest green" :weight bold)
-	            ("FIXED" :foreground "forest green" :weight bold)
-	            ("CANCELED" :foreground "forest green" :weight bold)
+	            ("CANCELED" :foreground "grey" :weight bold)
 	            )))
 ;; --------------------summary
 ;; 大项目state的hook
@@ -63,9 +63,6 @@
         ("c" "TODO"
          entry (file "/mnt/webdav/org/inbox.org")
          "* TODO %i%?\n SCHEDULED: %t" :empty-lines 0)
-        ;; ("s" "TODO [Study]"
-        ;;  entry (file+headline "/mnt/webdav/org/inbox.org" "Study")
-        ;;  "* TODO %i%?\n SCHEDULED: %t" :empty-lines 1)
         ))
 ;; ----------------------------------------template
 (fset '<s
@@ -81,7 +78,9 @@
           (agenda "" ((org-agenda-span 1)
                       (org-deadline-warning-days 0)
                       (org-agenda-sorting-strategy '(priority-down time-up))))
-          ;; 空的周课表,需要准备则todo
+          (agenda "" ((org-agenda-span 7)
+                      (org-deadline-warning-days 0)
+                      (org-agenda-sorting-strategy '(priority-down time-up))))
           )
         )))
 
