@@ -35,10 +35,10 @@
  (rear-context-string . " 'kill-ring-save")
  (position . 1817))
 ("org-capture-last-stored"
- (filename . "/mnt/Z/org/inbox.org")
- (front-context-string . "* TODO wushengdo")
- (rear-context-string . " Phrasal verbs\n\n")
- (position . 4490))
+ (filename . "/mnt/webdav/org/inbox.org")
+ (front-context-string . "* TODO \n SCHEDUL")
+ (rear-context-string . "023-04-10 Mon>\n\n")
+ (position . 4721))
 ("org-refile-last-stored"
  (filename . "/mnt/webdav/finish.org")
  (front-context-string . "** DONE L27-Noth")

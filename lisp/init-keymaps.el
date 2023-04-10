@@ -106,8 +106,8 @@
 (define-key my-mode-map (kbd "s-t") 'wusd/add-pronunciation)
 
 ;; ------------------------------------------------------------org
-(define-key my-mode-map (kbd "s-o") 'wusd/org-agenda)
-(define-key my-mode-map (kbd "s-i") 'wusd/org-capture)
+(define-key my-mode-map (kbd "f11") 'wusd/org-capture)
+(define-key my-mode-map (kbd "f12") 'wusd/org-agenda)
 (define-key spacemacs-org-mode-map-root-map (kbd "M-<return>") 'org-meta-return)
 
 ;; ------------------------------------------------------------Commands
@@ -120,10 +120,10 @@
 
 
 ;; ------------------------------------------------------------help
-(define-key my-mode-map (kbd "<f9>") (lookup-key global-map (kbd "C-h")))
-(define-key my-mode-map (kbd "<f10>") 'describe-function)
-(define-key my-mode-map (kbd "<f11>") 'describe-mode)
-(define-key my-mode-map (kbd "<f12>") 'describe-key)
+;; (define-key my-mode-map (kbd "<f9>") (lookup-key global-map (kbd "C-h")))
+;; (define-key my-mode-map (kbd "<f10>") 'describe-function)
+(define-key my-mode-map (kbd "<f9>") 'describe-mode)
+(define-key my-mode-map (kbd "<f10>") 'describe-key)
 
 
 (provide 'init-keymaps)
