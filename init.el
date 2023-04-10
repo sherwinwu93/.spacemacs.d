@@ -89,7 +89,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-frozen-packages '()
 
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '()
+   dotspacemacs-excluded-packages '(evil-unimpaired)
 
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -217,7 +217,7 @@ It should only modify the values of Spacemacs settings."
    ;; pair of numbers, e.g. `(recents-by-project . (7 .  5))', where the first
    ;; number is the project limit and the second the limit on the recent files
    ;; within a project.
-   dotspacemacs-startup-lists '((projects . 7)
+   dotspacemacs-startup-lists '((projects . 5)
                                 (bookmarks . 5)
                                 (recents . 5))
 
@@ -305,7 +305,8 @@ It should only modify the values of Spacemacs settings."
    ;; (default "C-M-m" for terminal mode, "<M-return>" for GUI mode).
    ;; Thus M-RET should work as leader key in both GUI and terminal modes.
    ;; C-M-m also should work in terminal mode, but not in GUI mode.
-   dotspacemacs-major-mode-emacs-leader-key (if window-system "<M-return>" "C-M-m")
+   ;; dotspacemacs-major-mode-emacs-leader-key (if window-system "<M-return>" "C-M-m")
+   dotspacemacs-major-mode-emacs-leader-key "C-M-m"
 
    ;; These variables control whether separate commands are bound in the GUI to
    ;; the key pairs `C-i', `TAB' and `C-m', `RET'.
@@ -568,10 +569,10 @@ This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
-  (setq configuration-layer-elpa-archives
-        '(("melpa-cn" . "http://mirrors.ustc.edu.cn/elpa/melpa/")
-          ("nongnu-cn"   . "http://mirrors.ustc.edu.cn/elpa/nongnu/")
-          ("gnu-cn"   . "http://mirrors.ustc.edu.cn/elpa/gnu/")))
+   (setq configuration-layer-elpa-archives
+         '(("melpa-cn" . "http://mirrors.ustc.edu.cn/elpa/melpa/")
+           ("nongnu-cn"   . "http://mirrors.ustc.edu.cn/elpa/nongnu/")
+           ("gnu-cn"   . "http://mirrors.ustc.edu.cn/elpa/gnu/")))
   )
 
 

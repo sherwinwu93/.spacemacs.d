@@ -8,6 +8,7 @@
 ;; ----------------------------------------agenda
 ;; 定义 agenda 文件的位置
 (setq org-agenda-files '("/mnt/webdav/org/inbox.org"))
+(setq org-agenda-window-setup 'only-window)
 
 ;; ----------------------------------------state
 ;; --------------------state
@@ -59,7 +60,7 @@
 ;; ----------------------------------------capture
 (setq org-capture-templates
       '(
-        ("i" "TODO"
+        ("c" "TODO"
          entry (file "/mnt/webdav/org/inbox.org")
          "* TODO %i%?\n SCHEDULED: %t" :empty-lines 0)
         ;; ("s" "TODO [Study]"
@@ -72,8 +73,6 @@
 
 ;; ----------------------------------------org-agenda-custom-commands
 
-(setq org-agenda-window-setup 'only-window)
-
 (setq org-agenda-custom-commands
       ;; --------------------
       '(("o" "Wusd Personal Agenda"
@@ -83,47 +82,15 @@
                       (org-deadline-warning-days 0)
                       (org-agenda-sorting-strategy '(priority-down time-up))))
           ;; 空的周课表,需要准备则todo
-          (agenda "" ((org-agenda-span 7)
-                      (org-agenda-files '("/mnt/webdav/org/weeks.org"))))
-          ;; 生日
-          (agenda "" ((org-agenda-entry-types '(:deadline))
-                      (org-agenda-span 1)
-                      (org-deadline-warning-days 7)
-                      (org-agenda-time-grid nil)))
-			    ;; (tags "@logic")
-          ;; (todo "TODO")
-          ;; (todo "CANCELED")
-          ;; (todo "DONE")
-          ))
-        ;; --------------------
-        ("w" "Weekly Review" ((agenda "" ((org-agenda-span 7)))
-			                        (stuck "")
-			                        (todo "TODO")
-			                        (todo "DOING")
-			                        (todo "DONE")))
-        ;; --------------------
-        ("g" . "GTD contexts")
-        ("gt" "task" tags-todo "@task")
-        ("gw" "work" tags-todo "@work")
-        ("gi" "idea" tags-todo "@idea")
-        ("gf" "info" tags-todo "@info")
-        ("gl" "learn" tags-todo "@learn")
-        ("G" "GTD Block Agenda"
-         ((tags-todo "@task")
-          (tags-todo "@work")
-          (tags-todo "@idea")
-          (tags-todo "@info")
-          (tags-todo "@learn")))))
+          )
+        )))
 
 (fset 'wusd/org-agenda
       (kmacro-lambda-form [?\M-m ?a ?o ?o ?o] 0 "%d"))
 (fset 'wusd/org-capture
-      (kmacro-lambda-form [?\M-m ?a ?o ?c ?i] 0 "%d"))
-(defun tian()
+      (kmacro-lambda-form [?\M-m ?a ?o ?c ?c] 0 "%d"))
+(defun inbox()
   (interactive)
   (find-file "/mnt/webdav/org/inbox.org"))
-(defun zhou()
-  (interactive)
-  (find-file "/mnt/webdav/org/weeks.org"))
 
 (provide 'init-org)
