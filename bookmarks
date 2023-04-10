@@ -1,4 +1,4 @@
-;;;; Emacs Bookmark Format Version 1;;;; -*- coding: utf-8-emacs; mode: lisp-data -*-
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*-
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
@@ -35,10 +35,10 @@
  (rear-context-string . " 'kill-ring-save")
  (position . 1817))
 ("org-capture-last-stored"
- (filename . "/mnt/Z/org/inbox.org")
- (front-context-string . "* TODO wushengdo")
- (rear-context-string . " Phrasal verbs\n\n")
- (position . 4490))
+ (filename . "/mnt/webdav/org/inbox.org")
+ (front-context-string . "* TODO test\n SCH")
+ (rear-context-string . "4-10 Mon 15:39]\n")
+ (position . 5059))
 ("org-refile-last-stored"
  (filename . "/mnt/webdav/finish.org")
  (front-context-string . "** DONE L27-Noth")

@@ -8,19 +8,20 @@
 ;; ----------------------------------------agenda
 ;; 定义 agenda 文件的位置
 (setq org-agenda-files '("/mnt/webdav/org/inbox.org"))
+(setq org-agenda-window-setup 'only-window)
 
 ;; ----------------------------------------state
 ;; --------------------state
-(setq org-todo-keywords '((sequence "TODO(t)" "DOING(g)" "|" "DONE(d)")
-                          (sequence "REPORT(r)" "BUG(b)" "|" "FIXED(f)")
-                          (sequence "WAITING(w)" "|" "CANCELED(c)")
-                          ))
+;; ! : 切换到该状态时会自动添加时间戳
+;; @ : 切换到该状态时要求输入文字说明
+;; 如果同时设定@和!,使用@/!
+(setq org-todo-keywords '((sequence "TODO(t)" "DOING(g)" "WAITING(w)" "|" "DONE(d!)" "CANCELED(c@/!)")))
 (setq org-todo-keyword-faces
       (quote (("TODO" :foreground "yellow" :weight bold)
-              ("REPORT" :foreground "yellow" :weight bold)
+              ("DOING" :foreground "orange" :weight bold)
+	            ("WAITING" :foreground "green" :weight bold)
 	            ("DONE" :foreground "forest green" :weight bold)
-	            ("FIXED" :foreground "forest green" :weight bold)
-	            ("CANCELED" :foreground "forest green" :weight bold)
+	            ("CANCELED" :foreground "grey" :weight bold)
 	            )))
 ;; --------------------summary
 ;; 大项目state的hook
@@ -59,20 +60,15 @@
 ;; ----------------------------------------capture
 (setq org-capture-templates
       '(
-        ("i" "TODO"
+        ("c" "TODO"
          entry (file "/mnt/webdav/org/inbox.org")
-         "* TODO %i%?\n SCHEDULED: %t\n" :empty-lines 1)
-        ;; ("s" "TODO [Study]"
-        ;;  entry (file+headline "/mnt/webdav/org/inbox.org" "Study")
-        ;;  "* TODO %i%?\n SCHEDULED: %t" :empty-lines 1)
+         "* TODO %i%?\n SCHEDULED: %t" :empty-lines 0)
         ))
 ;; ----------------------------------------template
 (fset '<s
       (kmacro-lambda-form [?\C-a ?# ?+ ?B ?E ?I backspace ?G ?I ?N ?_ ?S ?R ?C return ?# ?+ ?E ?N ?D ?_ ?S ?R ?C ?\C-p ?\C-e ? ] 0 "%d"))
 
 ;; ----------------------------------------org-agenda-custom-commands
-
-(setq org-agenda-window-setup 'only-window)
 
 (setq org-agenda-custom-commands
       ;; --------------------
@@ -82,50 +78,19 @@
           (agenda "" ((org-agenda-span 1)
                       (org-deadline-warning-days 0)
                       (org-agenda-sorting-strategy '(priority-down time-up))))
-          ;; 空的周课表,需要准备则todo
           (agenda "" ((org-agenda-span 7)
-                      (org-agenda-files '("/mnt/webdav/org/weeks.org"))))
-          ;; 生日
-          (agenda "" ((org-agenda-entry-types '(:deadline))
-                      (org-agenda-span 1)
-                      (org-deadline-warning-days 7)
-                      (org-agenda-time-grid nil)))
-			    ;; (tags "@logic")
-          ;; (todo "TODO")
-          ;; (todo "CANCELED")
-          ;; (todo "DONE")
-          ))
-        ;; --------------------
-        ("w" "Weekly Review" ((agenda "" ((org-agenda-span 7)))
-			                        (stuck "")
-			                        (todo "TODO")
-			                        (todo "DOING")
-			                        (todo "DONE")))
-        ;; --------------------
-        ("g" . "GTD contexts")
-        ("gt" "task" tags-todo "@task")
-        ("gw" "work" tags-todo "@work")
-        ("gi" "idea" tags-todo "@idea")
-        ("gf" "info" tags-todo "@info")
-        ("gl" "learn" tags-todo "@learn")
-        ("G" "GTD Block Agenda"
-         ((tags-todo "@task")
-          (tags-todo "@work")
-          (tags-todo "@idea")
-          (tags-todo "@info")
-          (tags-todo "@learn")))))
+                      (org-deadline-warning-days 0)
+                      (org-agenda-sorting-strategy '(priority-down time-up))))
+          )
+        )))
 
 (fset 'wusd/org-agenda
       (kmacro-lambda-form [?\M-m ?a ?o ?o ?o] 0 "%d"))
 (fset 'wusd/org-capture
-      (kmacro-lambda-form [?\M-m ?a ?o ?c ?i] 0 "%d"))
-
-(defun tian()
+      (kmacro-lambda-form [?\M-m ?a ?o ?c ?c] 0 "%d"))
+(defun inbox()
   (interactive)
   (find-file "/mnt/webdav/org/inbox.org"))
-(defun zhou()
-  (interactive)
-  (find-file "/mnt/webdav/org/weeks.org"))
 
 
 (provide 'init-org)
