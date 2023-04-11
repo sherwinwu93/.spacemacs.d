@@ -12,7 +12,8 @@ This function should only modify configuration layer settings."
    dotspacemacs-distribution 'spacemacs
 
    ;; Lazy installation of layers (i.e. layers are installed only when a file
-   ;; with a supported type is opened). Possible values are `all', ed layers (i.e. layers
+   ;; with a supported type is opened). Possible values are `all', `unused'
+   ;; and `nil'. `unused' will lazy install only unused layers (i.e. layers
    ;; not listed in variable `dotspacemacs-configuration-layers'), `all' will
    ;; lazy install any layer that support lazy installation even the layers
    ;; listed in `dotspacemacs-configuration-layers'. `nil' disable the lazy
@@ -26,47 +27,41 @@ This function should only modify configuration layer settings."
    dotspacemacs-ask-for-lazy-installation t
 
    ;; List of additional paths where to look for configuration layers.
-   ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
+   ;; Paths must have a trailing slash (i.e. "~/.mycontribs/")
    dotspacemacs-configuration-layer-path '()
 
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(nginx
+   '(
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     javascript
-     autohotkey
-     (html :variables web-fmt-tool 'prettier)
-     ;; (vinegar :variables
-     ;;          vinegar-reuse-dired-buffer t
-     ;;          vinegar-dired-hide-details nil)
-     evil-better-jumper
-     ;; (tabs :variables tabs-highlight-current-tab 'left)
-     (auto-completion :disabled-for org spacemacs-org)
+     ;; ----------------------------------------default
      better-defaults
-     ;; emacs-lisp
-     (git :variables
-          git-magit-status-fullscreen t)
-     markdown
-     ;; helm
      ivy
-     ;; lsp
-     ;;multiple-cursors
-     org
-     (shell :variables
-            shell-default-height 30
-            shell-default-position 'bottom)
+     ;; ----------------------------------------edit
+     multiple-cursors
+     (auto-completion :disabled-for org spacemacs-org)
      (spell-checking :variables
                      ispell-program-name "aspell"
                      ispell-dictionary "american"
                      spell-checking-enable-by-default nil)
-     ;; syntax-checking
-     ;; version-control
-     treemacs
-     )
+     ;; ----------------------------------------vc
+     (git :variables
+          git-magit-status-fullscreen t)
+     ;; ----------------------------------------language
+     markdown
+     org
+     nginx
+     ;; emacs-lisp
+     ;; ----------------------------------------shell
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom)
+     ;; ----------------------------------------project
+     treemacs)
 
 
    ;; List of additional packages that will be installed without being wrapped
@@ -84,7 +79,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-frozen-packages '()
 
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '(evil-unimpaired)
+   dotspacemacs-excluded-packages '(evil-want-keybinding)
 
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
@@ -199,7 +194,6 @@ It should only modify the values of Spacemacs settings."
    ;; contents, to a maximum of the full image height and a minimum of 3 line
    ;; heights. If set to a number (int or float) it is used as a constant
    ;; scaling factor for the default logo size.
-   ;; 11:50
    dotspacemacs-startup-banner-scale 'auto
 
    ;; List of items to show in startup buffer or an association list of
@@ -212,9 +206,8 @@ It should only modify the values of Spacemacs settings."
    ;; pair of numbers, e.g. `(recents-by-project . (7 .  5))', where the first
    ;; number is the project limit and the second the limit on the recent files
    ;; within a project.
-   dotspacemacs-startup-lists '((projects . 5)
-                                (bookmarks . 5)
-                                (recents . 5))
+   dotspacemacs-startup-lists '((recents . 5)
+                                (projects . 7))
 
    ;; True if the home buffer should respond to resize events. (default t)
    dotspacemacs-startup-buffer-responsive t
@@ -253,8 +246,7 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(
-                         spacemacs-dark
+   dotspacemacs-themes '(spacemacs-dark
                          spacemacs-light)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
@@ -273,11 +265,11 @@ It should only modify the values of Spacemacs settings."
    ;; Default font or prioritized list of fonts. The `:size' can be specified as
    ;; a non-negative integer (pixel size), or a floating-point (point size).
    ;; Point size is recommended, because it's device independent. (default 10.0)
-   dotspacemacs-default-font '("Consolas"
-                               :size 17
+   dotspacemacs-default-font '("Source Code Pro"
+                               :size 10.0
                                :weight normal
-                               :width normal
-                               )
+                               :width normal)
+
    ;; The leader key (default "SPC")
    dotspacemacs-leader-key "SPC"
 
@@ -300,7 +292,6 @@ It should only modify the values of Spacemacs settings."
    ;; (default "C-M-m" for terminal mode, "<M-return>" for GUI mode).
    ;; Thus M-RET should work as leader key in both GUI and terminal modes.
    ;; C-M-m also should work in terminal mode, but not in GUI mode.
-   ;; dotspacemacs-major-mode-emacs-leader-key (if window-system "<M-return>" "C-M-m")
    dotspacemacs-major-mode-emacs-leader-key "C-M-m"
 
    ;; These variables control whether separate commands are bound in the GUI to
@@ -335,7 +326,7 @@ It should only modify the values of Spacemacs settings."
    ;; auto-save the file in-place, `cache' to auto-save the file to another
    ;; file stored in the cache directory and `nil' to disable auto-saving.
    ;; (default 'cache)
-   dotspacemacs-auto-save-file-location 'original
+   dotspacemacs-auto-save-file-location 'cache
 
    ;; Maximum number of rollback slots to keep in the cache. (default 5)
    dotspacemacs-max-rollback-slots 5
@@ -377,12 +368,12 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil the frame is maximized when Emacs starts up.
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
-   ;; (default nil) (Emacs 24.4+ only)
+   ;; (default t) (Emacs 24.4+ only)
    dotspacemacs-maximized-at-startup t
 
    ;; If non-nil the frame is undecorated when Emacs starts up. Combine this
-   ;; variable with `dotspacemacs-maximized-at-startup' in OSX to obtain
-   ;; borderless fullscreen. (default nil)
+   ;; variable with `dotspacemacs-maximized-at-startup' to obtain fullscreen
+   ;; without external boxes. Also disables the internal border. (default nil)
    dotspacemacs-undecorated-at-startup nil
 
    ;; A value from the range (0..100), in increasing opacity, which describes
@@ -394,6 +385,11 @@ It should only modify the values of Spacemacs settings."
    ;; the transparency level of a frame when it's inactive or deselected.
    ;; Transparency can be toggled through `toggle-transparency'. (default 90)
    dotspacemacs-inactive-transparency 90
+
+   ;; A value from the range (0..100), in increasing opacity, which describes the
+   ;; transparency level of a frame background when it's active or selected. Transparency
+   ;; can be toggled through `toggle-background-transparency'. (default 90)
+   dotspacemacs-background-transparency 90
 
    ;; If non-nil show the titles of transient states. (default t)
    dotspacemacs-show-transient-state-title t
@@ -460,7 +456,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil, start an Emacs server if one is not already running.
    ;; (default nil)
-   dotspacemacs-enable-server t
+   dotspacemacs-enable-server nil
 
    ;; Set the emacs server socket location.
    ;; If nil, uses whatever the Emacs default is, otherwise a directory path
@@ -471,7 +467,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil, advise quit functions to keep server open when quitting.
    ;; (default nil)
-   dotspacemacs-persistent-server t
+   dotspacemacs-persistent-server nil
 
    ;; List of search tool executable names. Spacemacs uses the first installed
    ;; tool of the list. Supported tools are `rg', `ag', `pt', `ack' and `grep'.
@@ -507,7 +503,7 @@ It should only modify the values of Spacemacs settings."
    ;; Color highlight trailing whitespace in all prog-mode and text-mode derived
    ;; modes such as c++-mode, python-mode, emacs-lisp, html-mode, rst-mode etc.
    ;; (default t)
-   dotspacemacs-show-trailing-whitespace nil
+   dotspacemacs-show-trailing-whitespace t
 
    ;; Delete whitespace while saving buffer. Possible values are `all'
    ;; to aggressively delete empty line and long sequences of whitespace,
@@ -556,7 +552,7 @@ default it calls `spacemacs/load-spacemacs-env' which loads the environment
 variables declared in `~/.spacemacs.env' or `~/.spacemacs.d/.spacemacs.env'.
 See the header of this file for more information."
   (spacemacs/load-spacemacs-env)
-	)
+)
 
 (defun dotspacemacs/user-init ()
   "Initialization for user code:
@@ -564,11 +560,12 @@ This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
-   (setq configuration-layer-elpa-archives
-         '(("melpa-cn" . "http://mirrors.ustc.edu.cn/elpa/melpa/")
-           ("nongnu-cn"   . "http://mirrors.ustc.edu.cn/elpa/nongnu/")
-           ("gnu-cn"   . "http://mirrors.ustc.edu.cn/elpa/gnu/")))
-  )
+(setq configuration-layer-elpa-archives
+    '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+      ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+      ("nongnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/nongnu/")
+      ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
+)
 
 
 (defun dotspacemacs/user-load ()
@@ -576,7 +573,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 This function is called only while dumping Spacemacs configuration. You can
 `require' or `load' the libraries of your choice that will be included in the
 dump."
-	)
+)
 
 
 (defun dotspacemacs/user-config ()
@@ -586,10 +583,11 @@ configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
   ;; --------------------fonts
-  (dolist (charset '(kana han cjk-misc bopomofo))
-    (set-fontset-font (frame-parameter nil 'font) charset
-                      (font-spec :family "Microsoft YaHei Mono"
-                                 :size 15)))
+  (when (display-graphic-p)
+    (dolist (charset '(kana han cjk-misc bopomofo))
+      (set-fontset-font (frame-parameter nil 'font) charset
+                        (font-spec :family "Microsoft YaHei Mono"
+                                   :size 15))))
   ;; 递归遍历加载路径
   (defun add-subdirs-to-load-path(dir)
     "Recursive add directories to `load-path`"
@@ -597,23 +595,21 @@ before packages are loaded."
       (add-to-list 'load-path dir)
       (normal-top-level-add-subdirs-to-load-path)))
   (add-subdirs-to-load-path "~/.spacemacs.d/lisp/")
-    (require 'init-evil)
-    (require 'init-input)
-    (require 'init-better-defaults)
-    (require 'init-edit)
-    (require 'init-files)
-    (require 'init-scheme)
-    (require 'init-translate)
-    (require 'my-mode)
-    (require 'init-keymaps)
-    (require 'init-vc)
-    (with-eval-after-load 'org
-      (require 'init-org)
-    )
+  (require 'init-evil)
+  (require 'init-input)
+  (require 'init-better-defaults)
+  (require 'init-edit)
+  (require 'init-files)
+  (require 'init-scheme)
+  (require 'init-translate)
+  (require 'my-mode)
+  (require 'init-keymaps)
+  (require 'init-vc)
+  (with-eval-after-load 'org
+    (require 'init-org)
   )
+)
 
-(setq custom-file (expand-file-name "custom.el" dotspacemacs-directory))
-(load custom-file 'no-error 'no-message)
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
