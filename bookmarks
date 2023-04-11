@@ -36,9 +36,9 @@
  (position . 1817))
 ("org-capture-last-stored"
  (filename . "/mnt/webdav/org/inbox.org")
- (front-context-string . "* TODO jyg-正式发布\n")
- (rear-context-string . "4-10 Mon 15:39]\n")
- (position . 5059))
+ (front-context-string . "* TODO L30\n SCHE")
+ (rear-context-string . "2023-04-11 Tue>\n")
+ (position . 5312))
 ("org-refile-last-stored"
  (filename . "/mnt/webdav/finish.org")
  (front-context-string . "** DONE L27-Noth")
